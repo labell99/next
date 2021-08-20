@@ -51,14 +51,6 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/icons",
-    name: "Icons",
-    rtlName: "الرموز",
-    icon: BubbleChart,
-
-    layout: "/admin",
-  },
-  {
     path: "/notifications",
     name: "Notifications",
     rtlName: "إخطارات",
