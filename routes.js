@@ -82,14 +82,6 @@ const dashboardRoutes = [
 
     layout: "/admin",
   },
-  {
-    path: "/rtl-page",
-    name: "RTL Support",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: Language,
-
-    layout: "/rtl",
-  },
 ];
 
 export default dashboardRoutes;
