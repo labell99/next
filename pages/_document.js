@@ -5,7 +5,7 @@ import { ServerStyleSheets } from "@material-ui/styles";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <html lang="en-us">
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#000000" />
@@ -36,10 +36,12 @@ class MyDocument extends Document {
         </Head>
         <body>
           <div id="page-transition"></div>
+          <Html>
           <Main />
           <NextScript />
+          </Html>
         </body>
-      </Html>
+      </html>
     );
   }
 }
