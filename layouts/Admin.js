@@ -13,7 +13,7 @@ import routes from "routes.js";
 
 import styles from "assets/jss/nextjs-material-dashboard/layouts/adminStyle.js";
 
-import bgImage from "assets/img/sidebar-2.jpg";
+import bgImage from "assets/img/sidebar-1.jpg";
 import logo from "assets/img/reactlogo.png";
 
 let ps;
