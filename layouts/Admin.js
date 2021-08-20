@@ -77,7 +77,7 @@ export default function Admin({ children, ...rest }) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"ECAM-IDS"}
+        logoText={""}
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}
