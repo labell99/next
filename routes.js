@@ -50,14 +50,6 @@ const dashboardRoutes = [
 
     layout: "/admin",
   },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    rtlName: "إخطارات",
-    icon: Notifications,
-
-    layout: "/admin",
-  },
 ];
 
 export default dashboardRoutes;
