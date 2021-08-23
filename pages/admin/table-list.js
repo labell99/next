@@ -51,7 +51,7 @@ function TableList() {
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
-          <CardHeader color="primary">
+          <CardHeader color="lightblue">
             <h4 className={classes.cardTitleWhite}>Simple Table</h4>
           </CardHeader>
           <CardBody>
