@@ -66,18 +66,6 @@ export default function AdminNavbarLinks() {
           <Search />
         </Button>
       </div>
-      <Button
-        color={size.width > 959 ? "transparent" : "white"}
-        justIcon={size.width > 959}
-        simple={!(size.width > 959)}
-        aria-label="Dashboard"
-        className={classes.buttonLink}
-      >
-        <Dashboard className={classes.icons} />
-        <Hidden mdUp implementation="css">
-          <p className={classes.linkText}>Dashboard</p>
-        </Hidden>
-      </Button>
       <div className={classes.manager}>
         <Button
           color={size.width > 959 ? "transparent" : "white"}
