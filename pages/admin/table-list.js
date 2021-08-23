@@ -39,6 +39,10 @@ const styles = {
       lineHeight: "1",
     },
   },
+  menuColor: {
+      backgroundColor: theme.palette.primary.main,
+      color: '#ffffff',
+  },
 };
 
 function TableList() {
@@ -48,7 +52,7 @@ function TableList() {
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
-          <CardHeader color="red">
+          <CardHeader color="primary">
             <h4 className={classes.cardTitleWhite}>Simple Table</h4>
           </CardHeader>
           <CardBody>
