@@ -40,8 +40,7 @@ const styles = {
     },
   },
   menuColor: {
-      backgroundColor: theme.palette.primary.main,
-      color: '#ffffff',
+      backgroundColor: "lightblue"
   },
 };
 
