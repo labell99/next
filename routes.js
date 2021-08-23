@@ -28,7 +28,7 @@ import Language from "@material-ui/icons/Language";
 const dashboardRoutes = [
   {
     path: "/dashboard",
-    name: "Dashboard",
+    name: "IDS",
     rtlName: "لوحة القيادة",
     icon: Dashboard,
 
