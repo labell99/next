@@ -49,11 +49,11 @@ function View() {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
-            <h4 className={classes.cardTitleWhite}>Simple Table</h4>
+            <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
           </CardHeader>
           <CardBody>
             <Table
-              tableHeaderColor="primary"
+              tableHeaderColor="dark"
               tableHead={["Name", "Country", "City", "Salary"]}
               tableData={[
                 ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
