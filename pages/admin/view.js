@@ -53,7 +53,7 @@ function View() {
           </CardHeader>
           <CardBody>
             <Table
-              tableHeaderColor="dark"
+              tableHeaderColor="gray"
               tableHead={["Name", "Country", "City", "Salary"]}
               tableData={[
                 ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
