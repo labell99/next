@@ -26,29 +26,18 @@ export default function Footer(props) {
                 Company
               </a>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#portfolio" className={classes.block}>
-                Portfolio
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#blog" className={classes.block}>
-                Blog
-              </a>
-            </ListItem>
           </List>
         </div>
         <p className={classes.right}>
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
             <a
-              href="https://www.creative-tim.com?ref=njsmd-footer"
+              href="https://norvax.uk"
               target="_blank"
               className={classes.a}
             >
-              Creative Tim
+              Norvax
             </a>
-            , made with love for a better web
           </span>
         </p>
       </div>
