@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // layout for this page
@@ -44,6 +46,101 @@ const styles = {
 function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
+  const [data, setData] = useState([]);
+
+useEffect(() => {
+    axios.post('http://54.198.204.54:1337/auth/local', {
+      identifier: 'lee_abell@hotmail.com',
+      password: 'Test123!',
+    }).then(resp => {
+
+      var authtoken = "Bearer " + resp.data.jwt;
+	  const headers = {
+        'Authorization': authtoken,
+        'accept': 'application/json'
+      };
+
+      axios.get(`http://54.198.204.54:1337/ids`, { headers })
+        .then(response => {
+
+        var resultsets = response.data;
+        console.log("resultsets ",resultsets);
+        var UsersArray = [];
+        for (let i = 0; i < resultsets.length; i++) {
+          var name = resultsets[i].VaccineName;
+          var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
+          var vaccineType = resultsets[i].VaccineType;
+          var vaccineApplication = resultsets[i].VaccineApplication;
+          var vaccineTarget = resultsets[i].VaccineTarget;
+          var Emergence = resultsets[i].Emergence;
+          var shortName = resultsets[i].ntShortName;
+          var longName = resultsets[i].ntLongName;
+          var fTarget = resultsets[i].FACTAtarget;
+          var fGenome = resultsets[i].FACTAGenome;
+          var sVariants = resultsets[i].SpikeVariants;
+          var oVariants = resultsets[i].OtherVariants;
+          var PANGO = resultsets[i].PANGO;
+		  var BVBRC = resultsets[i].BVBRC;
+          var AminoAcid = resultsets[i].AminoAcid;
+          var Conserved = resultsets[i].Conserved;
+          var VariantTargets = resultsets[i].VariantTargets;
+          var Description = resultsets[i].Description;
+          var Category = resultsets[i].Category;
+		  var Type = resultsets[i].Type;
+          var Subcategory = resultsets[i].Subcategory;
+          var IPReference = resultsets[i].IPReference;
+          var Phenotypes = resultsets[i].DOI;
+          var PublicationSource = resultsets[i].PublicationSource;
+          var REFlinks = resultsets[i].REFlinks;
+		  var Users = resultsets[i].Users;
+          var Notes = resultsets[i].Notes;
+          var Notes2 = resultsets[i].Notes2;
+
+          var UserArray = [];
+          UserArray.push("");
+          UserArray.push(recordNumber);
+          UserArray.push(name);
+          UserArray.push(vaccineType);
+          UserArray.push(vaccineTarget);
+          UserArray.push(vaccineApplication);
+          UserArray.push(Emergence);
+          UserArray.push(shortName);
+          UserArray.push(longName);
+          UserArray.push(fTarget);
+          UserArray.push(fGenome);
+          UserArray.push(sVariants);
+          UserArray.push(oVariants);
+          UserArray.push(PANGO);
+          UserArray.push(BVBRC);
+          UserArray.push(AminoAcid);
+          UserArray.push(Conserved);
+          UserArray.push(VariantTargets);
+          UserArray.push(Description);
+          UserArray.push(Category);
+          UserArray.push(Type);
+          UserArray.push(Subcategory);
+          UserArray.push(IPReference);
+          UserArray.push(Phenotypes);
+          UserArray.push(PublicationSource);
+          UserArray.push(REFlinks);
+          UserArray.push(Users);
+          UserArray.push(Notes);
+          UserArray.push(Notes2);
+          UsersArray.push(UserArray);
+        }
+
+        setData(UsersArray);
+      })
+      .catch(error => {
+        // handle error
+        console.log(error);
+        if (error.response.status == 401) {
+          alert("Authentication Error! Please login again");
+        }
+      });
+    });
+}, []);
+
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
