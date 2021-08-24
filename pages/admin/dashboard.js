@@ -30,7 +30,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
+import Image from 'next/image'
 import { bugs, website, server } from "variables/general.js";
 
 import {
@@ -47,6 +47,11 @@ function Dashboard() {
   return (
     <div>
       <GridContainer>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+		    <Image src={`/images/reactlogo.png`} />
+          </Card>
+        </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
