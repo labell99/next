@@ -31,6 +31,7 @@ import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import Image from 'next/image'
+import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
 
 import {
@@ -47,7 +48,7 @@ function Dashboard() {
   return (
     <div>
       <GridContainer>
-		<img src={`/images/reactlogo.png`} />
+		<img src={norvax} />
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
