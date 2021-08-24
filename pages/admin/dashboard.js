@@ -47,7 +47,7 @@ function Dashboard() {
   return (
     <div>
       <GridContainer>
-		<Image src={`/images/reactlogo.png`} layout='fill' />
+		<img src={`/images/reactlogo.png`} />
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
