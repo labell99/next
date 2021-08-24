@@ -48,7 +48,9 @@ function Dashboard() {
   return (
     <div>
       <GridContainer>
-		<img src={norvax} />
+        <Card profile>
+		  <Image src={norvax} />
+		</Card>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
