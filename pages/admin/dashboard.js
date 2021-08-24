@@ -49,7 +49,7 @@ function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-		    <Image src={`/images/reactlogo.png`} />
+		    <Image src={`/images/reactlogo.png`} layout='fill' />
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
