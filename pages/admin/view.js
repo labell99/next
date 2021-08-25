@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
 // layout for this page
 import Admin from "layouts/Admin.js";
-//import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button'
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Table from "components/Table/Table.js";
@@ -14,7 +14,7 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { Button, Input, InputGroupAddon, InputGroupText, InputGroup, Modal, ModalBody, ModalFooter, FormGroup, Form } from "reactstrap";
+import { Input, InputGroupAddon, InputGroupText, InputGroup, Modal, ModalBody, ModalFooter, FormGroup, Form } from "reactstrap";
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
