@@ -405,9 +405,9 @@ const options = {
           <TextField
             autoFocus
             margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
+            id="test"
+            label="test"
+            type="test"
             fullWidth
           />
         </DialogContent>
