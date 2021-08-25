@@ -399,10 +399,12 @@ const options = {
   }
 };
 
+const recNum = {modalInfo}+1;
+
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Review IDS Record parseInt({modalInfo})+1</DialogTitle>
+        <DialogTitle id="form-dialog-title">Review IDS Record {recNum}</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
