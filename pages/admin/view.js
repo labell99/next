@@ -73,7 +73,7 @@ function View() {
   const popupDialog = (value) => {
     setModalOpen(!modalOpen);
     setModalInfo(value);
-    var rec = ${value} + 1;
+    var rec = value + 1;
     window.alert(`Clicked "Edited" for row ${rec}`);
   }
 
