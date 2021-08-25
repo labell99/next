@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
 // layout for this page
 import Admin from "layouts/Admin.js";
-// core components
+import Button from '@material-ui/core/Button'
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Table from "components/Table/Table.js";
