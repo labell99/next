@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import MUIDataTable from "mui-datatables";
 // layout for this page
 import Admin from "layouts/Admin.js";
 // core components
@@ -12,6 +13,18 @@ import Table from "components/Table/Table.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+
+const getMuiTheme = () => createMuiTheme({
+    overrides: {
+      MUIDataTableBodyCell: {
+        root: {
+		  whiteSpace: 'nowrap'
+        }
+      }
+    }
+  })
+
 
 const styles = {
   cardCategoryWhite: {
@@ -48,7 +61,7 @@ function View() {
   const classes = useStyles();
   const [data, setData] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
     axios.post('http://54.198.204.54:1337/auth/local', {
       identifier: 'lee_abell@hotmail.com',
       password: 'Test123!',
@@ -139,7 +152,233 @@ useEffect(() => {
         }
       });
     });
-}, []);
+  }, []);
+
+const columns = [
+ {
+   name: "",
+   options: {
+     filter: true,
+     sort: false,
+     customBodyRender: (value, tableMeta, updateValue) => {
+       return (
+         <Button style={{background: 'lightBlue'}} variant="contained" onClick={() => popupDialog(tableMeta.rowIndex)}>
+            Edit
+         </Button>
+       );
+     }
+   }
+ },
+ {
+  name: "Record Number",
+  options: {
+   filter: true,
+   sort: true,
+   sortDirection: 'asc',
+  }
+ },
+ {
+  name: "Vaccine Name",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Vaccine Type",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Vaccine Target",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Vaccine Application",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Emergence",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Nucliotide ShortName",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Nucliotide LongName",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "FACTA Target",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "FACTA Genome",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Spike Variants",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Other Variants",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "PANGO",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "BVBRC",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Amino Acid",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Conserved",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Variant Targets",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Description",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Category",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Type",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Subcategory",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "IPReference",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Phenotypes",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "PubSource",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "RefLinks",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Users",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Notes",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+ {
+  name: "Source Note (SIB)",
+  options: {
+   filter: true,
+   sort: false,
+  }
+ },
+];
+
+const options = {
+  filter: true,
+  filterType: 'dropdown',
+  responsive: 'vertical',
+  selectableRows: false,
+  print: false,
+  sortOrder: {
+   name: 'Record Number',
+   direction: 'asc'
+  }
+};
 
   return (
     <GridContainer>
@@ -149,6 +388,14 @@ useEffect(() => {
             <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
           </CardHeader>
           <CardBody>
+            <MuiThemeProvider theme={getMuiTheme()}>
+              <MUIDataTable
+                title={"Immunogen Design & Selection"}
+                data={data}
+                columns={columns}
+                options={options}
+              />
+            </MuiThemeProvider>
             <Table
               tableHeaderColor="gray"
               tableHead={["Name", "Country", "City", "Salary"]}
