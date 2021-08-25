@@ -395,16 +395,8 @@ const options = {
           <h5 className=" modal-title" id="exampleModalLabel">
             Modal title
           </h5>
-          <button
-            aria-label="Close"
-            className=" close"
-            type="button"
-            onClick={() => setModalOpen(!modalOpen)}
-          >
-            <span aria-hidden={true}>×</span>
-          </button>
         </div>
-        <ModalBody>...</ModalBody>
+        <ModalBody> body text </ModalBody>
         <ModalFooter>
           <Button
             color="secondary"
