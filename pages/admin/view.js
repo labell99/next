@@ -399,7 +399,7 @@ const options = {
   }
 };
 
-const recNum = {modalInfo}+1;
+const recNum = parseInt({modalInfo})+1;
 
   return (
     <GridContainer>
