@@ -14,7 +14,6 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { Modal, ModalBody, ModalFooter } from "reactstrap";
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
@@ -61,12 +60,6 @@ function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const [data, setData] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-
-  function popupDialog(value) {
-    setModalOpen(!modalOpen)}
-    window.alert(`Clicked "Edited" for row ${value}`);
-  }
 
   useEffect(() => {
     axios.post('http://54.198.204.54:1337/auth/local', {
