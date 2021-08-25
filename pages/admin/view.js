@@ -400,7 +400,7 @@ const options = {
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">IDS Data</DialogTitle>
         <DialogContent>
           <DialogContentText>
             To subscribe to this website, please enter your email address here. We will send updates
@@ -418,9 +418,6 @@ const options = {
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
           </Button>
         </DialogActions>
       </Dialog>
