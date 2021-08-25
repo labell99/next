@@ -60,6 +60,12 @@ function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const [data, setData] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  function popupDialog(value) {
+    setModalOpen(!modalOpen);
+    window.alert(`Clicked "Edited" for row ${value}`);
+  }
 
   useEffect(() => {
     axios.post('http://54.198.204.54:1337/auth/local', {
