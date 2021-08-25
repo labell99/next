@@ -391,10 +391,6 @@ const options = {
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
-          <CardHeader color="dark">
-            <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
-          </CardHeader>
-          <CardBody>
           <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
             <div className=" modal-body p-0">
               <Card className=" bg-secondary shadow border-0">
@@ -451,6 +447,10 @@ const options = {
               </Card>
             </div>
           </Modal>
+          <CardHeader color="dark">
+            <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
+          </CardHeader>
+          <CardBody>
             <MuiThemeProvider theme={getMuiTheme()}>
               <MUIDataTable
                 title={" "}
