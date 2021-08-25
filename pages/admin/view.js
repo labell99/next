@@ -14,6 +14,7 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import Modal from 'react-modal';
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
