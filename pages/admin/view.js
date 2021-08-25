@@ -71,7 +71,7 @@ function View() {
 
   const popupDialog = (value) => {
     setModalOpen(!modalOpen);
-    window.alert(`Clicked "Edited" for row ${value}`);
+    //window.alert(`Clicked "Edited" for row ${value}`);
   }
 
   const handleClose = () => {
@@ -400,7 +400,7 @@ const options = {
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Review IDS Entry</DialogTitle>
+        <DialogTitle id="form-dialog-title">Review IDS Entry {value}</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
