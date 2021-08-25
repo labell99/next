@@ -395,23 +395,62 @@ const options = {
             <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
           </CardHeader>
           <CardBody>
-      <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
-        <div className=" modal-header">
-          <h5 className=" modal-title" id="exampleModalLabel">
-            Modal title
-          </h5>
-        </div>
-        <ModalBody> body text </ModalBody>
-        <ModalFooter>
-          <Button
-            color="secondary"
-            type="button"
-            onClick={() => setModalOpen(!modalOpen)}
-          >
-            Close
-          </Button>
-        </ModalFooter>
-      </Modal>
+          <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
+            <div className=" modal-body p-0">
+              <Card className=" bg-secondary shadow border-0">
+                <CardHeader className=" bg-white pb-5">
+                  <div className=" text-muted text-center mb-3">
+                    <small>Sign in with</small>
+                  </div>
+                </CardHeader>
+                <CardBody className=" px-lg-5 py-lg-5">
+                  <div className=" text-center text-muted mb-4">
+                    <small>Or sign in with credentials</small>
+                  </div>
+                  <Form role="form">
+                    <FormGroup className=" mb-3">
+                      <InputGroup className=" input-group-alternative">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className=" ni ni-email-83"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input placeholder="Email" type="email"></Input>
+                      </InputGroup>
+                    </FormGroup>
+                    <FormGroup>
+                      <InputGroup className=" input-group-alternative">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className=" ni ni-lock-circle-open"></i>
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input placeholder="Password" type="password"></Input>
+                      </InputGroup>
+                    </FormGroup>
+                    <div className=" custom-control custom-control-alternative custom-checkbox">
+                      <input
+                        className=" custom-control-input"
+                        id=" customCheckLogin"
+                        type="checkbox"
+                      ></input>
+                      <label
+                        className=" custom-control-label"
+                        htmlFor=" customCheckLogin"
+                      >
+                        <span>Remember me</span>
+                      </label>
+                    </div>
+                    <div className=" text-center">
+                      <Button className=" my-4" color="primary" type="button">
+                        Sign in
+                      </Button>
+                    </div>
+                  </Form>
+                </CardBody>
+              </Card>
+            </div>
+          </Modal>
             <MuiThemeProvider theme={getMuiTheme()}>
               <MUIDataTable
                 title={" "}
