@@ -74,6 +74,10 @@ function View() {
     //window.alert(`Clicked "Edited" for row ${value}`);
   }
 
+  const handleClose = () => {
+      setModalOpen(!modalOpen);
+  };
+
   useEffect(() => {
     axios.post('http://54.198.204.54:1337/auth/local', {
       identifier: 'lee_abell@hotmail.com',
