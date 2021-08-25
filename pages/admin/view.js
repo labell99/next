@@ -389,9 +389,6 @@ const options = {
 
   return (
     <GridContainer>
-      <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
-
-      </Modal>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
@@ -400,7 +397,7 @@ const options = {
           <CardBody>
             <MuiThemeProvider theme={getMuiTheme()}>
               <MUIDataTable
-                title={""}
+                title={" "}
                 data={data}
                 columns={columns}
                 options={options}
