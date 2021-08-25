@@ -402,7 +402,7 @@ const options = {
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Review IDS Record +{modalInfo}+1</DialogTitle>
+        <DialogTitle id="form-dialog-title">Review IDS Record parseInt({modalInfo})+1</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
