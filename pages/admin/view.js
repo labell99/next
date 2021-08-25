@@ -400,7 +400,7 @@ const options = {
 };
 
 const recNum = {modalInfo};
-console.log("recNum ",recNum.modalInfo);
+console.log("recNum ",recNum);
 
   return (
     <GridContainer>
