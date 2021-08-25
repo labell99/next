@@ -399,7 +399,7 @@ const options = {
   }
 };
 
-const recNum = parseInt({modalInfo});
+const recNum = {modalInfo};
 console.log("recNum ",recNum);
 
   return (
