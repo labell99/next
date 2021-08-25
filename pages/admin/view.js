@@ -65,7 +65,7 @@ function View() {
 
   function popupDialog(value) {
     setModalOpen(!modalOpen);
-    window.alert(`Clicked "Edited" for row ${value}`);
+    //window.alert(`Clicked "Edited" for row ${value}`);
   }
 
   useEffect(() => {
