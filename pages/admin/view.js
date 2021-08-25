@@ -61,6 +61,33 @@ function View() {
   const classes = useStyles();
   const [data, setData] = useState([]);
 
+  function popupDialog(value) {
+ <Modal >
+    <Modal.Header>
+        <Modal.Title>
+            Modal title
+        </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+        <FormGroup>
+            <label>Email address</label>
+            <input
+                type="email"
+                placeholder="Email"
+            />
+        </FormGroup>
+        <FormGroup>
+            <label>Password</label>
+            <input
+                type="password"
+                placeholder="Password"
+            />
+        </FormGroup>
+    </Modal.Body>
+</Modal>
+    window.alert(`Clicked "Edited" for row ${value}`);
+  }
+
   useEffect(() => {
     axios.post('http://54.198.204.54:1337/auth/local', {
       identifier: 'lee_abell@hotmail.com',
@@ -162,7 +189,7 @@ const columns = [
      sort: false,
      customBodyRender: (value, tableMeta, updateValue) => {
        return (
-         <Button style={{background: 'lightBlue'}} variant="contained" onClick={() => popupDialog(tableMeta.rowIndex)}>
+         <Button style={{background: "dark"}} variant="contained" onClick={() => popupDialog(tableMeta.rowIndex)}>
             Edit
          </Button>
        );
