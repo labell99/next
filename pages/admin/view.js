@@ -189,7 +189,7 @@ const columns = [
      sort: false,
      customBodyRender: (value, tableMeta, updateValue) => {
        return (
-         <Button style={{ color: "white", background: "dark"}} variant="contained" onClick={() => popupDialog(tableMeta.rowIndex)}>
+         <Button style={{ color: "white", background: "black"}} variant="contained" onClick={() => popupDialog(tableMeta.rowIndex)}>
             Edit
          </Button>
        );
