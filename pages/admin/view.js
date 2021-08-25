@@ -14,8 +14,7 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import Modal from 'react-modal';
-import FormGroup from '@material-ui/core/FormGroup';
+import { Modal, ModalBody, ModalFooter } from "reactstrap";
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
@@ -62,31 +61,10 @@ function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const [data, setData] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   function popupDialog(value) {
- <Modal >
-    <Modal.Header>
-        <Modal.Title>
-            Modal title
-        </Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-        <FormGroup>
-            <label>Email address</label>
-            <input
-                type="email"
-                placeholder="Email"
-            />
-        </FormGroup>
-        <FormGroup>
-            <label>Password</label>
-            <input
-                type="password"
-                placeholder="Password"
-            />
-        </FormGroup>
-    </Modal.Body>
-</Modal>
+    setModalOpen(!modalOpen)}
     window.alert(`Clicked "Edited" for row ${value}`);
   }
 
@@ -411,6 +389,34 @@ const options = {
 
   return (
     <GridContainer>
+          <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
+	        <div className=" modal-header">
+	          <h5 className=" modal-title" id="exampleModalLabel">
+	            Modal title
+	          </h5>
+	          <button
+	            aria-label="Close"
+	            className=" close"
+	            type="button"
+	            onClick={() => setModalOpen(!modalOpen)}
+	          >
+	            <span aria-hidden={true}>×</span>
+	          </button>
+	        </div>
+	        <ModalBody>...</ModalBody>
+	        <ModalFooter>
+	          <Button
+	            color="secondary"
+	            type="button"
+	            onClick={() => setModalOpen(!modalOpen)}
+	          >
+	            Close
+	          </Button>
+	          <Button color="primary" type="button">
+	            Save changes
+	          </Button>
+	        </ModalFooter>
+      </Modal>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
