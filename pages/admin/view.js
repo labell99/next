@@ -390,6 +390,11 @@ const options = {
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
+        <Card>
+          <CardHeader color="dark">
+            <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
+          </CardHeader>
+          <CardBody>
       <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
         <div className=" modal-header">
           <h5 className=" modal-title" id="exampleModalLabel">
@@ -407,11 +412,6 @@ const options = {
           </Button>
         </ModalFooter>
       </Modal>
-        <Card>
-          <CardHeader color="dark">
-            <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
-          </CardHeader>
-          <CardBody>
             <MuiThemeProvider theme={getMuiTheme()}>
               <MUIDataTable
                 title={" "}
