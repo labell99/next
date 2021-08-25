@@ -389,7 +389,7 @@ const options = {
 
   return (
     <GridContainer>
-
+      <GridItem xs={12} sm={12} md={12}>
       <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
         <div className=" modal-header">
           <h5 className=" modal-title" id="exampleModalLabel">
@@ -413,13 +413,8 @@ const options = {
           >
             Close
           </Button>
-          <Button color="primary" type="button">
-            Save changes
-          </Button>
         </ModalFooter>
       </Modal>
-
-      <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
             <h4 className={classes.cardTitleWhite}>Immunogen Design & Selection</h4>
