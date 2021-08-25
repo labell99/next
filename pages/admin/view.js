@@ -69,9 +69,9 @@ function View() {
   const [data, setData] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
 
-  function popupDialog(value) {
+  const popupDialog = (value) => {
     setModalOpen(!modalOpen);
-    //window.alert(`Clicked "Edited" for row ${value}`);
+    window.alert(`Clicked "Edited" for row ${value}`);
   }
 
   const handleClose = () => {
