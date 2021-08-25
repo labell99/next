@@ -390,24 +390,12 @@ const options = {
           <CardBody>
             <MuiThemeProvider theme={getMuiTheme()}>
               <MUIDataTable
-                title={"Immunogen Design & Selection"}
+                title={""}
                 data={data}
                 columns={columns}
                 options={options}
               />
             </MuiThemeProvider>
-            <Table
-              tableHeaderColor="gray"
-              tableHead={["Name", "Country", "City", "Salary"]}
-              tableData={[
-                ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
-                ["Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"],
-                ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
-                ["Philip Chaney", "Korea, South", "Overland Park", "$38,735"],
-                ["Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"],
-                ["Mason Porter", "Chile", "Gloucester", "$78,615"],
-              ]}
-            />
           </CardBody>
         </Card>
       </GridItem>
