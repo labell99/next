@@ -388,6 +388,7 @@ const options = {
 };
 
   return (
+    <GridContainer>
           <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
             <div className=" modal-body p-0">
               <Card className=" bg-secondary shadow border-0">
@@ -444,7 +445,6 @@ const options = {
               </Card>
             </div>
           </Modal>
-    <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
