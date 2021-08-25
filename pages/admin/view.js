@@ -73,7 +73,8 @@ function View() {
   const popupDialog = (value) => {
     setModalOpen(!modalOpen);
     setModalInfo(value);
-    //window.alert(`Clicked "Edited" for row ${value}`);
+    var rec = ${value} + 1;
+    window.alert(`Clicked "Edited" for row ${rec}`);
   }
 
   const handleClose = () => {
@@ -399,13 +400,10 @@ const options = {
   }
 };
 
-const recNum = {modalInfo};
-console.log("recNum ",recNum);
-
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Review IDS Record {recNum}</DialogTitle>
+        <DialogTitle id="form-dialog-title">Review IDS Record {modalInfo}</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
