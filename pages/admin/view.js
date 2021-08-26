@@ -400,7 +400,9 @@ const options = {
   }
 };
   console.log("data out: ",data);
-  console.log("data out2: ",data[modalInfo]);
+  const res = data[modalInfo];
+  console.log("data out2: ",res);
+  console.log("data out3: ",res[2]);
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
