@@ -399,7 +399,7 @@ const options = {
    direction: 'asc'
   }
 };
-  console.log("data out: ",data[modalInfo]);
+  console.log("data out2: ",data[modalInfo][2]);
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
