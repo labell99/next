@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { navigate } from 'gatsby';
 
 // material-ui
 import { Card, CardContent, CardActions, Grid, Typography } from '@material-ui/core';
