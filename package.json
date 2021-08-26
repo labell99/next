@@ -35,7 +35,8 @@
     "formik-material-ui-pickers": "^0.0.10",
     "yup": "^0.29.1",
     "moment": "^2.27.0",   
-    "@date-io/moment": "1.x",    
+    "@date-io/moment": "1.x", 
+    "@material-ui/pickers": "^3.2.10",   
     "reactstrap": "^8.9.0" 
   },
   "eslintConfig": {
