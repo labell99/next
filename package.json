@@ -30,6 +30,12 @@
     "react-dom": "17.0.1",
     "react-modal": "^3.14.3",
     "react-swipeable-views": "0.13.9",
+    "formik": "^2.1.4",
+    "formik-material-ui": "^2.0.1",
+    "formik-material-ui-pickers": "^0.0.10",
+    "yup": "^0.29.1",
+    "moment": "^2.27.0",   
+    "@date-io/moment": "1.x",    
     "reactstrap": "^8.9.0" 
   },
   "eslintConfig": {
