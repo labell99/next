@@ -416,6 +416,14 @@ const options = {
             type="test"
             fullWidth
           />
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">
+          <InputGroupText>
+            <Input addon type="checkbox" aria-label="Checkbox for following text input" />
+          </InputGroupText>
+        </InputGroupAddon>
+        <Input placeholder="Check it out" />
+      </InputGroup>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
