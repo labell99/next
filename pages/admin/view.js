@@ -399,6 +399,7 @@ const options = {
    direction: 'asc'
   }
 };
+  console.log("data out: ",data);
   console.log("data out2: ",data[modalInfo]);
   return (
     <GridContainer>
