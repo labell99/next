@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // material-ui
 import { Card, CardContent, CardActions, Grid, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
-import { Button } from 'gatsby-theme-material-ui';
+import Button from '@material-ui/core/Button';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 // formiks
