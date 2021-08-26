@@ -30,7 +30,7 @@ const encode = data =>
 const StyledButton = styled(Button)`
   width: 175px;
   color: white;
-  background: #0073BF;
+  background: black;
 
   @media screen and (min-width: 600px) {
     width: 300px;
