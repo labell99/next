@@ -421,11 +421,11 @@ const options = {
         </Tabs>
         <InputGroup>
           <Typography>Vaccine Name</Typography>
-          <Input placeholder="Check it out" />
+          <InputGroupText placeholder="Check it out" />
         </InputGroup>
          <InputGroup>
-          <Typography>Vaccine Name</Typography>
-          <Input placeholder="Check it out" />
+          <Typography>Vaccine Type</Typography>
+          <InputGroupText placeholder="Check it out" />
         </InputGroup>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
