@@ -412,7 +412,7 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
-            <InputGroupText>Vaccine Name</InputGroupText>
+            <Typography>Vaccine Name</Typography>
           </InputGroupAddon>
           <Input placeholder="Check it out" />
         </InputGroup>
