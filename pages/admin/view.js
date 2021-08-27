@@ -419,12 +419,12 @@ const options = {
 		    <Tab label="Item Two" />
 		    <Tab label="Item Three" />
         </Tabs>
-        <StyledInputGroup>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>Vaccine Name</InputGroupText>
           </InputGroupAddon>
           <InputGroupText placeholder="Check it out" />
-        </StyledInputGroup>
+        </InputGroup>
          <InputGroup>
           <Typography>Vaccine Type</Typography>
           <Input placeholder="Check it out" />
