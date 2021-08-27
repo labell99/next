@@ -408,7 +408,7 @@ const options = {
   console.log("data out3: ",res[2]);
   return (
     <GridContainer>
-      <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
+      <Dialog maxWidth="md" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
       <GridItem xs={30} >
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <InputGroup>
