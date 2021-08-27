@@ -419,7 +419,7 @@ const options = {
 		    <Tab label="Item Three" />
         </Tabs>
         <InputGroup>
-          VaccineName:
+          <Typography variant="h3">VaccineName</Typography>
           <Input placeholder="Check it out" />
         </InputGroup>
         <DialogActions>
