@@ -422,7 +422,9 @@ const options = {
         </Col>
         <Col xs="auto">
         <InputGroup>
-          <Typography>Vaccine Type</Typography>
+          <InputGroupAddon addonType="prepend">
+            <Typography>Vaccine Type</Typography>
+          </InputGroupAddon>
           <Input placeholder="Check it out" />
         </InputGroup>
         </Col>
