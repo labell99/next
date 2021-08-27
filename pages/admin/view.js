@@ -21,6 +21,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
+import Tabs from '@material-ui/core/Tabs';
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
