@@ -408,11 +408,11 @@ const options = {
   console.log("data out3: ",res[2]);
   return (
     <GridContainer>
-      <Dialog fullWidth maxWidth="sm" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
+      <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <Form >
         <Row>
-        <Col xs="auto">
+        <Col>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <Typography>Vaccine Name</Typography>
@@ -420,7 +420,7 @@ const options = {
           <Input placeholder="Check it out" />
         </InputGroup>
         </Col>
-        <Col xs="auto">
+        <Col>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <Typography>Vaccine Type</Typography>
