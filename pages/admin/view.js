@@ -409,8 +409,8 @@ const options = {
   return (
     <GridContainer>
       <Dialog fullWidth maxWidth="sm" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-      <GridItem xs={30} >
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
+        <GridItem >
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <Typography>Vaccine Name</Typography>
@@ -423,12 +423,12 @@ const options = {
           <Input placeholder="Check it out" />
         </InputGroup>
         <br />
+        </GridItem>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
         </DialogActions>
-        </GridItem>
       </Dialog>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
