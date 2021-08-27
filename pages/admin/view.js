@@ -408,8 +408,8 @@ const options = {
   console.log("data out3: ",res[2]);
   return (
     <GridContainer>
-      <GridItem xs={12} sm={12} md={12}>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
+      <GridItem xs={12} sm={12} md={12}>
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
@@ -428,8 +428,8 @@ const options = {
             Cancel
           </Button>
         </DialogActions>
+        </GridItem>
       </Dialog>
-      </GridItem>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
