@@ -15,7 +15,7 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { Grid ,Row, Col, Input, InputGroupAddon, InputGroupText, InputGroup, Modal, ModalBody, ModalFooter, FormGroup, Form } from "reactstrap";
+import { Container ,Row, Col, Input, InputGroupAddon, InputGroupText, InputGroup, Modal, ModalBody, ModalFooter, FormGroup, Form } from "reactstrap";
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -411,7 +411,7 @@ const options = {
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <div>
-        <Grid >
+        <Container >
         <Row>
         <Col>
         <InputGroup>
@@ -430,7 +430,7 @@ const options = {
         </InputGroup>
         </Col>
         </Row>
-        </Grid>
+        </Container>
         </div>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
