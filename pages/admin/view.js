@@ -410,7 +410,7 @@ const options = {
     <GridContainer>
       <Dialog fullWidth maxWidth="sm" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
-        <GridItem >
+        <Form >
         <FormGroup inline>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
@@ -425,7 +425,7 @@ const options = {
         </InputGroup>
         <br />
         </FormGroup>
-        </GridItem>
+        </Form>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
