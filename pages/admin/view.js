@@ -406,7 +406,7 @@ const options = {
   return (
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
+        <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
@@ -417,11 +417,6 @@ const options = {
             fullWidth
           />
       <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          <InputGroupText>
-            <Input addon type="checkbox" aria-label="Checkbox for following text input" />
-          </InputGroupText>
-        </InputGroupAddon>
         <Input placeholder="Check it out" />
       </InputGroup>
         </DialogContent>
