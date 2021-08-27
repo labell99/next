@@ -418,12 +418,10 @@ const options = {
           </InputGroupAddon>
           <Input placeholder="Check it out" />
         </InputGroup>
-        <br />
         <InputGroup>
           <Typography>Vaccine Type</Typography>
           <Input placeholder="Check it out" />
         </InputGroup>
-        <br />
         </FormGroup>
         </Form>
         <DialogActions>
