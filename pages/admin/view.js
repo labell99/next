@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 // @material-ui/core components
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
 // layout for this page
