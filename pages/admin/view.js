@@ -418,9 +418,10 @@ const options = {
 		    <Tab label="Item Two" />
 		    <Tab label="Item Three" />
         </Tabs>
-      <InputGroup>
-        <Input placeholder="Check it out" />
-      </InputGroup>
+        <InputGroup>
+          VaccineName:
+          <Input placeholder="Check it out" />
+        </InputGroup>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
