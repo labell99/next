@@ -423,7 +423,7 @@ const options = {
           <InputGroupAddon addonType="prepend">
             <InputGroupText>Vaccine Name</InputGroupText>
           </InputGroupAddon>
-          <InputGroupText placeholder="Check it out" />
+          <Input placeholder="Check it out" />
         </InputGroup>
          <InputGroup>
           <Typography>Vaccine Type</Typography>
