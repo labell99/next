@@ -412,7 +412,7 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
         <Form >
         <Row>
-        <Col>
+        <Col xs="auto">
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <Typography>Vaccine Name</Typography>
@@ -420,7 +420,7 @@ const options = {
           <Input placeholder="Check it out" />
         </InputGroup>
         </Col>
-        <Col>
+        <Col xs="auto">
         <InputGroup>
           <Typography>Vaccine Type</Typography>
           <Input placeholder="Check it out" />
