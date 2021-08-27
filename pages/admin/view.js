@@ -410,15 +410,6 @@ const options = {
     <GridContainer>
       <Dialog onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
-          <Tabs
-		    indicatorColor="primary"
-		    textColor="primary"
-		    centered
-		  >
-		    <Tab label="Item One" />
-		    <Tab label="Item Two" />
-		    <Tab label="Item Three" />
-        </Tabs>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>Vaccine Name</InputGroupText>
