@@ -419,11 +419,6 @@ const options = {
 		    <Tab label="Item Three" />
         </Tabs>
       <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          <InputGroupText>
-            <Input addon type="checkbox" aria-label="Checkbox for following text input" />
-          </InputGroupText>
-        </InputGroupAddon>
         <Input placeholder="Check it out" />
       </InputGroup>
         <DialogActions>
