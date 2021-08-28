@@ -442,6 +442,12 @@ const options = {
                 <Typography gutterBottom variant="subtitle1">
                   Standard license
                 </Typography>
+                        <InputGroup>
+				          <InputGroupAddon addonType="prepend">
+				            <Typography>Vaccine Name</Typography>
+				          </InputGroupAddon>
+				          <Input placeholder="Check it out" />
+                </InputGroup>
               </Grid>
             </Grid>
             <Grid item>
@@ -457,18 +463,6 @@ const options = {
         </Grid>
       </Paper>
     </div>
-        <InputGroup>
-          <InputGroupAddon addonType="prepend">
-            <Typography>Vaccine Name</Typography>
-          </InputGroupAddon>
-          <Input placeholder="Check it out" />
-        </InputGroup>
-        <InputGroup>
-          <InputGroupAddon addonType="prepend">
-            <Typography>Vaccine Type</Typography>
-          </InputGroupAddon>
-          <Input placeholder="Check it out" />
-        </InputGroup>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
