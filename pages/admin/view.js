@@ -446,33 +446,29 @@ const options = {
             </Grid>
             <Grid item>
               <Typography variant="subtitle1">$19.00</Typography>
+                      <InputGroup>
+			            <InputGroupAddon addonType="prepend">
+			              <Typography>Vaccine Type</Typography>
+			            </InputGroupAddon>
+			            <Input placeholder="Check it out" />
+                       </InputGroup>
             </Grid>
           </Grid>
         </Grid>
       </Paper>
     </div>
-        <div>
-        <Container >
-        <Row>
-        <Col>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <Typography>Vaccine Name</Typography>
           </InputGroupAddon>
           <Input placeholder="Check it out" />
         </InputGroup>
-        </Col>
-        <Col>
         <InputGroup>
           <InputGroupAddon addonType="prepend">
             <Typography>Vaccine Type</Typography>
           </InputGroupAddon>
           <Input placeholder="Check it out" />
         </InputGroup>
-        </Col>
-        </Row>
-        </Container>
-        </div>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
