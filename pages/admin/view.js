@@ -439,9 +439,6 @@ const options = {
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  Standard license
-                </Typography>
                         <InputGroup>
 				          <InputGroupAddon addonType="prepend">
 				            <Typography>Vaccine Name</Typography>
@@ -451,7 +448,6 @@ const options = {
               </Grid>
             </Grid>
             <Grid item>
-              <Typography variant="subtitle1">$19.00</Typography>
                       <InputGroup>
 			            <InputGroupAddon addonType="prepend">
 			              <Typography>Vaccine Type</Typography>
