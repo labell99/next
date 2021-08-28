@@ -426,7 +426,6 @@ const options = {
   const res = data[modalInfo];
   console.log("data out2: ",res);
   console.log("data out3: ",res[2]);
-  const classes = useStyles();
 
   return (
     <GridContainer>
