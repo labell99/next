@@ -556,7 +556,7 @@ const options = {
 			  <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
-			 	    <Typography>Vaccine Type</Typography>
+			 	    <Typography>PANGO Link</Typography>
 			 	  </InputGroupAddon>
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
@@ -564,7 +564,33 @@ const options = {
 			  <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
-			 	    <Typography>Vaccine Target</Typography>
+			 	    <Typography>BV-BRC Link</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Amino Acid</Typography>
+			      </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Conserved</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Variant Targets</Typography>
 			 	  </InputGroupAddon>
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
