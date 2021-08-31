@@ -423,60 +423,59 @@ const options = {
     <GridContainer>
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
-  <div className={classes.root}>
-
-        <Grid container spacing={2} alignItems="center" justify="center"  >
+          <div className={classes.root}>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
-                        <InputGroup>
-				          <InputGroupAddon addonType="prepend">
-				            <Typography>Vaccine Name</Typography>
-				          </InputGroupAddon>
-				          <Input placeholder="Check it out" />
+                <InputGroup>
+				  <InputGroupAddon addonType="prepend">
+				    <Typography>Vaccine Name</Typography>
+				  </InputGroupAddon>
+				  <Input placeholder="Check it out" />
                 </InputGroup>
-            </Grid>
-            <Grid item>
-                      <InputGroup>
-			            <InputGroupAddon addonType="prepend">
-			              <Typography>Vaccine Type</Typography>
-			            </InputGroupAddon>
-			            <Input placeholder="Check it out" />
-                       </InputGroup>
-            </Grid>
-            <Grid item>
-                      <InputGroup>
-			            <InputGroupAddon addonType="prepend">
-			              <Typography>Vaccine Target</Typography>
-			            </InputGroupAddon>
-			            <Input placeholder="Check it out" />
-                       </InputGroup>
-            </Grid>
-        </Grid>
-         <Grid container spacing={2} alignItems="center" justify="center"  >
+              </Grid>
               <Grid item>
-                        <InputGroup>
-				          <InputGroupAddon addonType="prepend">
-				            <Typography>Emergence</Typography>
-				          </InputGroupAddon>
-				          <Input placeholder="Check it out" />
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Vaccine Type</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
                 </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Vaccine Target</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
             </Grid>
-            <Grid item>
-                      <InputGroup>
-			            <InputGroupAddon addonType="prepend">
-			              <Typography>Short Name</Typography>
-			            </InputGroupAddon>
-			            <Input placeholder="Check it out" />
-                       </InputGroup>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+              <Grid item>
+                <InputGroup>
+				  <InputGroupAddon addonType="prepend">
+				    <Typography>Emergence</Typography>
+				  </InputGroupAddon>
+				  <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Short Name</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Long Name</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
             </Grid>
-            <Grid item>
-                      <InputGroup>
-			            <InputGroupAddon addonType="prepend">
-			              <Typography>Long Name</Typography>
-			            </InputGroupAddon>
-			            <Input placeholder="Check it out" />
-                       </InputGroup>
-            </Grid>
-        </Grid>
          <Grid container spacing={2} alignItems="center" justify="center"  >
              <Grid item>
                       <InputGroup>
@@ -538,7 +537,7 @@ const options = {
 			             </Grid>
         </Grid>
         </Grid>
-    </div>
+          </div>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
