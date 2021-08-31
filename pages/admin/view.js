@@ -509,32 +509,32 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid container spacing={2} alignItems="center" justify="center"  >
-			    <Grid item>
-			      <InputGroup>
-			 	    <InputGroupAddon addonType="prepend">
-			 		  <Typography>Vaccine Application</Typography>
-			 		</InputGroupAddon>
-			 	    <Input placeholder="Check it out" />
-			      </InputGroup>
-			    </Grid>
-			    <Grid item>
-			      <InputGroup>
-			 	    <InputGroupAddon addonType="prepend">
-			 	      <Typography>Vaccine Type</Typography>
-			 	    </InputGroupAddon>
-			 	    <Input placeholder="Check it out" />
-			      </InputGroup>
-			    </Grid>
-			    <Grid item>
-			      <InputGroup>
-			 	    <InputGroupAddon addonType="prepend">
-			 	      <Typography>Vaccine Target</Typography>
-			 	    </InputGroupAddon>
-			 	    <Input placeholder="Check it out" />
-			      </InputGroup>
-			    </Grid>
-              </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Vaccine Application</Typography>
+			      </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Vaccine Type</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Vaccine Target</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
             </Grid>
           </div>
           <DialogActions>
