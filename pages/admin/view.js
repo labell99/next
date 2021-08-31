@@ -425,7 +425,7 @@ const options = {
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
   <div className={classes.root}>
-      <Paper className={classes.paper}>
+
         <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                         <InputGroup>
@@ -452,7 +452,7 @@ const options = {
                        </InputGroup>
             </Grid>
         </Grid>
-      </Paper>
+
     </div>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
