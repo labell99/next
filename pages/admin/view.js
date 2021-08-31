@@ -596,6 +596,84 @@ const options = {
 			    </InputGroup>
 			  </Grid>
             </Grid>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Description</Typography>
+			      </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Category</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Type</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Subcategory</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			  <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>IPReference</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+            </Grid>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Phenotypes</Typography>
+			      </InputGroupAddon>
+			      <TextField
+				    id="outlined-multiline-flexible"
+				    label="Multiline"
+				    multiline
+				    rowsMax="3"
+				    className={classes.textField}
+				    margin="normal"
+				    variant="outlined"
+                  />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Publication Source</Typography>
+			      </InputGroupAddon>
+			      <TextField
+				    id="outlined-multiline-flexible"
+				    label="Multiline"
+				    multiline
+				    rowsMax="3"
+					className={classes.textField}
+					margin="normal"
+				    variant="outlined"
+                  />
+                </InputGroup>
+              </Grid>
+            </Grid>
           </div>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
