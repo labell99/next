@@ -455,7 +455,7 @@ const options = {
               <Grid item>
                         <InputGroup>
 				          <InputGroupAddon addonType="prepend">
-				            <Typography>Vaccine Name</Typography>
+				            <Typography>Emergence</Typography>
 				          </InputGroupAddon>
 				          <Input placeholder="Check it out" />
                 </InputGroup>
@@ -463,7 +463,7 @@ const options = {
             <Grid item>
                       <InputGroup>
 			            <InputGroupAddon addonType="prepend">
-			              <Typography>Vaccine Type</Typography>
+			              <Typography>Short Name</Typography>
 			            </InputGroupAddon>
 			            <Input placeholder="Check it out" />
                        </InputGroup>
@@ -471,7 +471,7 @@ const options = {
             <Grid item>
                       <InputGroup>
 			            <InputGroupAddon addonType="prepend">
-			              <Typography>Vaccine Type</Typography>
+			              <Typography>Long Name</Typography>
 			            </InputGroupAddon>
 			            <Input placeholder="Check it out" />
                        </InputGroup>
