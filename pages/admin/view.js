@@ -435,17 +435,14 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
   <div className={classes.root}>
       <Paper className={classes.paper}>
-        <Grid container spacing={2} spacing={0} direction="column" alignItems="center" justify="center"  >
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
+        <Grid container spacing={0} direction="column" alignItems="center" justify="center"  >
+              <Grid item>
                         <InputGroup>
 				          <InputGroupAddon addonType="prepend">
 				            <Typography>Vaccine Name</Typography>
 				          </InputGroupAddon>
 				          <Input placeholder="Check it out" />
                 </InputGroup>
-              </Grid>
             </Grid>
             <Grid item>
                       <InputGroup>
@@ -463,7 +460,6 @@ const options = {
 			            <Input placeholder="Check it out" />
                        </InputGroup>
             </Grid>
-          </Grid>
         </Grid>
       </Paper>
     </div>
