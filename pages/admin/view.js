@@ -492,8 +492,8 @@ const options = {
 				    variant="outlined"
                   />
                 </InputGroup>
-             </Grid>
-             <Grid item>
+              </Grid>
+              <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>FACTA. Genome</Typography>
@@ -508,8 +508,8 @@ const options = {
 				    variant="outlined"
                   />
                 </InputGroup>
-             </Grid>
-             <Grid container spacing={2} alignItems="center" justify="center"  >
+              </Grid>
+              <Grid container spacing={2} alignItems="center" justify="center"  >
 			    <Grid item>
 			      <InputGroup>
 			 	    <InputGroupAddon addonType="prepend">
@@ -534,14 +534,14 @@ const options = {
 			 	    <Input placeholder="Check it out" />
 			      </InputGroup>
 			    </Grid>
-             </Grid>
-        </Grid>
+              </Grid>
+            </Grid>
           </div>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-        </DialogActions>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Cancel
+            </Button>
+          </DialogActions>
       </Dialog>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
