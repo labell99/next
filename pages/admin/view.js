@@ -474,6 +474,13 @@ const options = {
 			              <Typography>Long Name</Typography>
 			            </InputGroupAddon>
 			            <Input placeholder="Check it out" />
+                       </InputGroup>
+            </Grid>
+             <Grid item>
+                      <InputGroup>
+			            <InputGroupAddon addonType="prepend">
+			              <Typography>FACTA. Target</Typography>
+			            </InputGroupAddon>
 			            <TextField
 						          id="outlined-multiline-flexible"
 						          label="Multiline"
@@ -486,7 +493,6 @@ const options = {
                        </InputGroup>
             </Grid>
         </Grid>
-
     </div>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
