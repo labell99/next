@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    backgroundColor: 'transparent',
     padding: theme.spacing(2),
     margin: 'auto',
     maxWidth: 500,
