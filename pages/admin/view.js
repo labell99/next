@@ -476,6 +476,8 @@ const options = {
 			            <Input placeholder="Check it out" />
                        </InputGroup>
             </Grid>
+        </Grid>
+         <Grid container spacing={2} alignItems="center" justify="center"  >
              <Grid item>
                       <InputGroup>
 			            <InputGroupAddon addonType="prepend">
@@ -491,7 +493,23 @@ const options = {
 						          variant="outlined"
                        />
                        </InputGroup>
-            </Grid>
+             </Grid>
+             <Grid item>
+                      <InputGroup>
+			            <InputGroupAddon addonType="prepend">
+			              <Typography>FACTA. Genome</Typography>
+			            </InputGroupAddon>
+			            <TextField
+						          id="outlined-multiline-flexible"
+						          label="Multiline"
+						          multiline
+						          rowsMax="3"
+						          className={classes.textField}
+						          margin="normal"
+						          variant="outlined"
+                       />
+                       </InputGroup>
+             </Grid>
         </Grid>
     </div>
         <DialogActions>
