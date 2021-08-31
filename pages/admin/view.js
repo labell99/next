@@ -476,66 +476,65 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
-         <Grid container spacing={2} alignItems="center" justify="center"  >
-             <Grid item>
-                      <InputGroup>
-			            <InputGroupAddon addonType="prepend">
-			              <Typography>FACTA. Target</Typography>
-			            </InputGroupAddon>
-			            <TextField
-						          id="outlined-multiline-flexible"
-						          label="Multiline"
-						          multiline
-						          rowsMax="3"
-						          className={classes.textField}
-						          margin="normal"
-						          variant="outlined"
-                       />
-                       </InputGroup>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>FACTA. Target</Typography>
+			      </InputGroupAddon>
+			      <TextField
+				    id="outlined-multiline-flexible"
+				    label="Multiline"
+				    multiline
+				    rowsMax="3"
+				    className={classes.textField}
+				    margin="normal"
+				    variant="outlined"
+                  />
+                </InputGroup>
              </Grid>
              <Grid item>
-                      <InputGroup>
-			            <InputGroupAddon addonType="prepend">
-			              <Typography>FACTA. Genome</Typography>
-			            </InputGroupAddon>
-			            <TextField
-						          id="outlined-multiline-flexible"
-						          label="Multiline"
-						          multiline
-						          rowsMax="3"
-						          className={classes.textField}
-						          margin="normal"
-						          variant="outlined"
-                       />
-                       </InputGroup>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>FACTA. Genome</Typography>
+			      </InputGroupAddon>
+			      <TextField
+				    id="outlined-multiline-flexible"
+				    label="Multiline"
+				    multiline
+				    rowsMax="3"
+					className={classes.textField}
+					margin="normal"
+				    variant="outlined"
+                  />
+                </InputGroup>
              </Grid>
+             <Grid container spacing={2} alignItems="center" justify="center"  >
+			    <Grid item>
+			      <InputGroup>
+			 	    <InputGroupAddon addonType="prepend">
+			 		  <Typography>Vaccine Application</Typography>
+			 		</InputGroupAddon>
+			 	    <Input placeholder="Check it out" />
+			      </InputGroup>
+			    </Grid>
+			    <Grid item>
+			      <InputGroup>
+			 	    <InputGroupAddon addonType="prepend">
+			 	      <Typography>Vaccine Type</Typography>
+			 	    </InputGroupAddon>
+			 	    <Input placeholder="Check it out" />
+			      </InputGroup>
+			    </Grid>
+			    <Grid item>
+			      <InputGroup>
+			 	    <InputGroupAddon addonType="prepend">
+			 	      <Typography>Vaccine Target</Typography>
+			 	    </InputGroupAddon>
+			 	    <Input placeholder="Check it out" />
+			      </InputGroup>
+			    </Grid>
              </Grid>
-                     <Grid container spacing={2} alignItems="center" justify="center"  >
-			               <Grid item>
-			                         <InputGroup>
-			 				          <InputGroupAddon addonType="prepend">
-			 				            <Typography>Vaccine Application</Typography>
-			 				          </InputGroupAddon>
-			 				          <Input placeholder="Check it out" />
-			                 </InputGroup>
-			             </Grid>
-			             <Grid item>
-			                       <InputGroup>
-			 			            <InputGroupAddon addonType="prepend">
-			 			              <Typography>Vaccine Type</Typography>
-			 			            </InputGroupAddon>
-			 			            <Input placeholder="Check it out" />
-			                        </InputGroup>
-			             </Grid>
-			             <Grid item>
-			                       <InputGroup>
-			 			            <InputGroupAddon addonType="prepend">
-			 			              <Typography>Vaccine Target</Typography>
-			 			            </InputGroupAddon>
-			 			            <Input placeholder="Check it out" />
-			                        </InputGroup>
-			             </Grid>
-        </Grid>
         </Grid>
           </div>
         <DialogActions>
