@@ -435,7 +435,7 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
   <div className={classes.root}>
       <Paper className={classes.paper}>
-        <Grid container spacing={0} direction="column" alignItems="center" justify="center"  >
+        <Grid container spacing={0} direction="column" justify="center"  >
               <Grid item>
                         <InputGroup>
 				          <InputGroupAddon addonType="prepend">
