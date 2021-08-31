@@ -510,6 +510,7 @@ const options = {
                        />
                        </InputGroup>
              </Grid>
+             </Grid>
                      <Grid container spacing={2} alignItems="center" justify="center"  >
 			               <Grid item>
 			                         <InputGroup>
