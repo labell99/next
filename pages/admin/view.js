@@ -794,6 +794,24 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
+            <Grid container spacing={2} alignItems="center" justify="center"  >
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>AmpTec_Sourcecode</Typography>
+			      </InputGroupAddon>
+			      <TextField
+				    id="outlined-multiline-flexible"
+				    label="Multiline"
+				    multiline
+				    rowsMax="3"
+				    className={classes.textField}
+				    margin="normal"
+				    variant="outlined"
+                  />
+                </InputGroup>
+              </Grid>
+            </Grid>
           </div>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
