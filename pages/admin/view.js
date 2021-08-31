@@ -474,6 +474,15 @@ const options = {
 			              <Typography>Long Name</Typography>
 			            </InputGroupAddon>
 			            <Input placeholder="Check it out" />
+			            <TextField
+						          id="outlined-multiline-flexible"
+						          label="Multiline"
+						          multiline
+						          rowsMax="3"
+						          className={classes.textField}
+						          margin="normal"
+						          variant="outlined"
+                       />
                        </InputGroup>
             </Grid>
         </Grid>
