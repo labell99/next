@@ -445,7 +445,7 @@ const options = {
             <Grid item>
                       <InputGroup>
 			            <InputGroupAddon addonType="prepend">
-			              <Typography>Vaccine Type</Typography>
+			              <Typography>Vaccine Target</Typography>
 			            </InputGroupAddon>
 			            <Input placeholder="Check it out" />
                        </InputGroup>
