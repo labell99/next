@@ -677,41 +677,50 @@ const options = {
             </Grid>
               </AccordionDetails>
             </Accordion>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Phenotypes</Typography>
-			      </InputGroupAddon>
-			      <TextField
-				    id="outlined-multiline-flexible"
-				    label="Multiline"
-				    multiline
-				    rowsMax="3"
-				    className={classes.textField}
-				    margin="normal"
-				    variant="outlined"
-                  />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Publication Source</Typography>
-			      </InputGroupAddon>
-			      <TextField
-				    id="outlined-multiline-flexible"
-				    label="Multiline"
-				    multiline
-				    rowsMax="3"
-					className={classes.textField}
-					margin="normal"
-				    variant="outlined"
-                  />
-                </InputGroup>
-              </Grid>
-            </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography className={classes.heading}>Accordion 1</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+                  <Grid item>
+                    <InputGroup>
+			                <InputGroupAddon addonType="prepend">
+			                  <Typography>Phenotypes</Typography>
+			                </InputGroupAddon>
+			                <TextField
+				                id="outlined-multiline-flexible"
+				                label="Multiline"
+				                multiline
+				                rowsMax="3"
+				                className={classes.textField}
+				                margin="normal"
+				                variant="outlined"
+                      />
+                    </InputGroup>
+                  </Grid>
+                  <Grid item>
+                    <InputGroup>
+			                <InputGroupAddon addonType="prepend">
+			                  <Typography>Publication Source</Typography>
+			                </InputGroupAddon>
+			                <TextField
+				                id="outlined-multiline-flexible"
+				                label="Multiline"
+				                multiline
+				                rowsMax="3"
+					              className={classes.textField}
+					              margin="normal"
+				                variant="outlined"
+                      />
+                    </InputGroup>
+                  </Grid>
+                </Grid>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -745,7 +754,7 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
+                <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -779,6 +788,8 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
+              </AccordionDetails>
+            </Accordion>
             <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
