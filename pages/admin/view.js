@@ -437,12 +437,6 @@ const options = {
           <Typography className={classes.heading}>Accordion 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
             <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
@@ -495,6 +489,8 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
+        </AccordionDetails>
+      </Accordion>
             <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
