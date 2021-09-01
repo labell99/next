@@ -458,15 +458,6 @@ const options = {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography className={classes.heading}>Disabled Accordion</Typography>
-        </AccordionSummary>
-      </Accordion>
             <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
