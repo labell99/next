@@ -675,6 +675,58 @@ const options = {
 			    </InputGroup>
 			  </Grid>
             </Grid>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+              <Grid item>
+                <InputGroup>
+				  <InputGroupAddon addonType="prepend">
+				    <Typography>Signal_Peptide_e</Typography>
+				  </InputGroupAddon>
+				  <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>NTD_Mutation</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>RBD_Mutation</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+            </Grid>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+              <Grid item>
+                <InputGroup>
+				  <InputGroupAddon addonType="prepend">
+				    <Typography>S1_S2_Mutation</Typography>
+				  </InputGroupAddon>
+				  <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>S2_Mutation</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+              <Grid item>
+                <InputGroup>
+			      <InputGroupAddon addonType="prepend">
+			        <Typography>Sequences</Typography>
+			      </InputGroupAddon>
+			      <Input placeholder="Check it out" />
+                </InputGroup>
+              </Grid>
+            </Grid>
               </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -788,70 +840,6 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className={classes.heading}>Accordion 1</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
-                <InputGroup>
-				  <InputGroupAddon addonType="prepend">
-				    <Typography>Signal_Peptide_e</Typography>
-				  </InputGroupAddon>
-				  <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>NTD_Mutation</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>RBD_Mutation</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-            </Grid>
-                <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
-                <InputGroup>
-				  <InputGroupAddon addonType="prepend">
-				    <Typography>S1_S2_Mutation</Typography>
-				  </InputGroupAddon>
-				  <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>S2_Mutation</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Sequences</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-            </Grid>
-
               </AccordionDetails>
             </Accordion>
             <Accordion>
