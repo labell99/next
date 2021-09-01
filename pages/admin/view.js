@@ -570,8 +570,17 @@ const options = {
                 </Grid>
               </AccordionDetails>
             </Accordion>  
-            <Grid container spacing={2} alignItems="center" justify="center"  >
-			  <Grid item>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography className={classes.heading}>Accordion 1</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Vaccine Application</Typography>
@@ -579,7 +588,7 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>PANGO Link</Typography>
@@ -587,7 +596,7 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>BV-BRC Link</Typography>
@@ -595,8 +604,8 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-            </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
+                </Grid>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
 			  <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
@@ -622,7 +631,7 @@ const options = {
 			    </InputGroup>
 			  </Grid>
             </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
+                <Grid container spacing={2} alignItems="center" justify="center"  >
 			  <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
@@ -648,7 +657,7 @@ const options = {
 			    </InputGroup>
 			  </Grid>
             </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
+                <Grid container spacing={2} alignItems="center" justify="center"  >
 			  <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
@@ -666,6 +675,8 @@ const options = {
 			    </InputGroup>
 			  </Grid>
             </Grid>
+              </AccordionDetails>
+            </Accordion>
             <Grid container spacing={2} alignItems="center" justify="center"  >
               <Grid item>
                 <InputGroup>
