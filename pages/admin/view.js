@@ -428,71 +428,80 @@ const options = {
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography className={classes.heading}>Accordion 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
-                <InputGroup>
-				  <InputGroupAddon addonType="prepend">
-				    <Typography>Vaccine Name</Typography>
-				  </InputGroupAddon>
-				  <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Vaccine Type</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Vaccine Target</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-            </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
-                <InputGroup>
-				  <InputGroupAddon addonType="prepend">
-				    <Typography>Emergence</Typography>
-				  </InputGroupAddon>
-				  <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Short Name</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Long Name</Typography>
-			      </InputGroupAddon>
-			      <Input placeholder="Check it out" />
-                </InputGroup>
-              </Grid>
-            </Grid>
-        </AccordionDetails>
-      </Accordion>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography className={classes.heading}>Accordion 1</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+                  <Grid item>
+                    <InputGroup>
+				              <InputGroupAddon addonType="prepend">
+				                <Typography>Vaccine Name</Typography>
+				              </InputGroupAddon>
+				              <Input placeholder="Check it out" />
+                    </InputGroup>
+                  </Grid>
+                  <Grid item>
+                    <InputGroup>
+			                <InputGroupAddon addonType="prepend">
+			                  <Typography>Vaccine Type</Typography>
+			                </InputGroupAddon>
+			                <Input placeholder="Check it out" />
+                    </InputGroup>
+                  </Grid>
+                  <Grid item>
+                    <InputGroup>
+			                <InputGroupAddon addonType="prepend">
+			                  <Typography>Vaccine Target</Typography>
+			                </InputGroupAddon>
+			                <Input placeholder="Check it out" />
+                    </InputGroup>
+                  </Grid>
+                </Grid>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+                  <Grid item>
+                    <InputGroup>
+				              <InputGroupAddon addonType="prepend">
+				                <Typography>Emergence</Typography>
+				              </InputGroupAddon>
+				              <Input placeholder="Check it out" />
+                    </InputGroup>
+                  </Grid>
+                  <Grid item>
+                    <InputGroup>
+			                <InputGroupAddon addonType="prepend">
+			                  <Typography>Short Name</Typography>
+			                </InputGroupAddon>
+			                <Input placeholder="Check it out" />
+                    </InputGroup>
+                  </Grid>
+                  <Grid item>
+                    <InputGroup>
+			                <InputGroupAddon addonType="prepend">
+			                  <Typography>Long Name</Typography>
+			                </InputGroupAddon>
+			                <Input placeholder="Check it out" />
+                    </InputGroup>
+                  </Grid>
+                </Grid>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography className={classes.heading}>Accordion 1</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>FACTA. Target</Typography>
@@ -508,25 +517,25 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid item>
-                <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>FACTA. Genome</Typography>
-			      </InputGroupAddon>
-			      <TextField
-				    id="outlined-multiline-flexible"
-				    label="Multiline"
-				    multiline
-				    rowsMax="3"
-					className={classes.textField}
-					margin="normal"
-				    variant="outlined"
-                  />
-                </InputGroup>
-              </Grid>
-            </Grid>
-            <Grid container spacing={2} alignItems="center" justify="center"  >
-              <Grid item>
+                  <Grid item>
+                  <InputGroup>
+			              <InputGroupAddon addonType="prepend">
+			                <Typography>FACTA. Genome</Typography>
+			              </InputGroupAddon>
+			              <TextField
+				              id="outlined-multiline-flexible"
+				              label="Multiline"
+				              multiline
+				              rowsMax="3"
+					            className={classes.textField}
+					            margin="normal"
+				              variant="outlined"
+                    />
+                  </InputGroup>
+                </Grid>
+                </Grid>
+                <Grid container spacing={2} alignItems="center" justify="center"  >
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Spike Variants</Typography>
@@ -542,23 +551,25 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
-			      <InputGroupAddon addonType="prepend">
-			        <Typography>Other Variants</Typography>
-			      </InputGroupAddon>
-			      <TextField
-				    id="outlined-multiline-flexible"
-				    label="Multiline"
-				    multiline
-				    rowsMax="3"
-					className={classes.textField}
-					margin="normal"
-				    variant="outlined"
+			            <InputGroupAddon addonType="prepend">
+			              <Typography>Other Variants</Typography>
+			            </InputGroupAddon>
+			            <TextField
+				            id="outlined-multiline-flexible"
+				            label="Multiline"
+				            multiline
+				            rowsMax="3"
+					          className={classes.textField}
+					          margin="normal"
+				            variant="outlined"
                   />
                 </InputGroup>
               </Grid>
-            </Grid>
+                </Grid>
+              </AccordionDetails>
+            </Accordion>  
             <Grid container spacing={2} alignItems="center" justify="center"  >
 			  <Grid item>
 			    <InputGroup>
