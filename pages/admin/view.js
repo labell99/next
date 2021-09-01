@@ -840,17 +840,6 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
-                id="panel2a-header"
-              >
-                <Typography className={classes.heading}>Accordion 2</Typography>
-              </AccordionSummary>
-              <AccordionDetails>            
                 <Grid container spacing={2} alignItems="center" justify="center"  >
                   <Grid item>
                     <InputGroup>
