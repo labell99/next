@@ -434,7 +434,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>Characterisation</Typography>
+                <Typography variant="h1" component="h2" className={classes.heading}>Characterisation</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container direction="column" spacing={2}>
