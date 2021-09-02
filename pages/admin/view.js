@@ -727,8 +727,8 @@ const options = {
                 <Typography className={classes.heading}>Reference</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Grid container spacing={4}  >
-                  <Grid item>
+                <Grid container spacing={24}  >
+                  <Grid item xs={4}>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
 			                  <Typography>Phenotypes</Typography>
@@ -744,7 +744,7 @@ const options = {
                       />
                     </InputGroup>
                   </Grid>
-                  <Grid item>
+                  <Grid item xs={4}>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
 			                  <Typography>Publication Source</Typography>
@@ -761,8 +761,8 @@ const options = {
                     </InputGroup>
                   </Grid>
                 </Grid>
-                <Grid container spacing={4}  >
-              <Grid item>
+                <Grid container spacing={24}  >
+              <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>REFlinks</Typography>
@@ -778,7 +778,7 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid item>
+              <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Users</Typography>
@@ -795,8 +795,8 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
-                <Grid container spacing={4}  >
-              <Grid item>
+                <Grid container spacing={24}  >
+              <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Notes</Typography>
@@ -812,10 +812,10 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid item>
+              <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
-			        <Typography>Source Note(SIB)</Typography>
+			        <Typography>Source Note (SIB)</Typography>
 			      </InputGroupAddon>
 			      <TextField
 				    id="outlined-multiline-flexible"
@@ -829,8 +829,8 @@ const options = {
                 </InputGroup>
               </Grid>
             </Grid>
-                <Grid container spacing={4}  >
-                  <Grid item>
+                <Grid container spacing={24}  >
+                  <Grid item xs={4}>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
 			                  <Typography>AmpTec_Sourcecode</Typography>
