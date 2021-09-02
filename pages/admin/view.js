@@ -648,7 +648,8 @@ const options = {
                 <Typography className={classes.heading}>Structure</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Grid container spacing={2} alignItems="center" justify="center"  >
+                <Grid container direction="row" spacing={2}>
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -658,7 +659,7 @@ const options = {
 				    id="outlined-multiline-flexible"
 				    label="Multiline"
 				    multiline
-				    rowsMax="3"
+				    fullWidth
 				    className={classes.textField}
 				    margin="normal"
 				    variant="outlined"
@@ -674,7 +675,7 @@ const options = {
 				              id="outlined-multiline-flexible"
 				              label="Multiline"
 				              multiline
-				              rowsMax="3"
+				              fullWidth
 					            className={classes.textField}
 					            margin="normal"
 				              variant="outlined"
@@ -682,7 +683,7 @@ const options = {
                   </InputGroup>
                 </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="center"  >
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -692,7 +693,7 @@ const options = {
 				    id="outlined-multiline-flexible"
 				    label="Multiline"
 				    multiline
-				    rowsMax="3"
+				    fullWidth
 				    className={classes.textField}
 				    margin="normal"
 				    variant="outlined"
@@ -708,13 +709,14 @@ const options = {
 				            id="outlined-multiline-flexible"
 				            label="Multiline"
 				            multiline
-				            rowsMax="3"
+				            fullWidth
 					          className={classes.textField}
 					          margin="normal"
 				            variant="outlined"
                   />
                 </InputGroup>
               </Grid>
+                </Grid>
                 </Grid>
               </AccordionDetails>
             </Accordion>  
