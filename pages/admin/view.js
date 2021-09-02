@@ -727,7 +727,7 @@ const options = {
                 <Typography className={classes.heading}>Reference</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Grid container spacing={4}  direction="col">
+                <Grid container spacing={4}>
                   <Grid item xs={4}>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
@@ -744,6 +744,8 @@ const options = {
                       />
                     </InputGroup>
                   </Grid>
+                </Grid>
+                <Grid container spacing={4}>
                   <Grid item xs={4}>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
