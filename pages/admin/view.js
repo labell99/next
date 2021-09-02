@@ -647,7 +647,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>Structure</Typography>
+                <Typography variant="h5" className={classes.heading}>Structure</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container direction="row" spacing={2}>
@@ -728,7 +728,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>References</Typography>
+                <Typography variant="h5" className={classes.heading}>References</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container direction="row" spacing={2}>
