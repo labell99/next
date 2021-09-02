@@ -745,7 +745,7 @@ const options = {
                     </InputGroup>
                   </Grid>
                 </Grid>
-                <br />
+                <p />
                 <Grid container spacing={2} alignItems="center" justify="center" direction="row">
                   <Grid item>
                     <InputGroup>
@@ -764,7 +764,7 @@ const options = {
                     </InputGroup>
                   </Grid>
                 </Grid>
-                <br />
+                <p />
                 <Grid container spacing={2} alignItems="center" justify="center" direction="row">
                   <Grid item>
                 <InputGroup>
