@@ -728,7 +728,7 @@ const options = {
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container direction="row" spacing={2}>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
@@ -746,7 +746,7 @@ const options = {
                     </InputGroup>
                   </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
@@ -764,7 +764,7 @@ const options = {
                     </InputGroup>
                   </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -782,7 +782,7 @@ const options = {
                 </InputGroup>
               </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                    <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -800,7 +800,7 @@ const options = {
                 </InputGroup>
               </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -818,7 +818,7 @@ const options = {
                 </InputGroup>
               </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
@@ -836,7 +836,7 @@ const options = {
                 </InputGroup>
               </Grid>
                 </Grid>
-                <Grid container spacing={2} alignItems="center" justify="left" direction="column">
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
                   <Grid item>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
