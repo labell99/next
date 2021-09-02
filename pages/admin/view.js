@@ -738,7 +738,6 @@ const options = {
 				                id="outlined-multiline-flexible"
 				                label="Multiline"
 				                multiline
-				                rowsMax="3"
 				                className={classes.textField}
 				                margin="normal"
 				                variant="outlined"
