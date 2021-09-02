@@ -815,7 +815,7 @@ const options = {
               <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
-			        <Typography>Variant Source Note (SIB)</Typography>
+			        <Typography>Source Note(SIB)</Typography>
 			      </InputGroupAddon>
 			      <TextField
 				    id="outlined-multiline-flexible"
