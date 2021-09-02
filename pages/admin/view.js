@@ -741,6 +741,7 @@ const options = {
 				                className={classes.textField}
 				                margin="normal"
 				                variant="outlined"
+                        fullWidth
                       />
                     </InputGroup>
                   </Grid>
@@ -755,7 +756,7 @@ const options = {
 				                id="outlined-multiline-flexible"
 				                label="Multiline"
 				                multiline
-				                rowsMax="3"
+				                fullWidth
 					              className={classes.textField}
 					              margin="normal"
 				                variant="outlined"
@@ -773,7 +774,7 @@ const options = {
 				    id="outlined-multiline-flexible"
 				    label="Multiline"
 				    multiline
-				    rowsMax="3"
+				    fullWidth
 				    className={classes.textField}
 				    margin="normal"
 				    variant="outlined"
@@ -791,7 +792,7 @@ const options = {
 				    id="outlined-multiline-flexible"
 				    label="Multiline"
 				    multiline
-				    rowsMax="3"
+				    fullWidth
 					className={classes.textField}
 					margin="normal"
 				    variant="outlined"
@@ -809,7 +810,7 @@ const options = {
 				    id="outlined-multiline-flexible"
 				    label="Multiline"
 				    multiline
-				    rowsMax="3"
+				    fullWidth
 				    className={classes.textField}
 				    margin="normal"
 				    variant="outlined"
@@ -827,7 +828,7 @@ const options = {
 				    id="outlined-multiline-flexible"
 				    label="Multiline"
 				    multiline
-				    rowsMax="3"
+				    fullWidth
 					className={classes.textField}
 					margin="normal"
 				    variant="outlined"
@@ -845,7 +846,7 @@ const options = {
 				                id="outlined-multiline-flexible"
 				                label="Multiline"
 				                multiline
-				                rowsMax="3"
+				                fullWidth
 				                className={classes.textField}
 				                margin="normal"
 				                variant="outlined"
