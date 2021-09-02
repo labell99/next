@@ -517,7 +517,7 @@ const options = {
 			  </Grid>
                 </Grid>
                 <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Amino Acid</Typography>
@@ -525,7 +525,7 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Conserved</Typography>
@@ -533,7 +533,7 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Variant Targets</Typography>
@@ -541,9 +541,9 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-            </Grid>
+                </Grid>
                 <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Description</Typography>
@@ -551,7 +551,7 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Category</Typography>
@@ -559,7 +559,7 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-			  <Grid item>
+			            <Grid item>
 			    <InputGroup>
 			 	  <InputGroupAddon addonType="prepend">
 			 	    <Typography>Type</Typography>
@@ -567,27 +567,9 @@ const options = {
 			 	  <Input placeholder="Check it out" />
 			    </InputGroup>
 			  </Grid>
-            </Grid>
+                </Grid>
                 <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
-			  <Grid item>
-			    <InputGroup>
-			 	  <InputGroupAddon addonType="prepend">
-			 	    <Typography>Subcategory</Typography>
-			 	  </InputGroupAddon>
-			 	  <Input placeholder="Check it out" />
-			    </InputGroup>
-			  </Grid>
-			  <Grid item>
-			    <InputGroup>
-			 	  <InputGroupAddon addonType="prepend">
-			 	    <Typography>IPReference</Typography>
-			 	  </InputGroupAddon>
-			 	  <Input placeholder="Check it out" />
-			    </InputGroup>
-			  </Grid>
-            </Grid>
-                <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
 				  <InputGroupAddon addonType="prepend">
 				    <Typography>Signal_Peptide_e</Typography>
@@ -595,7 +577,7 @@ const options = {
 				  <Input placeholder="Check it out" />
                 </InputGroup>
               </Grid>
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>NTD_Mutation</Typography>
@@ -603,7 +585,7 @@ const options = {
 			      <Input placeholder="Check it out" />
                 </InputGroup>
               </Grid>
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>RBD_Mutation</Typography>
@@ -611,9 +593,9 @@ const options = {
 			      <Input placeholder="Check it out" />
                 </InputGroup>
               </Grid>
-            </Grid>
+                </Grid>
                 <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
 				  <InputGroupAddon addonType="prepend">
 				    <Typography>S1_S2_Mutation</Typography>
@@ -621,7 +603,7 @@ const options = {
 				  <Input placeholder="Check it out" />
                 </InputGroup>
               </Grid>
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>S2_Mutation</Typography>
@@ -629,7 +611,7 @@ const options = {
 			      <Input placeholder="Check it out" />
                 </InputGroup>
               </Grid>
-              <Grid item>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Sequences</Typography>
@@ -637,7 +619,25 @@ const options = {
 			      <Input placeholder="Check it out" />
                 </InputGroup>
               </Grid>
-            </Grid>
+                </Grid>
+                <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
+			            <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>Subcategory</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+			            <Grid item>
+			    <InputGroup>
+			 	  <InputGroupAddon addonType="prepend">
+			 	    <Typography>IPReference</Typography>
+			 	  </InputGroupAddon>
+			 	  <Input placeholder="Check it out" />
+			    </InputGroup>
+			  </Grid>
+                </Grid>
                 </Grid>
               </AccordionDetails>
             </Accordion>
