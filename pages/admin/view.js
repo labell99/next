@@ -434,7 +434,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>Accordion 1</Typography>
+                <Typography className={classes.heading}>Characterisation</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={2} alignItems="center" justify="center"  >
@@ -645,7 +645,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>Accordion 1</Typography>
+                <Typography className={classes.heading}>Structure</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={2} alignItems="center" justify="center"  >
@@ -724,7 +724,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={classes.heading}>Accordion 1</Typography>
+                <Typography className={classes.heading}>Reference</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={2} alignItems="center" justify="center"  >
