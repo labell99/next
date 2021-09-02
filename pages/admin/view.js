@@ -763,8 +763,8 @@ const options = {
                     </InputGroup>
                   </Grid>
                 </Grid>
-                <Grid container spacing={4}  direction="col">
-              <Grid item xs={4}>
+                <Grid container spacing={4}>
+                  <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>REFlinks</Typography>
@@ -780,7 +780,9 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid item xs={4}>
+                </Grid>
+                <Grid container spacing={4}>
+                   <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Users</Typography>
@@ -796,9 +798,9 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-            </Grid>
-                <Grid container spacing={4}  direction="col">
-              <Grid item xs={4}>
+                </Grid>
+                <Grid container spacing={4}>
+                  <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Notes</Typography>
@@ -814,7 +816,9 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-              <Grid item xs={4}>
+                </Grid>
+                <Grid container spacing={4}>
+                  <Grid item xs={4}>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Source Note (SIB)</Typography>
@@ -830,8 +834,8 @@ const options = {
                   />
                 </InputGroup>
               </Grid>
-            </Grid>
-                <Grid container spacing={4}  direction="col">
+                </Grid>
+                <Grid container spacing={4}>
                   <Grid item xs={4}>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
