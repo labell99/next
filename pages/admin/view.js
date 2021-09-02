@@ -728,7 +728,7 @@ const options = {
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={4}>
-                  <Grid item xs={4}>
+                  <Grid item>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
 			                  <Typography>Phenotypes</Typography>
@@ -746,7 +746,7 @@ const options = {
                   </Grid>
                 </Grid>
                 <Grid container spacing={4}>
-                  <Grid item xs={4}>
+                  <Grid item>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
 			                  <Typography>Publication Source</Typography>
@@ -764,7 +764,7 @@ const options = {
                   </Grid>
                 </Grid>
                 <Grid container spacing={4}>
-                  <Grid item xs={4}>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>REFlinks</Typography>
@@ -782,7 +782,7 @@ const options = {
               </Grid>
                 </Grid>
                 <Grid container spacing={4}>
-                   <Grid item xs={4}>
+                   <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Users</Typography>
@@ -800,7 +800,7 @@ const options = {
               </Grid>
                 </Grid>
                 <Grid container spacing={4}>
-                  <Grid item xs={4}>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Notes</Typography>
@@ -818,7 +818,7 @@ const options = {
               </Grid>
                 </Grid>
                 <Grid container spacing={4}>
-                  <Grid item xs={4}>
+                  <Grid item>
                 <InputGroup>
 			      <InputGroupAddon addonType="prepend">
 			        <Typography>Source Note (SIB)</Typography>
@@ -836,7 +836,7 @@ const options = {
               </Grid>
                 </Grid>
                 <Grid container spacing={4}>
-                  <Grid item xs={4}>
+                  <Grid item>
                     <InputGroup>
 			                <InputGroupAddon addonType="prepend">
 			                  <Typography>AmpTec_Sourcecode</Typography>
