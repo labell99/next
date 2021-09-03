@@ -49,7 +49,7 @@ function Dashboard() {
     <div>
       <GridContainer>
         <Card profile>
-		  <Image src={norvax} width={1642} height={878} layout={'fill'}/>
+		  <Image src={norvax} width={1642} height={878} layout='fixed'/>
 		</Card>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
