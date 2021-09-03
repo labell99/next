@@ -132,19 +132,19 @@ function View() {
           var sVariants = resultsets[i].SpikeVariants;
           var oVariants = resultsets[i].OtherVariants;
           var PANGO = resultsets[i].PANGO;
-		  var BVBRC = resultsets[i].BVBRC;
+          var BVBRC = resultsets[i].BVBRC;
           var AminoAcid = resultsets[i].AminoAcid;
           var Conserved = resultsets[i].Conserved;
           var VariantTargets = resultsets[i].VariantTargets;
           var Description = resultsets[i].Description;
           var Category = resultsets[i].Category;
-		  var Type = resultsets[i].Type;
+          var Type = resultsets[i].Type;
           var Subcategory = resultsets[i].Subcategory;
           var IPReference = resultsets[i].IPReference;
           var Phenotypes = resultsets[i].DOI;
           var PublicationSource = resultsets[i].PublicationSource;
           var REFlinks = resultsets[i].REFlinks;
-		  var Users = resultsets[i].Users;
+          var Users = resultsets[i].Users;
           var Notes = resultsets[i].Notes;
           var Notes2 = resultsets[i].Notes2;
 
