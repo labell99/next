@@ -526,6 +526,7 @@ const fixedItems = [
   }
 ];
 
+console.log("fixedItems ",fixedItems);
 
   return (
     <GridContainer>
@@ -535,7 +536,6 @@ const fixedItems = [
       <Accordion>
         {fixedItems.map((item, index) => (
               <p>{item}</p>
-              <p>{index}</p>
         ))}
       </Accordion>
             <Accordion>
