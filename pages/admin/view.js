@@ -535,7 +535,7 @@ console.log("fixedItems ",fixedItems);
           <div className={classes.root}>
       <Accordion>
         {fixedItems.map((item, index) => (
-              <p key="{item}">{item}</p>
+              <p key="{index}">{item.id}</p>
         ))}
       </Accordion>
             <Accordion>
