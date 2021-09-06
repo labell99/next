@@ -532,10 +532,10 @@ const fixedItems = [
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
-      <Accordion activeTab={1} isCollapsible checkbox>
+      <Accordion>
         {fixedItems.map((item, index) => (
-              <p>{item.content}</p>
-              {item.fields && item.fields.map(() => <div>Field</div>)}
+              <p>{item}</p>
+              <p>{index}</p>
         ))}
       </Accordion>
             <Accordion>
