@@ -90,6 +90,7 @@ function View() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
+  const [inp, setInp] = useState([""]);
 
   const popupDialog = (value) => {
     setModalOpen(!modalOpen);
@@ -526,7 +527,8 @@ const fixedItems = [
   }
 ];
 
-console.log("fixedItems ",fixedItems);
+setInp(fixedItems);
+console.log("fixedItems ",inp);
 
   return (
     <GridContainer>
@@ -534,8 +536,8 @@ console.log("fixedItems ",fixedItems);
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
       <Accordion>
-        {fixedItems.map((item, index) => (
-              <p key="{index}">{item.id}</p>
+        {inp.map(({item, index}) => (
+              <p key="{index}">{item.label}</p>
         ))}
       </Accordion>
             <Accordion>
