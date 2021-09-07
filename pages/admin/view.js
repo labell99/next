@@ -423,22 +423,10 @@ const options = {
   console.log("data out2: ",res);
   console.log("data out3: ",res[2]);
 
-const fixedItems = [
-  {
-    label: "FormGroup-0a",
-    content:
-      "FormGroup-0 FormGroup-0 FormGroup-0FormGroup-0 FormGroup-0 FormGroup-0"
-  },
-  {
-    label: "FormGroup-1",
-    content:
-      "FormGroup-1FormGroup-1FormGroup-1 FormGroup-1v FormGroup-1 FormGroup-1"
-  },
-  {
-    label: "FormGroup-2",
-    content: "FormGroup-2FormGroup-2 FormGroup-2 FormGroup-2 FormGroup-2"
-  }
-];
+  var entries=[
+    {id:1, name: "first entry", text:"first sample text"},
+    {id:2, name: "second entry", text:"second sample text"}
+  ];
 
   return (
     <GridContainer>
@@ -446,9 +434,8 @@ const fixedItems = [
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
       <Accordion>
-        {fixedItems.map((item, index) => (
-              <p key="{index}">{item.label}</p>
-        ))}
+        {entries.map((entry, index)=>(
+            <p key="{index}">{entry.text}</p>))}
       </Accordion>
             <Accordion>
               <AccordionSummary
