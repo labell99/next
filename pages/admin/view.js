@@ -427,101 +427,16 @@ const fixedItems = [
   {
     label: "FormGroup-0",
     content:
-      "FormGroup-0 FormGroup-0 FormGroup-0FormGroup-0 FormGroup-0 FormGroup-0",
-    fields: [
-      {
-        el: "input",
-        type: "text",
-        id: "pension-disability",
-        label: "Pension/Disability",
-        placeholder: "Pension/Disability",
-        value: "",
-        name: "pension-disability",
-        validation: "currency",
-        useValue: true,
-        charLimit: 6
-      },
-      {
-        el: "input",
-        type: "text",
-        id: "testing",
-        label: "Testing",
-        placeholder: "Testing",
-        value: "",
-        name: "testing",
-        validation: "currency",
-        useValue: true,
-        charLimit: 6
-      }
-    ]
+      "FormGroup-0 FormGroup-0 FormGroup-0FormGroup-0 FormGroup-0 FormGroup-0"
   },
   {
     label: "FormGroup-1",
     content:
-      "FormGroup-1FormGroup-1FormGroup-1 FormGroup-1v FormGroup-1 FormGroup-1",
-    fields: [
-      {
-        el: "input",
-        type: "text",
-        id: "testing",
-        label: "Testing",
-        placeholder: "Testing",
-        value: "",
-        name: "testing",
-        validation: "currency",
-        useValue: true,
-        charLimit: 6
-      },
-      {
-        el: "input",
-        type: "radio",
-        label: "Testing",
-        placeholder: "Testing",
-        name: "testing",
-        options: [
-          {
-            el: "input",
-            type: "radio",
-            label: "Choice1",
-            value: ""
-          },
-          {
-            el: "input",
-            type: "radio",
-            label: "Choice2",
-            value: ""
-          }
-        ]
-      }
-    ]
+      "FormGroup-1FormGroup-1FormGroup-1 FormGroup-1v FormGroup-1 FormGroup-1"
   },
   {
     label: "FormGroup-2",
-    content: "FormGroup-2FormGroup-2 FormGroup-2 FormGroup-2 FormGroup-2",
-    fields: [
-      {
-        el: "input",
-        type: "checkbox",
-        label: "Testing",
-        placeholder: "Testing",
-        name: "testing",
-        id: "testing",
-        options: [
-          {
-            el: "input",
-            type: "checkbox",
-            label: "Choice1",
-            value: ""
-          },
-          {
-            el: "input",
-            type: "checkbox",
-            label: "Choice2",
-            value: ""
-          }
-        ]
-      }
-    ]
+    content: "FormGroup-2FormGroup-2 FormGroup-2 FormGroup-2 FormGroup-2"
   }
 ];
 
