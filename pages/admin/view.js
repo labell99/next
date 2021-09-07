@@ -425,7 +425,7 @@ const options = {
 
 const fixedItems = [
   {
-    label: "FormGroup-0",
+    label: "FormGroup-0a",
     content:
       "FormGroup-0 FormGroup-0 FormGroup-0FormGroup-0 FormGroup-0 FormGroup-0"
   },
