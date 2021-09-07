@@ -31,7 +31,6 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-
 const getMuiTheme = () => createMuiTheme({
     overrides: {
       MUIDataTableBodyCell: {
@@ -536,7 +535,7 @@ console.log("fixedItems ",inp);
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
       <Accordion>
-        {inp.map(({item, index}) => (
+        {inp.map((item, index) => (
               <p key="{index}">{item.label}</p>
         ))}
       </Accordion>
