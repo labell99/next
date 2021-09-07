@@ -526,10 +526,8 @@ const fixedItems = [
   }
 ];
 
-setInp(fixedItems);
-console.log("fixedItems ",inp);
-
   return (
+    setInp(fixedItems);
     <GridContainer>
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
