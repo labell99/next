@@ -89,7 +89,6 @@ function View() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
-  const [inp, setInp] = useState([""]);
 
   const popupDialog = (value) => {
     setModalOpen(!modalOpen);
@@ -527,13 +526,12 @@ const fixedItems = [
 ];
 
   return (
-    setInp(fixedItems);
     <GridContainer>
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
       <Accordion>
-        {inp.map((item, index) => (
+        {fixedItems.map((item, index) => (
               <p key="{index}">{item.label}</p>
         ))}
       </Accordion>
