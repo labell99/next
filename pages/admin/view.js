@@ -432,9 +432,9 @@ const options = {
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
-
-          {entries.map(entry => { return <Accordion><p key={entry.id}>{entry.text}</p></Accordion>})}
-   
+<div>
+          {entries.map(entry => { <Accordion><p key={entry.id}>{entry.text}</p></Accordion>})}
+</div> 
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
