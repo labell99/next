@@ -432,9 +432,34 @@ const options = {
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
-<div>
-          {entries.map(entry => { <Accordion><p key={entry.id}>{entry.text}</p></Accordion>})}
-</div> 
+
+          {entries.map(entry => { 
+            <Accordion>
+              <p key={entry.id} index={entry.id}>{entry.text}</p>
+              <AccordionDetails>
+                <Grid container direction="row" spacing={2}>
+                <Grid container spacing={2} alignItems="left" justify="left" direction="column">
+                  <Grid item>
+                    <InputGroup>
+	              <InputGroupAddon addonType="prepend">
+	                <Typography>Test</Typography>
+	              </InputGroupAddon>
+		      <TextField
+		        id="outlined-multiline-flexible"
+		        label="Multiline"
+		        multiline
+		        fullWidth
+		        className={classes.textField}
+		        margin="normal"
+		        variant="outlined"
+                      />
+                    </InputGroup>
+                  </Grid>
+                </Grid>
+                </Grid>
+              </AccordionDetails>
+             </Accordion>})}
+
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
