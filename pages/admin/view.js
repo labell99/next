@@ -431,8 +431,8 @@ const options = {
 
 
   var categories=[
-    {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"},
-    {id:2, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}
+    {id:1, name: [{"FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"}], menu:"Structure"},
+    {id:2, name: [{"FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"}], menu:"Structure"}
   ];
 
   return (
