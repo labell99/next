@@ -442,9 +442,8 @@ const options = {
           <div className={classes.root}>
 
           {categories.map(category => (
-            <Accordion>
-            <p>{category}</p>
-            </Accordion>
+            console.log("cat ",category)
+
             <Accordion>
               <AccordionSummary
                  expandIcon={<ExpandMoreIcon />}
