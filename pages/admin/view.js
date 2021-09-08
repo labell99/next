@@ -442,15 +442,13 @@ const options = {
           <div className={classes.root}>
 
           {categories.map(category => (
-            console.log("cat ",category)
-
             <Accordion>
               <AccordionSummary
                  expandIcon={<ExpandMoreIcon />}
                  aria-controls="panel1a-content"
                  id="panel1a-header"
               >
-                <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
+                <Typography variant="h5" className={classes.heading}> {category} </Typography>
               </AccordionSummary>
 
             </Accordion>
