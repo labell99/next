@@ -429,6 +429,7 @@ const options = {
     {id:4, name: "Other Variants", menu:"Structure"}
   ];
 
+
   var categories=[
     {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"},
     {id:2, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}
