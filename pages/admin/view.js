@@ -442,6 +442,7 @@ const options = {
           <div className={classes.root}>
 
           {categories.map(category => (
+            <p>{category}</p>
             <Accordion>
               <AccordionSummary
                  expandIcon={<ExpandMoreIcon />}
@@ -450,31 +451,6 @@ const options = {
               >
                 <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
               </AccordionSummary>
-
-	                   <AccordionDetails>
-	                     <Grid container direction="row" spacing={2}>
-	                     <Grid container spacing={2} alignItems="left" justify="left" direction="column">
-	                     category.name.map(subcategory => (
-	                       <Grid item>
-	                         <InputGroup>
-	     	              <InputGroupAddon addonType="prepend">
-	     	                <Typography>{subcategory}</Typography>
-	     	              </InputGroupAddon>
-	     		      <TextField
-	     		        id="outlined-multiline-flexible"
-	     		        label="Multiline"
-	     		        multiline
-	     		        fullWidth
-	     		        className={classes.textField}
-	     		        margin="normal"
-	     		        variant="outlined"
-	                           />
-	                         </InputGroup>
-	                       </Grid>
-	                     ))
-	                     </Grid>
-	                     </Grid>
-	                   </AccordionDetails>
 
             </Accordion>
            ))}
