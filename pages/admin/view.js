@@ -435,7 +435,7 @@ const options = {
           <div className={classes.root}>
       
         {entries.map((entry, index)=>(<Accordion>
-            <p key="{index}">{entry.text}</p></Accordion>))}
+            <p key="{entry.id}">{entry.text}</p></Accordion>))}
    
             <Accordion>
               <AccordionSummary
