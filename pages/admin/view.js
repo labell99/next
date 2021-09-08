@@ -433,7 +433,7 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
 
-          {entries.map(entry => (<Accordion><p key={entry.id}>{entry.text}</p></Accordion>))}
+          {entries.map(entry => { return <Accordion><p key={entry.id}>{entry.text}</p></Accordion>})}
    
             <Accordion>
               <AccordionSummary
