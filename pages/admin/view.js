@@ -435,7 +435,13 @@ const options = {
 
           {entries.map(entry => ( 
             <Accordion>
-              <Typography>Test</Typography>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography variant="h5" className={classes.heading}>Test</Typography>
+              </AccordionSummary>
              </Accordion>))}
 
             <Accordion>
