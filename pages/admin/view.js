@@ -423,8 +423,10 @@ const options = {
   console.log("data out2: ",res);
 
   var entries=[
-    {id:1, name: "first entry", text:"first sample text"},
-    {id:2, name: "second entry", text:"second sample text"}
+    {id:1, name: "FACTA. Target", label:"Structure"},
+    {id:2, name: "FACTA. Genome", label:"Structure"}
+    {id:3, name: "Spike Variants", label:"Structure"},
+    {id:4, name: "Other Variants", label:"Structure"}
   ];
 
   return (
@@ -440,7 +442,7 @@ const options = {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography variant="h5" className={classes.heading}>Test</Typography>
+                <Typography variant="h5" className={classes.heading}>{entry.label}</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container direction="row" spacing={2}>
@@ -448,7 +450,7 @@ const options = {
                   <Grid item>
                     <InputGroup>
 	              <InputGroupAddon addonType="prepend">
-	                <Typography>{entry.text}</Typography>
+	                <Typography>{entry.name}</Typography>
 	              </InputGroupAddon>
 		      <TextField
 		        id="outlined-multiline-flexible"
