@@ -436,13 +436,7 @@ const options = {
           {entries.map(entry => { 
             <Accordion>
               <p key={entry.id} index={entry.id}>{entry.text}</p>
-              <AccordionDetails>
-                    <InputGroup>
-	              <InputGroupAddon addonType="prepend">
-	                <Typography>Test</Typography>
-	              </InputGroupAddon>
-                    </InputGroup>
-              </AccordionDetails>
+	      <Typography>Test</Typography>
              </Accordion>})}
 
             <Accordion>
