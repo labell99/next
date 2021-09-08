@@ -421,7 +421,6 @@ const options = {
   console.log("data out: ",data);
   const res = data[modalInfo];
   console.log("data out2: ",res);
-  console.log("data out3: ",res[2]);
 
   var entries=[
     {id:1, name: "first entry", text:"first sample text"},
@@ -434,7 +433,7 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
 
-          {entries.map((entry, index)=>(<Accordion> <p key="{entry.id}">{entry.text}</p></Accordion>))}
+          {entries.map(entry => (<Accordion><p key={entry.id}>{entry.text}</p></Accordion>))}
    
             <Accordion>
               <AccordionSummary
