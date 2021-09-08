@@ -424,7 +424,7 @@ const options = {
 
   var entries=[
     {id:1, name: "FACTA. Target", label:"Structure"},
-    {id:2, name: "FACTA. Genome", label:"Structure"}
+    {id:2, name: "FACTA. Genome", label:"Structure"},
     {id:3, name: "Spike Variants", label:"Structure"},
     {id:4, name: "Other Variants", label:"Structure"}
   ];
