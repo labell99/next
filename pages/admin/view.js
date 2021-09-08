@@ -435,8 +435,8 @@ const options = {
 
           {entries.map(entry => { 
             <Accordion>
-              <p key={entry.id} index={entry.id}>{entry.text}</p>
-	      <Typography>Test</Typography>
+              <p key={entry.id} >{entry.text}</p>
+
              </Accordion>})}
 
             <Accordion>
