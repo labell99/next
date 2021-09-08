@@ -423,10 +423,15 @@ const options = {
   console.log("data out2: ",res);
 
   var entries=[
-    {id:1, name: "FACTA. Target", label:"Structure"},
-    {id:2, name: "FACTA. Genome", label:"Structure"},
-    {id:3, name: "Spike Variants", label:"Structure"},
-    {id:4, name: "Other Variants", label:"Structure"}
+    {id:1, name: "FACTA. Target", menu:"Structure"},
+    {id:2, name: "FACTA. Genome", menu:"Structure"},
+    {id:3, name: "Spike Variants", menu:"Structure"},
+    {id:4, name: "Other Variants", menu:"Structure"}
+  ];
+
+  var categories=[
+    {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"},
+    {id:2, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}
   ];
 
   return (
@@ -435,22 +440,23 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
 
-          {entries.map(entry => ( 
+          categories.map(category => (
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography variant="h5" className={classes.heading}>{entry.label}</Typography>
+                <Typography variant="h5" className={classes.heading}>{category.menu}</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container direction="row" spacing={2}>
                 <Grid container spacing={2} alignItems="left" justify="left" direction="column">
+                category.name.map(subcategory => (
                   <Grid item>
                     <InputGroup>
 	              <InputGroupAddon addonType="prepend">
-	                <Typography>{entry.name}</Typography>
+	                <Typography>{subcategory}</Typography>
 	              </InputGroupAddon>
 		      <TextField
 		        id="outlined-multiline-flexible"
@@ -463,10 +469,12 @@ const options = {
                       />
                     </InputGroup>
                   </Grid>
+                ))
                 </Grid>
                 </Grid>
               </AccordionDetails>
-             </Accordion>))}
+              </Accordion>
+));
 
             <Accordion>
               <AccordionSummary
