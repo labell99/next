@@ -448,7 +448,7 @@ const options = {
                  aria-controls="panel1a-content"
                  id="panel1a-header"
               >
-                <Typography variant="h5" className={classes.heading}> {category} </Typography>
+                <Typography variant="h5" className={classes.heading}> {category.name} </Typography>
               </AccordionSummary>
 
             </Accordion>
