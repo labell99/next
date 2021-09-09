@@ -16,13 +16,16 @@ import { Container ,Row, Col, Input, InputGroupAddon, InputGroupText, InputGroup
 export default function RegularAccordion(props) {
 
   const {
-	classes,
+    classes,
     category,
     key
   } = props;
 
+  let uid = key || 0;
+  console.log("keyvp: ",uid);
+
   return (
-    <Accordion key={key}>
+    <Accordion key={uid}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -32,7 +35,7 @@ export default function RegularAccordion(props) {
       </AccordionSummary>
       <AccordionDetails>
         <Grid container direction="row" spacing={2}>
-          <Grid container spacing={2} alignItems="left" justify="left" direction="column">
+          <Grid container spacing={2} direction="column">
             {category.name.map((subcategory, cur) => (
 	          <Grid item key={cur}>
 	            <InputGroup>
