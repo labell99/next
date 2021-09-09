@@ -91,14 +91,15 @@ function View() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
-  const [datal, setDatal] = useState([""]);
+  const [dataVal, setDataVal] = useState("");
 
   const popupDialog = (value) => {
+    console.log("rdata: ",data[value]);
+    setDataVal(data[value]);
     setModalOpen(!modalOpen);
     setModalInfo(value);
     setModalInfoi(value + 1);
-    setDatal(data[value]);
-    console.log("data: ",datal);
+    console.log("data: ",dataVal);
   }
 
   const handleClose = () => {
