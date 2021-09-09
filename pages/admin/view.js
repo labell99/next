@@ -91,15 +91,13 @@ function View() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
-  const [dataVal, setDataVal] = useState();
+  const [dataVal, setDataVal] = useState([""]);
 
   const popupDialog = (value) => {
-    console.log("rdata: ",data[value]);
     setDataVal(data[value]);
     setModalOpen(!modalOpen);
     setModalInfo(value);
     setModalInfoi(value + 1);
-    console.log("data: ",dataVal);
   }
 
   const handleClose = () => {
@@ -443,7 +441,7 @@ console.log("datav: ",dataVal);
           <div className={classes.root}>
 
             {pentries.map((entry, key) => (
-              <PanelAccordion classes={classes} category={entry} key={key}/>
+              <PanelAccordion classes={classes} category={entry} key={key} data={dataVal} />
             ))}
 
             {categories.map((entry, key) => (
