@@ -450,7 +450,13 @@ const options = {
                 <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
               </AccordionSummary>
 
+	                   <AccordionDetails>
+	                     <Grid container direction="row" spacing={2}>
+	                     <Grid container spacing={2} alignItems="left" justify="left" direction="column">
 
+	                     </Grid>
+	                     </Grid>
+	                   </AccordionDetails>
 
             </Accordion>
            ))}
