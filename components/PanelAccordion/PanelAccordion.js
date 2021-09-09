@@ -39,15 +39,7 @@ export default function PanelAccordion(props) {
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>
 	     	      </InputGroupAddon>
-	     	      <TextField
-	     		    id="outlined-multiline-flexible"
-	     		    label="Multiline"
-	     		    multiline
-	     		    fullWidth
-	     		    className={classes.textField}
-	     		    margin="normal"
-	     		    variant="outlined"
-	              />
+	     	      <Input placeholder="Check it out" />
 	            </InputGroup>
 	          </Grid>
             ))}
