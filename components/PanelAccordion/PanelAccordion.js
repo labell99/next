@@ -22,6 +22,7 @@ export default function PanelAccordion(props) {
     data
   } = props;
 
+  uid = uid || 0;
   console.log("keyvp: ",uid,data);
 
   return (
