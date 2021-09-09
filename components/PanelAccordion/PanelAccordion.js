@@ -16,10 +16,13 @@ import { Container ,Row, Col, Input, InputGroupAddon, InputGroupText, InputGroup
 export default function PanelAccordion(props) {
 
   const {
-	classes,
+    classes,
     category,
-    key
+    key,
+    data
   } = props;
+
+  console.log("keyv: ",key,data);
 
   return (
     <Accordion key={key}>
