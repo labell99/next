@@ -428,9 +428,9 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
 
-          {categories.map(category => (
-            <Accordion>
-              <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>    
+          {categories.map((category, key) => (
+            <Accordion key={key} >
+              <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
             </Accordion>
            ))}
 
