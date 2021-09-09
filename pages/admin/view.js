@@ -431,7 +431,7 @@ const options = {
 
 
   var categories=[
-    {id:1, name: [{label: "FACTA. Target"},{label: "FACTA. Genome"},{label: "Spike Variants"},{label: "Other Variants"}], menu:"Structure"}
+    {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}
   ];
 
   return (
@@ -457,7 +457,7 @@ const options = {
 	                       <Grid item>
 	                         <InputGroup>
 	     	              <InputGroupAddon addonType="prepend">
-	     	                <Typography>{subcategory.label}</Typography>
+	     	                <Typography>{subcategory}</Typography>
 	     	              </InputGroupAddon>
 	     		      <TextField
 	     		        id="outlined-multiline-flexible"
