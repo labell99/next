@@ -9,6 +9,7 @@ import MUIDataTable from "mui-datatables";
 import Admin from "layouts/Admin.js";
 import Button from '@material-ui/core/Button';
 import RegularAccordion from "components/CustomAccordion/CustomAccordion.js";
+import PanelAccordion from "components/PanelAccordion/PanelAccordion.js";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Table from "components/Table/Table.js";
@@ -435,8 +436,12 @@ const options = {
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
 
-          {categories.map((category, key) => (
-            <RegularAccordion classes={classes} category={category} key={key}/>
+          {pentries.map((entry, key) => (
+            <RegularAccordion classes={classes} category={entry} key={key}/>
+           ))}
+
+          {categories.map((entry, key) => (
+            <RegularAccordion classes={classes} category={entry} key={key}/>
            ))}
 
           {entries.map((entry, key) => (
