@@ -418,9 +418,6 @@ const options = {
    direction: 'asc'
   }
 };
-  console.log("data out: ",data);
-  const res = data[modalInfo];
-  console.log("data out2: ",res);
 
   var categories=[
     {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}];
@@ -438,7 +435,7 @@ const options = {
                  aria-controls="panel1a-content"
                  id="panel1a-header"
               >
-                <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
+                <Typography key="{category.id}" variant="h5" className={classes.heading}> {category.menu} </Typography>
               </AccordionSummary>
 
 	          <AccordionDetails>
