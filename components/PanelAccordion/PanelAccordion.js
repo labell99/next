@@ -18,14 +18,14 @@ export default function PanelAccordion(props) {
   const {
     classes,
     category,
-    key,
+    uid,
     data
   } = props;
 
-  console.log("keyv: ",key,data);
+  console.log("keyvp: ",uid,data);
 
   return (
-    <Accordion key={key}>
+    <Accordion key={uid}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"

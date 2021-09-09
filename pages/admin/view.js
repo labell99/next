@@ -423,8 +423,6 @@ const options = {
   }
 };
 
-console.log("datav: ",dataVal);
-
   var categories=[
     {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}];
 
@@ -441,7 +439,7 @@ console.log("datav: ",dataVal);
           <div className={classes.root}>
 
             {pentries.map((entry, index) => (
-              <PanelAccordion classes={classes} category={entry} key={index} data={dataVal} />
+              <PanelAccordion classes={classes} category={entry} uid={index} data={dataVal} />
             ))}
 
             {categories.map((entry, key) => (
