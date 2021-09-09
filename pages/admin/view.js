@@ -430,13 +430,7 @@ const options = {
 
           {categories.map(category => (
             <Accordion>
-              <AccordionSummary
-                 expandIcon={<ExpandMoreIcon />}
-                 aria-controls="panel1a-content"
-                 id="panel1a-header"
-              >
                  <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
-              </AccordionSummary>
             </Accordion>
            ))}
 
