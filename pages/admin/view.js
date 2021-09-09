@@ -422,6 +422,9 @@ const options = {
   var categories=[
     {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}];
 
+  var entries=[
+    {id:1, name: ["Phenotypes","Publication Source","REFlinks","Users","Notes","Source Note (SIB)","AmpTec_Sourcecode"], menu:"References"}];
+
   return (
     <GridContainer>
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
@@ -445,6 +448,42 @@ const options = {
 	            <InputGroup>
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>
+	     	      </InputGroupAddon>
+	     	      <TextField
+	     		id="outlined-multiline-flexible"
+	     		label="Multiline"
+	     		multiline
+	     		fullWidth
+	     		className={classes.textField}
+	     		margin="normal"
+	     		variant="outlined"
+	              />
+	            </InputGroup>
+	          </Grid>
+	        ))}
+	        </Grid>
+	        </Grid>
+	      </AccordionDetails>
+            </Accordion>
+           ))}
+
+          {entries.map((entry, key) => (
+            <Accordion key={key}>
+              <AccordionSummary
+                 expandIcon={<ExpandMoreIcon />}
+                 aria-controls="panel1a-content"
+                 id="panel1a-header"
+              >
+                 <Typography variant="h5" className={classes.heading}> {entry.menu} </Typography>
+              </AccordionSummary>
+	      <AccordionDetails>
+	        <Grid container direction="row" spacing={2}>
+	        <Grid container spacing={2} alignItems="left" justify="left" direction="column">
+                {entry.name.map((subentry, cur) => (
+	          <Grid item key={cur}>
+	            <InputGroup>
+	     	      <InputGroupAddon addonType="prepend">
+	     	        <Typography>{subentry}</Typography>
 	     	      </InputGroupAddon>
 	     	      <TextField
 	     		id="outlined-multiline-flexible"
