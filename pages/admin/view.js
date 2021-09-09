@@ -440,8 +440,8 @@ console.log("datav: ",dataVal);
         <DialogTitle id="confirmation-dialog-title">Review IDS Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
 
-            {pentries.map((entry, key) => (
-              <PanelAccordion classes={classes} category={entry} key={key} data={dataVal} />
+            {pentries.map((entry, index) => (
+              <PanelAccordion classes={classes} category={entry} key={index} data={dataVal} />
             ))}
 
             {categories.map((entry, key) => (
