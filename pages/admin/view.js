@@ -426,6 +426,9 @@ const options = {
   var entries=[
     {id:1, name: ["Phenotypes","Publication Source","REFlinks","Users","Notes","Source Note (SIB)","AmpTec_Sourcecode"], menu:"References"}];
 
+  var pentries=[
+    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","BV-BRC Link","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Signal_Peptide_e,"NTD_Mutation","RBD_Mutation","S1_S2_Mutation","S2_Mutation","Sequences","Subcategory","IPReference"], menu:"Characterisation"}];
+
   return (
     <GridContainer>
       <Dialog fullWidth  onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
