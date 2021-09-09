@@ -91,7 +91,7 @@ function View() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
-  const [dataVal, setDataVal] = useState("");
+  const [dataVal, setDataVal] = useState();
 
   const popupDialog = (value) => {
     console.log("rdata: ",data[value]);
@@ -424,6 +424,8 @@ const options = {
    direction: 'asc'
   }
 };
+
+console.log("datav: ",dataVal);
 
   var categories=[
     {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], menu:"Structure"}];
