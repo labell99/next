@@ -430,7 +430,7 @@ const options = {
 
           {categories.map(category => (
             <Accordion>
-                 
+              <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>    
             </Accordion>
            ))}
 
