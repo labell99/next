@@ -31,8 +31,8 @@ export default function PanelAccordion(props) {
         <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Grid container direction="row" spacing={2}>
-          <Grid container spacing={2} alignItems="left" justify="left" direction="column">
+        <Grid container direction="column" spacing={2}>
+          <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
             {category.name.map((subcategory, cur) => (
 	          <Grid item key={cur}>
 	            <InputGroup>
