@@ -36,7 +36,7 @@ export default function PanelAccordion(props) {
       </AccordionSummary>
       <AccordionDetails>
         <Grid container direction="column" spacing={2}>
-          <Grid container spacing={2} alignItems="left" justify="left"  direction="row">
+          <Grid container spacing={2}  direction="row">
             {category.name.map((subcategory, cur) => (
 	          <Grid item key={cur}>
 	            <InputGroup>
