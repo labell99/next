@@ -440,8 +440,8 @@ const options = {
 	      <AccordionDetails>
 	        <Grid container direction="row" spacing={2}>
 	        <Grid container spacing={2} alignItems="left" justify="left" direction="column">
-                {category.name.map(subcategory => (
-	          <Grid item>
+                {category.name.map((subcategory, cur) => (
+	          <Grid item key={cur}>
 	            <InputGroup>
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>
