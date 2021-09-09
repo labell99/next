@@ -22,11 +22,11 @@ export default function PanelAccordion(props) {
     data
   } = props;
 
-  uid = uid || 0;
-  console.log("keyvp: ",uid,data);
+  let keyv = uid || 0;
+  console.log("keyvp: ",keyv,data);
 
   return (
-    <Accordion key={uid}>
+    <Accordion key={keyv}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
