@@ -437,7 +437,7 @@ const options = {
           <div className={classes.root}>
 
           {pentries.map((entry, key) => (
-            <RegularAccordion classes={classes} category={entry} key={key}/>
+            <PanelAccordion classes={classes} category={entry} key={key}/>
            ))}
 
           {categories.map((entry, key) => (
