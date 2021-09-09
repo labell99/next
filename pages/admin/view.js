@@ -454,7 +454,29 @@ const options = {
 	            <Grid container direction="row" spacing={2}>
 	            <Grid container spacing={2} alignItems="left" justify="left" direction="column">
 
-                  {category.name.map(subcategory => (<Typography>{subcategory}</Typography>))}
+                  {category.name.map(subcategory => (
+
+
+	                       <Grid item>
+	                         <InputGroup>
+	     	              <InputGroupAddon addonType="prepend">
+	     	                <Typography>{subcategory}</Typography>
+	     	              </InputGroupAddon>
+	     		      <TextField
+	     		        id="outlined-multiline-flexible"
+	     		        label="Multiline"
+	     		        multiline
+	     		        fullWidth
+	     		        className={classes.textField}
+	     		        margin="normal"
+	     		        variant="outlined"
+	                           />
+	                         </InputGroup>
+	                       </Grid>
+
+
+
+				  ))}
 
 	            </Grid>
 	            </Grid>
