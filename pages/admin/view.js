@@ -7,7 +7,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import MUIDataTable from "mui-datatables";
 // layout for this page
 import Admin from "layouts/Admin.js";
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
+import RegularAccordion from "components/CustomAccordion/CustomAccordion.js";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Table from "components/Table/Table.js";
@@ -432,39 +433,7 @@ const options = {
           <div className={classes.root}>
 
           {categories.map((category, key) => (
-            <Accordion key={key}>
-              <AccordionSummary
-                 expandIcon={<ExpandMoreIcon />}
-                 aria-controls="panel1a-content"
-                 id="panel1a-header"
-              >
-                 <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
-              </AccordionSummary>
-	      <AccordionDetails>
-	        <Grid container direction="row" spacing={2}>
-	        <Grid container spacing={2} alignItems="left" justify="left" direction="column">
-                {category.name.map((subcategory, cur) => (
-	          <Grid item key={cur}>
-	            <InputGroup>
-	     	      <InputGroupAddon addonType="prepend">
-	     	        <Typography>{subcategory}</Typography>
-	     	      </InputGroupAddon>
-	     	      <TextField
-	     		id="outlined-multiline-flexible"
-	     		label="Multiline"
-	     		multiline
-	     		fullWidth
-	     		className={classes.textField}
-	     		margin="normal"
-	     		variant="outlined"
-	              />
-	            </InputGroup>
-	          </Grid>
-	        ))}
-	        </Grid>
-	        </Grid>
-	      </AccordionDetails>
-            </Accordion>
+            <RegularAccordion classes={classes} category={category} key={key}/>
            ))}
 
           {entries.map((entry, key) => (
