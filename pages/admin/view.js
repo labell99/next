@@ -96,6 +96,7 @@ function View() {
     setModalOpen(!modalOpen);
     setModalInfo(value);
     setModalInfoi(value + 1);
+    console.log("data: ",data[value]);
   }
 
   const handleClose = () => {
