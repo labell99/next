@@ -22,7 +22,7 @@ export default function RegularAccordion(props) {
   } = props;
 
   let uid = key || 0;
-  console.log("keyvp: ",uid);
+  console.log("keycus: ",uid);
 
   return (
     <Accordion key={uid}>
