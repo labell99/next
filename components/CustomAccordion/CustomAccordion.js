@@ -18,14 +18,14 @@ export default function RegularAccordion(props) {
   const {
     classes,
     category,
-    key
+    uid
   } = props;
 
-  let uid = key || 0;
-  console.log("keycus: ",uid);
+  let keyv = uid || 0;
+  console.log("keyvp: ",keyv);
 
   return (
-    <Accordion key={uid}>
+    <Accordion key={keyv.toString()}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -37,7 +37,7 @@ export default function RegularAccordion(props) {
         <Grid container direction="row" spacing={2}>
           <Grid container spacing={2} direction="column">
             {category.name.map((subcategory, cur) => (
-	          <Grid item key={cur}>
+	          <Grid item key={cur.toString()}>
 	            <InputGroup>
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>

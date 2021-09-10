@@ -38,7 +38,7 @@ export default function PanelAccordion(props) {
         <Grid container direction="column" spacing={2}>
           <Grid container spacing={2}  direction="row">
             {category.name.map((subcategory, cur) => (
-	          <Grid item key={cur}>
+	          <Grid item key={cur.toString()}>
 	            <InputGroup>
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>

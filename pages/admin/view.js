@@ -442,12 +442,12 @@ const options = {
               <PanelAccordion classes={classes} category={entry} key={index} uid={index} data={dataVal} />
             ))}
 
-            {categories.map((entry, key) => (
-              <RegularAccordion classes={classes} category={entry} key={key}/>
+            {categories.map((entry, index) => (
+              <RegularAccordion classes={classes} category={entry} key={index} uid={index}/>
             ))}
 
-            {entries.map((entry, key) => (
-              <RegularAccordion classes={classes} category={entry} key={key}/>
+            {entries.map((entry, index) => (
+              <RegularAccordion classes={classes} category={entry} key={index} uid={index}/>
             ))}
 
           </div>
