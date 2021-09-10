@@ -43,7 +43,7 @@ export default function PanelAccordion(props) {
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>
 	     	      </InputGroupAddon>
-	     	      <Input placeholder="Check it out" />
+	     	      <Input placeholder=data[category.indexes[{cur}]] />
 	            </InputGroup>
 	          </Grid>
             ))}
