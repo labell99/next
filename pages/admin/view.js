@@ -439,7 +439,7 @@ const options = {
           <div className={classes.root}>
 
             {pentries.map((entry, index) => (
-              <PanelAccordion classes={classes} category={entry} key={index} data={dataVal} />
+              <PanelAccordion classes={classes} category={entry} key={index} uid={index} data={dataVal} />
             ))}
 
             {categories.map((entry, key) => (

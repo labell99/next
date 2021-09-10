@@ -18,11 +18,11 @@ export default function PanelAccordion(props) {
   const {
     classes,
     category,
-    key,
+    uid,
     data
   } = props;
 
-  let keyv = key || 0;
+  let keyv = uid || 0;
   console.log("keyvp: ",keyv,data);
 
   return (
