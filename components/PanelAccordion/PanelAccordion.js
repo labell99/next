@@ -23,7 +23,7 @@ export default function PanelAccordion(props) {
   } = props;
 
   let keyv = uid || 0;
-  console.log("keyvp: ",keyv,data);
+  console.log("keyvp: ",keyv,data,category);
 
   return (
     <Accordion key={keyv.toString()}>
@@ -43,7 +43,7 @@ export default function PanelAccordion(props) {
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>
 	     	      </InputGroupAddon>
-	     	      <Input placeholder={data[category.indexes[{cur}]]} />
+	     	      <Input placeholder={cur} />
 	            </InputGroup>
 	          </Grid>
             ))}
