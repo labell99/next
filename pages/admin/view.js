@@ -88,6 +88,7 @@ function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const [data, setData] = useState([""]);
+  const [dataTable, setDataTable] = useState([""]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
