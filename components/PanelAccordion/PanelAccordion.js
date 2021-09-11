@@ -23,7 +23,6 @@ export default function PanelAccordion(props) {
   } = props;
 
   let keyv = uid || 0;
-  console.log("keyvp: ",keyv,data,category.indexes);
 
   return (
     <Accordion key={keyv.toString()}>
