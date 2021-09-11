@@ -45,7 +45,6 @@ export default function RegularAccordion(props) {
 	     	      </InputGroupAddon>
 	     	      <TextField
 	     		    id="outlined-multiline-flexible"
-	     		    label="Multiline"
 	     		    multiline
 	     		    fullWidth
 	     		    className={classes.textField}
