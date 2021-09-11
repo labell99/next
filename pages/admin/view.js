@@ -151,6 +151,12 @@ function View() {
           var Users = resultsets[i].Users;
           var Notes = resultsets[i].Notes;
           var Notes2 = resultsets[i].Notes2;
+          var SigPepe = resultsets[i].Signal_Peptide_e;
+          var NTDMut = resultsets[i].NTD_Mutation;
+          var RBDMut = resultsets[i].RBD_Mutation;
+          var S1S2Mut = resultsets[i].S1_S2_Mutation;
+          var S2Mut = resultsets[i].S2_Mutation;
+          var Sequences = resultsets[i].Sequences;
 
           var UserArray = [];
           UserArray.push("");
@@ -182,6 +188,12 @@ function View() {
           UserArray.push(Users);
           UserArray.push(Notes);
           UserArray.push(Notes2);
+          UserArray.push(SigPepe);
+          UserArray.push(NTDMut);
+          UserArray.push(RBDMut);
+          UserArray.push(S1S2Mut);
+          UserArray.push(S2Mut);
+          UserArray.push(Sequences);
           UsersArray.push(UserArray);
         }
 
@@ -430,7 +442,7 @@ const options = {
     {id:1, name: ["Phenotypes","Publication Source","REFlinks","Users","Notes","Source Note (SIB)","AmpTec_Sourcecode"], menu:"References"}];
 
   var pentries=[
-    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","BV-BRC Link","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Signal_Peptide_e","NTD_Mutation","RBD_Mutation","S1_S2_Mutation","S2_Mutation","Sequences","Subcategory","IPReference"], indexes: [2,3,4,6,7,8,5,13,14,15,16,17,18,19,20,21,22,23,24,25,26,21,22], menu:"Characterisation"}];
+    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","BV-BRC Link","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Signal_Peptide_e","NTD_Mutation","RBD_Mutation","S1_S2_Mutation","S2_Mutation","Sequences","Subcategory","IPReference"], indexes: [2,3,4,6,7,8,5,13,14,15,16,17,18,19,20,29,30,31,32,33,34,21,22], menu:"Characterisation"}];
 
   return (
     <GridContainer>
