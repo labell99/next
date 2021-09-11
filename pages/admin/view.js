@@ -490,7 +490,7 @@ const options = {
             <MuiThemeProvider theme={getMuiTheme()}>
               <MUIDataTable
                 title={" "}
-                data={data}
+                data={dataTable}
                 columns={columns}
                 options={options}
               />
