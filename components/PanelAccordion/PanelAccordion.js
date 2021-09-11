@@ -32,7 +32,7 @@ export default function PanelAccordion(props) {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography variant="h4" className={classes.heading}> {category.menu} </Typography>
+        <Typography variant="h3" className={classes.heading}> {category.menu} </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Grid container direction="column" spacing={2}>
