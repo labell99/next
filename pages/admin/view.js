@@ -123,6 +123,7 @@ function View() {
         var resultsets = response.data;
         console.log("resultsets ",resultsets);
         var UsersArray = [];
+        var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
           var name = resultsets[i].VaccineName;
           var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
@@ -161,12 +162,18 @@ function View() {
           var AtSc = resultsets[i].AmpTec_Sourcecode;
 
           var UserArray = [];
+          var UserTableArray = [];
           UserArray.push("");
+          UserTableArray.push("");
           UserArray.push(recordNumber);
+          UserTableArray.push(recordNumber);
           UserArray.push(name);
+          UserTableArray.push(name);
           UserArray.push(vaccineType);
+          UserTableArray.push(vaccineType);
           UserArray.push(vaccineTarget);
           UserArray.push(vaccineApplication);
+          UserTableArray.push(vaccineApplication);
           UserArray.push(Emergence);
           UserArray.push(shortName);
           UserArray.push(longName);
@@ -198,9 +205,11 @@ function View() {
           UserArray.push(Sequences);
           UserArray.push(AtSc);
           UsersArray.push(UserArray);
+          UsersTableArray.push(UserTableArray);
         }
 
         setData(UsersArray);
+        setDataTable(UsersTableArray);
       })
       .catch(error => {
         // handle error
