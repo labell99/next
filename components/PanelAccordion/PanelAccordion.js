@@ -32,7 +32,7 @@ export default function PanelAccordion(props) {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography variant="h3" className={classes.heading}> {category.menu} </Typography>
+        <Typography variant="h5" className={classes.heading}> {category.menu} </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Grid container direction="column" spacing={2}>
@@ -41,7 +41,7 @@ export default function PanelAccordion(props) {
 	          <Grid item key={cur.toString()}>
 	            <InputGroup>
 	     	      <InputGroupAddon addonType="prepend">
-	     	        <Typography>{subcategory}</Typography>
+	     	        <Typography variant="h6">{subcategory}</Typography>
 	     	      </InputGroupAddon>
 	     	      <TextField id="outlined-basic" variant="outlined" value={data[category.indexes[cur]]} />
 	            </InputGroup>
