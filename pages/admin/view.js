@@ -182,12 +182,12 @@ function View() {
           UserArray.push(Type);
           UserArray.push(Subcategory);
           UserArray.push(IPReference);
-          UserArray.push(Phenotypes); 23
-          UserArray.push(PublicationSource); 24
-          UserArray.push(REFlinks); 25
-          UserArray.push(Users);26
-          UserArray.push(Notes);27
-          UserArray.push(Notes2);28
+          UserArray.push(Phenotypes);
+          UserArray.push(PublicationSource);
+          UserArray.push(REFlinks);
+          UserArray.push(Users);
+          UserArray.push(Notes);
+          UserArray.push(Notes2);
           UserArray.push(SigPepe);
           UserArray.push(NTDMut);
           UserArray.push(RBDMut);
