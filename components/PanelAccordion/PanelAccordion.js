@@ -43,7 +43,7 @@ export default function PanelAccordion(props) {
 	     	      <InputGroupAddon addonType="prepend">
 	     	        <Typography>{subcategory}</Typography>
 	     	      </InputGroupAddon>
-	     	      <Input> {data[category.indexes[cur]]} </Input>
+	     	      <TextField id="outlined-basic" label={data[category.indexes[cur]]} variant="outlined" />
 	            </InputGroup>
 	          </Grid>
             ))}
