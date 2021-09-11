@@ -18,7 +18,8 @@ export default function RegularAccordion(props) {
   const {
     classes,
     category,
-    uid
+    uid,
+    data
   } = props;
 
   let keyv = uid || 0;
@@ -40,7 +41,7 @@ export default function RegularAccordion(props) {
 	          <Grid item key={cur.toString()}>
 	            <InputGroup>
 	     	      <InputGroupAddon addonType="prepend">
-	     	        <Typography>{subcategory}</Typography>
+	     	        <Typography style={{ fontWeight: 600 }}>{subcategory}</Typography>
 	     	      </InputGroupAddon>
 	     	      <TextField
 	     		    id="outlined-multiline-flexible"
@@ -50,6 +51,7 @@ export default function RegularAccordion(props) {
 	     		    className={classes.textField}
 	     		    margin="normal"
 	     		    variant="outlined"
+	     		    value={data[category.indexes[cur]]}
 	              />
 	            </InputGroup>
 	          </Grid>
