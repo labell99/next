@@ -436,7 +436,7 @@ const options = {
 };
 
   var categories=[
-    {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], indexes: [2,3,4,6], menu:"Structure"}];
+    {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], indexes: [9,10,11,12], menu:"Structure"}];
 
   var entries=[
     {id:1, name: ["Phenotypes","Publication Source","REFlinks","Users","Notes","Source Note (SIB)","AmpTec_Sourcecode"], indexes: [2,3,4,6,7,8,5], menu:"References"}];
