@@ -1,6 +1,8 @@
 import React from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 // @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
 import Icon from "@material-ui/core/Icon";
@@ -55,7 +57,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <Icon>content_copy</Icon>
+                <Button variant="primary">Primary</Button>
               </CardIcon>
               <p className={classes.cardCategory}>Used Space</p>
               <h3 className={classes.cardTitle}>
