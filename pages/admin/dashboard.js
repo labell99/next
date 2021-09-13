@@ -53,7 +53,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton color="secondary" aria-label="add an alarm">
+                <IconButton color="white">
                   <AlarmIcon>MRNA-UCV-IDS</AlarmIcon>
                 </IconButton>
               </CardIcon>
