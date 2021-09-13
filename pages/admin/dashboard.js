@@ -55,9 +55,9 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton onClick={() => setDataBname("ids")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton onClick={() => setDataBname("MRNA-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
-                  MRNA-UCV-IDS
+                  MRNA-UCV-IDS {dataBname}
                 </IconButton>
               </CardIcon>
             </CardHeader>
