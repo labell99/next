@@ -54,7 +54,8 @@ function Dashboard() {
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
                 <IconButton color="white">
-                  <AlarmIcon>MRNA-UCV-IDS</AlarmIcon>
+                  <Store />
+                  MRNA-UCV-IDS
                 </IconButton>
               </CardIcon>
             </CardHeader>
