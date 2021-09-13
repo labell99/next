@@ -53,7 +53,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton style={{fontSize: '14px'}}>
+                <IconButton style={{fontSize: '12px'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
@@ -65,7 +65,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton style={{fontSize: '14px'}}>
+                <IconButton style={{fontSize: '12px'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -77,7 +77,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
-                 <IconButton style={{fontSize: '14px'}}>
+                 <IconButton style={{fontSize: '12px'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -89,7 +89,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <IconButton style={{fontSize: '14px'}}>
+                <IconButton style={{fontSize: '12px'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
