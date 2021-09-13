@@ -44,6 +44,7 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
+  const [dataBname, setDataBname] = useState("");
   return (
     <div>
       <GridContainer>
@@ -54,7 +55,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton onClick={setState({ database: "ids" })} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton onClick={() => setDataBname("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
