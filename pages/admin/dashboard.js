@@ -36,11 +36,7 @@ import Image from 'next/image'
 import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
 
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart,
-} from "variables/charts.js";
+
 
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 
@@ -55,25 +51,15 @@ function Dashboard() {
 		</Card>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="warning" stats icon>
-              <CardIcon color="warning">
-                <Button variant="primary">Primary</Button>
-              </CardIcon>
+            <CardBody color="warning" stats icon>
               <p className={classes.cardCategory}>Used Space</p>
               <h3 className={classes.cardTitle}>
                 49/50 <small>GB</small>
               </h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Danger>
-                  <Warning />
-                </Danger>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Get more space
-                </a>
-              </div>
-            </CardFooter>
+              <CardIcon color="warning">
+                <Button variant="primary">Primary</Button>
+              </CardIcon>
+            </CardBody>
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
