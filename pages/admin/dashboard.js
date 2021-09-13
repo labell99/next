@@ -35,7 +35,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import Image from 'next/image'
 import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
-
+import AlarmIcon from '@material-ui/icons/Alarm';
 
 
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
@@ -53,8 +53,9 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <Icon>info_outline</Icon>
-                MRNA-UCV-IDS
+                <IconButton color="secondary" aria-label="add an alarm">
+                  <AlarmIcon>MRNA-UCV-IDS</AlarmIcon>
+                </IconButton>
               </CardIcon>
             </CardHeader>
           </Card>
