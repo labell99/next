@@ -35,7 +35,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import Image from 'next/image'
 import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
-import AlarmIcon from '@material-ui/icons/Alarm';
+import StorageIcon from '@mui/icons-material/Storage';
 
 
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
@@ -54,7 +54,7 @@ function Dashboard() {
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
                 <IconButton>
-                  <Store />
+                  <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
               </CardIcon>
@@ -65,8 +65,10 @@ function Dashboard() {
           <Card>
             <CardHeader color="dark" stats icon>
               <CardIcon color="dark">
-                <Store />
-                NORVAX-LNPS
+                <IconButton>
+                  <StorageIcon />
+                  NORVAX-LNPS
+                </IconButton>
               </CardIcon>
             </CardHeader>
           </Card>
@@ -76,7 +78,7 @@ function Dashboard() {
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
                  <IconButton>
-                  <Store />
+                  <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
               </CardIcon>
@@ -87,8 +89,10 @@ function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <Accessibility />
-                ECAM-SMA-IDS
+                <IconButton>
+                  <StorageIcon />
+                  ECAM-SMA-IDS
+                </IconButton>
               </CardIcon>
             </CardHeader>
           </Card>
