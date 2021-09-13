@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 import Button from '@material-ui/core/Button';
@@ -53,7 +54,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton style={{fontSize: '12px', color: 'white'}}>
+                <IconButton onPressed: () => setState({ database: "ids" }) style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
