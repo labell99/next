@@ -16,6 +16,7 @@ const cardIconStyle = {
       backgroundColor: grayColor[0],
       padding: "15px",
       marginTop: "15px",
+      marginBottom: "15px",
       marginRight: "15px",
       float: "left",
     },
