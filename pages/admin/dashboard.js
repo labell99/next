@@ -54,7 +54,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton onPressed: () => setState({ database: "ids" }) style={{fontSize: '12px', color: 'white'}}>
+                <IconButton onPressed: (){setState({ database: "ids" })} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
