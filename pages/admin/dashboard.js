@@ -45,7 +45,7 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-  const [dataBname, setDataBname] = useStore("dataBname","MRNA-IDS");
+  const [dataBname, setDataBname] = useStore("dataBname");
 
   return (
     <div>
