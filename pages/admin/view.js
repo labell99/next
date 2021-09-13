@@ -288,6 +288,8 @@ const options = {
   var pentries=[
     {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","BV-BRC Link","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Signal_Peptide_e","NTD_Mutation","RBD_Mutation","S1_S2_Mutation","S2_Mutation","Sequences","Subcategory","IPReference"], indexes: [2,3,4,6,7,8,5,13,14,15,16,17,18,19,20,29,30,31,32,33,34,21,22], menu:"Characterisation"}];
 
+  console.log ("globaldb",{dataBname});
+
   return (
     <GridContainer>
       <Dialog fullWidth maxWidth="xl" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
