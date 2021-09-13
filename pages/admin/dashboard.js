@@ -65,7 +65,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton>
+                <IconButton style={{fontSize: '18px'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
