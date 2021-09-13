@@ -65,7 +65,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton style={{fontSize: '12px'}}>
+                <IconButton style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -77,7 +77,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
-                 <IconButton style={{fontSize: '12px'}}>
+                 <IconButton style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -89,7 +89,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <IconButton style={{fontSize: '12px'}}>
+                <IconButton style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
