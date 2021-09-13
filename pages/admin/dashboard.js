@@ -75,8 +75,10 @@ function Dashboard() {
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
-                <Store />
-                GBTBMRNA-IDS
+                 <IconButton>
+                  <Store />
+                  GBTBMRNA-IDS
+                </IconButton>
               </CardIcon>
             </CardHeader>
           </Card>
