@@ -54,7 +54,7 @@ function Dashboard() {
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
                 <Icon>info_outline</Icon>
-                mRNA-UCV-IDS
+                MRNA-UCV-IDS
               </CardIcon>
             </CardHeader>
           </Card>
@@ -74,7 +74,7 @@ function Dashboard() {
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
                 <Icon>info_outline</Icon>
-                GbTBmRNA-IDS
+                GBTBMRNA-IDS
               </CardIcon>
             </CardHeader>
           </Card>
