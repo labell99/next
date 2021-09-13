@@ -54,6 +54,7 @@ function Dashboard() {
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
                 <Icon>info_outline</Icon>
+                mRNA-UCV-IDS
               </CardIcon>
             </CardHeader>
           </Card>
@@ -63,6 +64,7 @@ function Dashboard() {
             <CardHeader color="dark" stats icon>
               <CardIcon color="dark">
                 <Store />
+                NORVAX-LNPS
               </CardIcon>
             </CardHeader>
           </Card>
@@ -72,6 +74,7 @@ function Dashboard() {
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
                 <Icon>info_outline</Icon>
+                GbTBmRNA-IDS
               </CardIcon>
             </CardHeader>
           </Card>
@@ -81,6 +84,7 @@ function Dashboard() {
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
                 <Accessibility />
+                ECAM-SMA-IDS
               </CardIcon>
             </CardHeader>
           </Card>
