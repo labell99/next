@@ -37,6 +37,7 @@ import Image from 'next/image'
 import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
 import StorageIcon from '@material-ui/icons/Storage';
+import { withStore, useStore } from "react-context-hook";
 
 
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
@@ -44,7 +45,8 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-  const [dataBname, setDataBname] = useState("MRNA-IDS");
+  const [dataBname, setDataBname] = useStore("dataBname","MRNA-IDS");
+
   return (
     <div>
       <GridContainer>
