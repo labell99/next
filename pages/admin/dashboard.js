@@ -35,7 +35,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import Image from 'next/image'
 import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
-import StorageIcon from '@mui/icons-material/Storage';
+import StorageIcon from '@material-ui/icons/Storage';
 
 
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
