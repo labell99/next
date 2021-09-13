@@ -44,7 +44,7 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-  const [dataBname, setDataBname] = useState("");
+  const [dataBname, setDataBname] = useState("MRNA-IDS");
   return (
     <div>
       <GridContainer>
@@ -57,7 +57,7 @@ function Dashboard() {
               <CardIcon color="warning">
                 <IconButton onClick={() => setDataBname("MRNA-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
-                  MRNA-UCV-IDS {dataBname}
+                  MRNA-UCV-IDS
                 </IconButton>
               </CardIcon>
             </CardHeader>
@@ -67,7 +67,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton style={{fontSize: '12px', color: 'white'}}>
+                <IconButton  onClick={() => setDataBname("NOR-LNPS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -79,7 +79,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
-                 <IconButton style={{fontSize: '12px', color: 'white'}}>
+                 <IconButton  onClick={() => setDataBname("GBTB-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -91,7 +91,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <IconButton style={{fontSize: '12px', color: 'white'}}>
+                <IconButton  onClick={() => setDataBname("ECAM-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
