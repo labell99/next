@@ -52,10 +52,6 @@ function Dashboard() {
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardBody color="warning" stats icon>
-              <p className={classes.cardCategory}>Used Space</p>
-              <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
-              </h3>
               <CardIcon color="warning">
                 <Button variant="primary">Primary</Button>
               </CardIcon>
