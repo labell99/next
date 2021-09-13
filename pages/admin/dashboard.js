@@ -51,11 +51,11 @@ function Dashboard() {
 		</Card>
         <GridItem >
           <Card>
-            <CardBody color="warning">
-
-                <Button variant="primary">Primary</Button>
-
-            </CardBody>
+            <CardHeader color="warning" stats icon>
+              <CardIcon color="warning">
+                <Icon>info_outline</Icon>
+              </CardIcon>
+            </CardHeader>
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
