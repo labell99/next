@@ -53,7 +53,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton style={{fontSize: '10px'}}>
+                <IconButton style={{fontSize: '12px'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
@@ -65,7 +65,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton style={{fontSize: '10px'}}>
+                <IconButton style={{fontSize: '12px'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
