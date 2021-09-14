@@ -4,11 +4,6 @@
 * NextJS Material Dashboard v1.1.0 based on Material Dashboard React v1.9.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/nextjs-material-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/nextjs-material-dashboard/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
 
 =========================================================
 
@@ -20,6 +15,7 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import dataBContext from 'components/Context/dataBContext';
 
 import PageChange from "components/PageChange/PageChange.js";
 
@@ -87,7 +83,9 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-          <Component {...pageProps} />
+          <dataBContext.Provider>
+            <Component {...pageProps} />
+          <dataBContext.Provider>
         </Layout>
       </React.Fragment>
     );
