@@ -40,6 +40,7 @@ Router.events.on("routeChangeError", () => {
 
 export default class MyApp extends App {
   componentDidMount() {
+	const [context, setContext] = useState("MRNA-IDS");
     let comment = document.createComment(`
 
 =========================================================
@@ -69,7 +70,7 @@ export default class MyApp extends App {
     return { pageProps };
   }
 
-  const [context, setContext] = useState("MRNA-IDS");
+
   render() {
     const { Component, pageProps } = this.props;
 
