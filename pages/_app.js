@@ -68,11 +68,13 @@ export default class MyApp extends App {
 
     return { pageProps };
   }
+
+  const [context, setContext] = useState("MRNA-IDS");
   render() {
     const { Component, pageProps } = this.props;
 
     const Layout = Component.layout || (({ children }) => <>{children}</>);
-    const [context, setContext] = useState("MRNA-IDS");
+
     return (
       <React.Fragment>
         <Head>
