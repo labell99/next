@@ -10,7 +10,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
@@ -72,7 +72,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     const Layout = Component.layout || (({ children }) => <>{children}</>);
-
+    const [context, setContext] = useState("MRNA-IDS");
     return (
       <React.Fragment>
         <Head>
@@ -83,7 +83,7 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-          <dataBContext.Provider>
+          <dataBContext.Provider value={[context, setContext]}>
             <Component {...pageProps} />
           </dataBContext.Provider>
         </Layout>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 import Button from '@material-ui/core/Button';
@@ -37,13 +37,13 @@ import Image from 'next/image'
 import norvax from "assets/img/norvax.png";
 import { bugs, website, server } from "variables/general.js";
 import StorageIcon from '@material-ui/icons/Storage';
-
+import dataBContext from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-  const [dataBname, setDataBname] = useState("dataBname");
+  const [context, setContext] = useContext(dataBContext);
 
   return (
     <div>
@@ -55,7 +55,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton onClick={() => setDataBname("MRNA-IDS")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton onClick={() => setContext("MRNA-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
@@ -67,7 +67,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton  onClick={() => setDataBname("NOR-LNPS")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton  onClick={() => setContext("NOR-LNPS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -79,7 +79,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
-                 <IconButton  onClick={() => setDataBname("GBTB-IDS")} style={{fontSize: '12px', color: 'white'}}>
+                 <IconButton  onClick={() => setContext("GBTB-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -91,7 +91,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <IconButton  onClick={() => setDataBname("ECAM-IDS")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton  onClick={() => setContext("ECAM-IDS")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
