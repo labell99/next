@@ -94,7 +94,7 @@ function View() {
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
   const [dataVal, setDataVal] = useState([""]);
-  const [context, setContext] = useContext(dataBContext);
+  const [context, setContext] = useDataBContext();
 
   const popupDialog = (value) => {
     setDataVal(data[value]);
