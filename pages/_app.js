@@ -73,7 +73,7 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    const {context, setContext} = useState("MRNA-IDS");
+    const [context, setContext] = useState("MRNA-IDS");
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
     return (
