@@ -38,6 +38,8 @@ Router.events.on("routeChangeError", () => {
   document.body.classList.remove("body-page-transition");
 });
 
+const [context, setContext] = useState("MRNA-IDS");
+
 export default class MyApp extends App {
 
   componentDidMount() {
@@ -61,7 +63,7 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    const [context, setContext] = useState("MRNA-IDS");
+
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
     return (
