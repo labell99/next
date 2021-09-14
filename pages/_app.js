@@ -85,7 +85,7 @@ export default class MyApp extends App {
         <Layout>
           <dataBContext.Provider>
             <Component {...pageProps} />
-          <dataBContext.Provider>
+          </dataBContext.Provider>
         </Layout>
       </React.Fragment>
     );
