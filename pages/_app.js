@@ -15,7 +15,7 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
-import dataBContext from 'components/Context/dataBContext';
+import DataBContextProvider from 'components/Context/dataBContext';
 
 import PageChange from "components/PageChange/PageChange.js";
 
@@ -37,8 +37,6 @@ Router.events.on("routeChangeError", () => {
   ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
   document.body.classList.remove("body-page-transition");
 });
-
-const [context, setContext] = useState("MRNA-IDS");
 
 export default class MyApp extends App {
 
@@ -76,9 +74,9 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-          <dataBContext.Provider value={[context, setContext]}>
+          <DataBContextProvider>
             <Component {...pageProps} />
-          </dataBContext.Provider>
+          </DataBContextProvider>
         </Layout>
       </React.Fragment>
     );
