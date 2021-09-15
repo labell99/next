@@ -15,7 +15,7 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
-import DataBContextProvider from 'components/Context/dataBContext';
+import DataBContext from 'components/Context/dataBContext';
 
 import PageChange from "components/PageChange/PageChange.js";
 
@@ -74,9 +74,9 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-          <DataBContextProvider>
+          <DataBContext.Provider>
             <Component {...pageProps} />
-          </DataBContextProvider>
+          </DataBContext.Provider>
         </Layout>
       </React.Fragment>
     );
