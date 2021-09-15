@@ -39,7 +39,7 @@ Router.events.on("routeChangeError", () => {
 });
 
 export default class MyApp extends App {
-
+  const [context, setContext] = useState("default context value");
   componentDidMount() {
     let comment = document.createComment(`
 =========================================================
