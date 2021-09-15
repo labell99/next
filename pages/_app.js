@@ -38,6 +38,10 @@ Router.events.on("routeChangeError", () => {
 
 export default class MyApp extends App {
 
+  state = {
+    datab: "MRNA-IDS",
+  };
+
   componentDidMount() {
     let comment = document.createComment(`
 =========================================================
@@ -56,7 +60,6 @@ export default class MyApp extends App {
     return { pageProps };
   }
 
-  const [members, setMembers] = useState("MRNA-IDS");
   render() {
     const { Component, pageProps } = this.props;
 
@@ -72,7 +75,11 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-          <DataBProvider value="MRNA-IDS">
+          <DataBProvider
+             value={{
+               data: this.state.datab
+             }}
+          >
             <Component {...pageProps} />
           </DataBProvider>
         </Layout>
