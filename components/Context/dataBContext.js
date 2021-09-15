@@ -2,17 +2,15 @@ import { createContext, useContext, useState } from 'react'
 
 const DataBContext = createContext()
 
-export default function DataBContextProvider({children}) {
-
-    const [context, setContext] = useState("MRNA-IDS");
+export function DataBContextProvider({children}) {
 
 	return (
-	   <DataBContext.Provider value={{context,setContext}}>
+	   <DataBContext.Provider>
 		{children}
 	   </DataBContext.Provider>
 	)
 }
 
-export function useDataBContext() {
+export default function useDataBContext() {
 	return useContext(DataBContext);
 }
