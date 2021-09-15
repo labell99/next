@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useContext } from 'react'
 
 export const DataBContext = createContext()
 
@@ -10,4 +10,8 @@ export function DataBProvider(props) {
 		{children}
 	   </DataBContext.Provider>
 	)
+}
+
+export function useDataBContext() {
+	return useContext(DataBContext);
 }
