@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react'
 
 const DataBContext = createContext(undefined)
 
-export function DataBContextProvider({ children }) {
+default export function DataBContextProvider({ children }) {
 
   const [context, setContext] = useState("MRNA-IDS");
 
@@ -19,7 +19,7 @@ export function DataBContextProvider({ children }) {
   )
 }
 
-export function useDataBContext() {
+default export function useDataBContext() {
   const context = useContext(DataBContext)
 
   if (!context)
@@ -27,3 +27,4 @@ export function useDataBContext() {
 
   return context
 }
+
