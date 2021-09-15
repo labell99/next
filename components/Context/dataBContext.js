@@ -4,9 +4,9 @@ export const DataBContext = createContext()
 
 export function DataBProvider(props) {
 	const {value, children} = props
-    const [context, setContext] = useState("");
+    const [dbcontext, setDBContext] = useState("");
 	return (
-	   <DataBContext.Provider value={value}>
+	   <DataBContext.Provider value={{dbcontext, setDBContext}}>
 		{children}
 	   </DataBContext.Provider>
 	)
