@@ -7,7 +7,7 @@ export function DataBProvider(props) {
     const [dbcontext, setDBContext] = useState("MRNA-IDS");
     console.log("db settinghj: ",DataBContext,dbcontext);
 	return (
-	   <DataBContext.Provider value={dbcontext, setDBContext}>
+	   <DataBContext.Provider value="testt">
 		{children}
 	   </DataBContext.Provider>
 	)
