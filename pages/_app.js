@@ -43,7 +43,7 @@ export default class MyApp extends App {
   };
 
   setData = (data) => {
-    this.setState("datab: "{ data });
+    this.setState("datab: { data }");
   };
 
   componentDidMount() {
