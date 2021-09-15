@@ -1,16 +1,7 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext } from 'react'
 
 const DataBContext = createContext()
 
-export function DataBContextProvider({children}) {
-
-	return (
-	   <DataBContext.Provider>
-		{children}
-	   </DataBContext.Provider>
-	)
-}
-
-export default function useDataBContext() {
+export function useDataBContext(); {
 	return useContext(DataBContext);
 }
