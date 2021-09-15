@@ -12,6 +12,6 @@ export function DataBProvider(props) {
 	)
 }
 
-export function useDataBContext() {
+default export function useDataBContext() {
 	return useContext(DataBContext);
 }
