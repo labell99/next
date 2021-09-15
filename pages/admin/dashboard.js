@@ -44,8 +44,9 @@ function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   console.log("db setting: ",DataBContext);
-  const [dbcontext, setDBContext] = useContext(DataBContext);
+  const dbcontext = useContext(DataBContext);
   console.log("db setting1: ",dbcontext);
+  const [datadb, setDBContext] = useState("");
   return (
     <div>
       <GridContainer>
