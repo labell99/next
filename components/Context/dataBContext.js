@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from 'react'
 
-export default const DataBContext = createContext();
+export const DataBContext = createContext();
 
 export function DataBProvider(props) {
 	const {value, children} = props
