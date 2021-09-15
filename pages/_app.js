@@ -56,7 +56,7 @@ export default class MyApp extends App {
     return { pageProps };
   }
 
-
+  const [members, setMembers] = useState("MRNA-IDS");
   render() {
     const { Component, pageProps } = this.props;
 
