@@ -74,9 +74,9 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-
+          <DataBContextProvider>
             <Component {...pageProps} />
-
+          </DataBContextProvider>
         </Layout>
       </React.Fragment>
     );
