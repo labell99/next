@@ -72,7 +72,7 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
-          <DataBProvider>
+          <DataBProvider value="MRNA-IDS">
             <Component {...pageProps} />
           </DataBProvider>
         </Layout>
