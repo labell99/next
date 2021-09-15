@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react'
 const DataBContext = createContext()
 
 export default function DataBContextProvider(props) {
-	const {value, children} = props
+	const {children} = props
     const [context, setContext] = useState("MRNA-IDS");
 
 	return (
