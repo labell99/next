@@ -2,7 +2,7 @@ import { createContext } from 'react'
 
 export const DataBContext = createContext()
 
-export function MenuProvider(props) {
+export function DataBProvider(props) {
 	const {value, children} = props
 
 	return (
