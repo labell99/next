@@ -42,6 +42,10 @@ export default class MyApp extends App {
     datab: "MRNA-IDS",
   };
 
+  setData = (data) => {
+    this.setState({ data });
+  };
+
   componentDidMount() {
     let comment = document.createComment(`
 =========================================================
@@ -78,6 +82,7 @@ export default class MyApp extends App {
           <DataBProvider
              value={{
                data: this.state.datab
+               setData: this.setData
              }}
           >
             <Component {...pageProps} />
