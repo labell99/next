@@ -81,7 +81,7 @@ export default class MyApp extends App {
         <Layout>
           <DataBProvider
              value={{
-               data: this.state.datab
+               data: this.state.datab,
                setData: this.setData
              }}
           >
