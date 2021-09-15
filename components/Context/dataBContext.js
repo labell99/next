@@ -4,7 +4,7 @@ export const DataBContext = createContext()
 
 export function DataBProvider(props) {
 	const {value, children} = props
-    const [dbcontext, setDBContext] = useState("");
+    const [dbcontext, setDBContext] = useState("MRNA-IDS");
 	return (
 	   <DataBContext.Provider value={{dbcontext, setDBContext}}>
 		{children}
