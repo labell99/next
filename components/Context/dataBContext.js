@@ -1,7 +1,7 @@
 import React from "react";
 import { createContext, useContext, useState } from 'react'
 
-const DataBContext = createContext(undefined)
+export const DataBContext = createContext(undefined)
 
 export function DataBContextProvider({ children }) {
 
