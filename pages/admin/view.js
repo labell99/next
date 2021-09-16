@@ -94,9 +94,10 @@ function View() {
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
   const [dataVal, setDataVal] = useState([""]);
-
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
+  const dbserver = "54.198.204.54";
+  const dbport = "1337";
 
   const popupDialog = (value) => {
     setDataVal(data[value]);
@@ -121,8 +122,6 @@ function View() {
         'accept': 'application/json'
       };
 
-      const dbserver = "54.198.204.54";
-      const dbport = "1337";
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       console.log("db setting5: ",fulldbname);
       axios.get(fulldbname, { headers })
