@@ -172,8 +172,8 @@ function builderids (resultsets) {
           UsersTableArray.push(UserTableArray);
         }
 
-        setData(UsersArray);
-        setDataTable(UsersTableArray);
+       // setData(UsersArray);
+       // setDataTable(UsersTableArray);
 };
 
 function builderid (resultsets) {
@@ -225,7 +225,7 @@ function View() {
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       axios.get(fulldbname, { headers })
         .then(response => {
-          builderid(response.data);
+          builderids(response.data);
       })
       .catch(error => {
         // handle error
