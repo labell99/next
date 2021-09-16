@@ -181,7 +181,7 @@ function builderlnps (resultsets, setData, setDataTable) {
         var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
           var name = resultsets[i].LNP_Formulation_Name;
-          var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
+          var recordNumber = parseInt(resultsets[i].Record_Number, 10);
           var formulationVersion = resultsets[i].Formulation_Version;
           var users = resultsets[i].Users;
           var aiAnalyticsReport = resultsets[i].AI_Analytics_Report;
