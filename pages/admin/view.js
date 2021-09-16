@@ -97,7 +97,6 @@ function View() {
 
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
-  console.log("db setting5: ",dbname);
 
   const popupDialog = (value) => {
     setDataVal(data[value]);
@@ -111,10 +110,10 @@ function View() {
   };
 
   useEffect(() => {
-    axios.post('http://54.198.204.54:1337/auth/local', {
-      identifier: 'lee_abell@hotmail.com',
-      password: 'Test123!',
-    }).then(resp => {
+      axios.post('http://54.198.204.54:1337/auth/local', {
+        identifier: 'lee_abell@hotmail.com',
+        password: 'Test123!',
+      }).then(resp => {
 
       var authtoken = "Bearer " + resp.data.jwt;
 	  const headers = {
@@ -122,6 +121,7 @@ function View() {
         'accept': 'application/json'
       };
 
+      console.log("db setting5: ",dbname);
       axios.get(`http://54.198.204.54:1337/ids`, { headers })
         .then(response => {
 
