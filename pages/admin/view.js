@@ -176,6 +176,76 @@ function builderids (resultsets, setData, setDataTable) {
         setDataTable(UsersTableArray);
 };
 
+function builderlnps (resultsets, setData, setDataTable) {
+        var UsersArray = [];
+        var UsersTableArray = [];
+        for (let i = 0; i < resultsets.length; i++) {
+          var name = resultsets[i].LNP_Formulation_Name;
+          var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
+          var formulationVersion = resultsets[i].Formulation_Version;
+          var users = resultsets[i].Users;
+          var aiAnalyticsReport = resultsets[i].AI_Analytics_Report;
+          var norvaxNotes = resultsets[i].Norvax_Notes;
+          var refLinks = resultsets[i].REF_Links;
+          var sintefNotes = resultsets[i].SINTEF_Notes;
+          var lipid11 = resultsets[i].Lipid_1_1;
+          var lipid12 = resultsets[i].Lipid_1_2;
+          var lipid13 = resultsets[i].Lipid_1_3;
+          var lipid14 = resultsets[i].Lipid_1_4;
+          var lipid21 = resultsets[i].Lipid_2_1;
+          var lipid22 = resultsets[i].Lipid_2_2;
+          var lipid23 = resultsets[i].Lipid_2_3;
+          var lipid24 = resultsets[i].Lipid_2_4;
+          var lipid31 = resultsets[i].Lipid_3_1;
+          var lipid32 = resultsets[i].Lipid_3_2;
+          var lipid33 = resultsets[i].Lipid_3_3;
+          var lipid34 = resultsets[i].Lipid_3_4;
+          var lipid41 = resultsets[i].Lipid_4_1;
+          var lipid42 = resultsets[i].Lipid_4_2;
+          var lipid43 = resultsets[i].Lipid_4_3;
+          var lipid44 = resultsets[i].Lipid_4_4;
+
+
+          var UserArray = [];
+          var UserTableArray = [];
+          UserArray.push("");
+          UserTableArray.push("");
+          UserArray.push(recordNumber);
+          UserTableArray.push(recordNumber);
+          UserArray.push(name);
+          UserTableArray.push(name);
+          UserArray.push(formulationVersion);
+          UserTableArray.push(formulationVersion);
+          UserArray.push(aiAnalyticsReport);
+          UserArray.push(users);
+          UserTableArray.push(users);
+          UserArray.push(norvaxNotes);
+          UserArray.push(refLinks);
+          UserArray.push(sintefNotes);
+          UserArray.push(lipid11);
+          UserArray.push(lipid12);
+          UserArray.push(lipid13);
+          UserArray.push(lipid14);
+          UserArray.push(lipid21);
+          UserArray.push(lipid22);
+          UserArray.push(lipid23);
+          UserArray.push(lipid24);
+          UserArray.push(lipid31);
+          UserArray.push(lipid32);
+          UserArray.push(lipid33);
+          UserArray.push(lipid34);
+          UserArray.push(lipid41);
+          UserArray.push(lipid42);
+          UserArray.push(lipid43);
+          UserArray.push(lipid44);
+          UsersArray.push(UserArray);
+          UsersTableArray.push(UserTableArray);
+        }
+
+        setData(UsersArray);
+        setDataTable(UsersTableArray);
+};
+
 function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -216,7 +286,11 @@ function View() {
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       axios.get(fulldbname, { headers })
         .then(response => {
-          builderids(response.data,setData,setDataTable);
+          if (dbname === "ids") {
+            builderids(response.data,setData,setDataTable);
+	      } else if (dbname === "norvax-lnps") {
+            builderlnps(response.data, setData, setDataTable);
+          }
       })
       .catch(error => {
         // handle error
