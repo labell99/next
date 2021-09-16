@@ -348,6 +348,8 @@ const columns = [
  }
 ];
 
+console.log("outputc: ",columns);
+
 const options = {
   filter: true,
   filterType: 'dropdown',
