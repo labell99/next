@@ -121,9 +121,9 @@ function View() {
         'accept': 'application/json'
       };
 
-      dbserver = "54.198.204.54";
-      dbport = "1337";
-      fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
+      const dbserver = "54.198.204.54";
+      const dbport = "1337";
+      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       console.log("db setting5: ",fulldbname);
       axios.get(`http://54.198.204.54:1337/ids`, { headers })
         .then(response => {
