@@ -348,8 +348,10 @@ const columns = [
  }
 ];
 
-columns[4].name="test";
-console.log("outputc: ",columns[4].name);
+columns[2].name="Formulation Name";
+columns[3].name="Formulation Version";
+columns[4].name="Users";
+
 console.log("output: ",columns);
 
 const options = {
