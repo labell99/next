@@ -386,6 +386,11 @@ const options = {
     {id:1, name: ["Name","Version","Lipid 1.1","Lipid 1.2","Lipid 1.3","Lipid 1.4","Lipid 2.1","Lipid 2.2","Lipid 2.3","Lipid 2.4","Lipid 3.1","Lipid 3.2","Lipid 3.3","Lipid 3.4","Lipid 4.1","Lipid 4.2","Lipid 4.3","Lipid 4.4","REF Links","AI Analytics Report","Norvax Notes","SINTEF Notes","Users","Preclinical Data and Toxicology"], indexes: [2,3,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,7,4,6,8,5,25], menu:"Formulation"}];
     var entries=[];
     var categories=[];
+  } else if (dbname === "gb-t-bm-rna-ids") {
+    var pentries=[
+    {id:1, name: ["Name","Version","Lipid 1.1","Lipid 1.2","Lipid 1.3","Lipid 1.4","Lipid 2.1","Lipid 2.2","Lipid 2.3","Lipid 2.4","Lipid 3.1","Lipid 3.2","Lipid 3.3","Lipid 3.4","Lipid 4.1","Lipid 4.2","Lipid 4.3","Lipid 4.4","REF Links","AI Analytics Report","Norvax Notes","SINTEF Notes","Users","Preclinical Data and Toxicology"], indexes: [2,3,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,7,4,6,8,5,25], menu:"Formulation"}];
+    var entries=[];
+    var categories=[];
   };
 
   return (
