@@ -262,10 +262,7 @@ function buildergbs (resultsets, setData, setDataTable) {
           var longName = resultsets[i].ntLongName;
           var fTarget = resultsets[i].FACTAtarget;
           var fGenome = resultsets[i].FACTAGenome;
-          var sVariants = resultsets[i].SpikeVariants;
-          var oVariants = resultsets[i].OtherVariants;
           var PANGO = resultsets[i].PANGO;
-          var BVBRC = resultsets[i].BVBRC;
           var AminoAcid = resultsets[i].AminoAcid;
           var Conserved = resultsets[i].Conserved;
           var VariantTargets = resultsets[i].VariantTargets;
@@ -280,13 +277,8 @@ function buildergbs (resultsets, setData, setDataTable) {
           var Users = resultsets[i].Users;
           var Notes = resultsets[i].Notes;
           var Notes2 = resultsets[i].Notes2;
-          var SigPepe = resultsets[i].Signal_Peptide_e;
-          var NTDMut = resultsets[i].NTD_Mutation;
-          var RBDMut = resultsets[i].RBD_Mutation;
-          var S1S2Mut = resultsets[i].S1_S2_Mutation;
-          var S2Mut = resultsets[i].S2_Mutation;
-          var Sequences = resultsets[i].Sequences;
           var AtSc = resultsets[i].AmpTec_Sourcecode;
+          var RNACHECK = resultsets[i].RNAseqCHECK;
 
           var UserArray = [];
           var UserTableArray = [];
@@ -306,10 +298,7 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(longName);
           UserArray.push(fTarget);
           UserArray.push(fGenome);
-          UserArray.push(sVariants);
-          UserArray.push(oVariants);
           UserArray.push(PANGO);
-          UserArray.push(BVBRC);
           UserArray.push(AminoAcid);
           UserArray.push(Conserved);
           UserArray.push(VariantTargets);
@@ -324,12 +313,7 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(Users);
           UserArray.push(Notes);
           UserArray.push(Notes2);
-          UserArray.push(SigPepe);
-          UserArray.push(NTDMut);
-          UserArray.push(RBDMut);
-          UserArray.push(S1S2Mut);
-          UserArray.push(S2Mut);
-          UserArray.push(Sequences);
+          UserArray.push(RNACHECK);
           UserArray.push(AtSc);
           UsersArray.push(UserArray);
           UsersTableArray.push(UserTableArray);
