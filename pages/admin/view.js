@@ -126,7 +126,7 @@ function View() {
       console.log("db setting5: ",fulldbname);
       axios.get(fulldbname, { headers })
         .then(response => {
-
+        console.log("response ",response);
         var resultsets = response.data;
         console.log("resultsets ",resultsets);
         var UsersArray = [];
