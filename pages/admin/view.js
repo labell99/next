@@ -85,7 +85,7 @@ const styles = {
   },
 };
 
-function builderids (resultsets) {
+function builderids (resultsets, setData) {
         var UsersArray = [];
         var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
@@ -217,7 +217,7 @@ function View() {
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       axios.get(fulldbname, { headers })
         .then(response => {
-          builderids(response.data);
+          builderids(response.data,setData);
       })
       .catch(error => {
         // handle error
