@@ -348,9 +348,11 @@ const columns = [
  }
 ];
 
-columns[2].name="Formulation Name";
-columns[3].name="Formulation Version";
-columns[4].name="Users";
+if (dbname === "norvax-lnps") {
+  columns[2].name="Formulation Name";
+  columns[3].name="Formulation Version";
+  columns[4].name="Users";
+};
 
 console.log("output: ",columns);
 
