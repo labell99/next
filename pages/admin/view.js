@@ -171,19 +171,11 @@ function builderids (resultsets) {
           UsersArray.push(UserArray);
           UsersTableArray.push(UserTableArray);
         }
-
+        console.log("db setting9: ",UsersArray);
+        console.log("db setting9a: ",UsersTableArray);
        // setData(UsersArray);
        // setDataTable(UsersTableArray);
 };
-
-function builderid (resultsets) {
-	console.log("db setting9: ",resultsets);
-        var UsersArray = [];
-        var UsersTableArray = [];
-        for (let i = 0; i < resultsets.length; i++) {
-          var name = resultsets[i].VaccineName;
-	    }
-}
 
 function View() {
   const useStyles = makeStyles(styles);
