@@ -248,6 +248,10 @@ function builderlnps (resultsets, setData, setDataTable) {
         setDataTable(UsersTableArray);
 };
 
+function buildergbs (resultsets, setData, setDataTable) {
+        console.log("gbs: ",resultsets);
+};
+
 function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -292,6 +296,8 @@ function View() {
             builderids(response.data,setData,setDataTable);
 	      } else if (dbname === "norvax-lnps") {
             builderlnps(response.data, setData, setDataTable);
+	      } else if (dbname === "gb-t-bm-rna-ids") {
+            buildergbs(response.data, setData, setDataTable);
           }
       })
       .catch(error => {
