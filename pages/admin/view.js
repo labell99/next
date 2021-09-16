@@ -249,8 +249,96 @@ function builderlnps (resultsets, setData, setDataTable) {
 };
 
 function buildergbs (resultsets, setData, setDataTable) {
-        console.log("gbs: ",resultsets);
+        var UsersArray = [];
+        var UsersTableArray = [];
+        for (let i = 0; i < resultsets.length; i++) {
+          var name = resultsets[i].VaccineName;
+          var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
+          var vaccineType = resultsets[i].VaccineType;
+          var vaccineApplication = resultsets[i].VaccineApplication;
+          var vaccineTarget = resultsets[i].VaccineTarget;
+          var Emergence = resultsets[i].Emergence;
+          var shortName = resultsets[i].ntShortName;
+          var longName = resultsets[i].ntLongName;
+          var fTarget = resultsets[i].FACTAtarget;
+          var fGenome = resultsets[i].FACTAGenome;
+          var sVariants = resultsets[i].SpikeVariants;
+          var oVariants = resultsets[i].OtherVariants;
+          var PANGO = resultsets[i].PANGO;
+          var BVBRC = resultsets[i].BVBRC;
+          var AminoAcid = resultsets[i].AminoAcid;
+          var Conserved = resultsets[i].Conserved;
+          var VariantTargets = resultsets[i].VariantTargets;
+          var Description = resultsets[i].Description;
+          var Category = resultsets[i].Category;
+          var Type = resultsets[i].Type;
+          var Subcategory = resultsets[i].Subcategory;
+          var IPReference = resultsets[i].IPReference;
+          var Phenotypes = resultsets[i].DOI;
+          var PublicationSource = resultsets[i].PublicationSource;
+          var REFlinks = resultsets[i].REFlinks;
+          var Users = resultsets[i].Users;
+          var Notes = resultsets[i].Notes;
+          var Notes2 = resultsets[i].Notes2;
+          var SigPepe = resultsets[i].Signal_Peptide_e;
+          var NTDMut = resultsets[i].NTD_Mutation;
+          var RBDMut = resultsets[i].RBD_Mutation;
+          var S1S2Mut = resultsets[i].S1_S2_Mutation;
+          var S2Mut = resultsets[i].S2_Mutation;
+          var Sequences = resultsets[i].Sequences;
+          var AtSc = resultsets[i].AmpTec_Sourcecode;
+
+          var UserArray = [];
+          var UserTableArray = [];
+          UserArray.push("");
+          UserTableArray.push("");
+          UserArray.push(recordNumber);
+          UserTableArray.push(recordNumber);
+          UserArray.push(name);
+          UserTableArray.push(name);
+          UserArray.push(vaccineType);
+          UserTableArray.push(vaccineType);
+          UserArray.push(vaccineTarget);
+          UserArray.push(vaccineApplication);
+          UserTableArray.push(vaccineApplication);
+          UserArray.push(Emergence);
+          UserArray.push(shortName);
+          UserArray.push(longName);
+          UserArray.push(fTarget);
+          UserArray.push(fGenome);
+          UserArray.push(sVariants);
+          UserArray.push(oVariants);
+          UserArray.push(PANGO);
+          UserArray.push(BVBRC);
+          UserArray.push(AminoAcid);
+          UserArray.push(Conserved);
+          UserArray.push(VariantTargets);
+          UserArray.push(Description);
+          UserArray.push(Category);
+          UserArray.push(Type);
+          UserArray.push(Subcategory);
+          UserArray.push(IPReference);
+          UserArray.push(Phenotypes);
+          UserArray.push(PublicationSource);
+          UserArray.push(REFlinks);
+          UserArray.push(Users);
+          UserArray.push(Notes);
+          UserArray.push(Notes2);
+          UserArray.push(SigPepe);
+          UserArray.push(NTDMut);
+          UserArray.push(RBDMut);
+          UserArray.push(S1S2Mut);
+          UserArray.push(S2Mut);
+          UserArray.push(Sequences);
+          UserArray.push(AtSc);
+          UsersArray.push(UserArray);
+          UsersTableArray.push(UserTableArray);
+        }
+
+        setData(UsersArray);
+        setDataTable(UsersTableArray);
 };
+
 
 function View() {
   const useStyles = makeStyles(styles);
