@@ -4,7 +4,7 @@ export const DataBContext = createContext();
 
 export function DataBProvider(props) {
 	const {value, children} = props
-    console.log("db settinghj: ",DataBContext,value);
+
 	return (
 	   <DataBContext.Provider value={value}>
 		{children}

@@ -43,9 +43,7 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
-  console.log("db setting: ",DataBContext);
   const dbcontext = useContext(DataBContext);
-  console.log("db setting1: ",dbcontext);
 
   return (
     <div>
