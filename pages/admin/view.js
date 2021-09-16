@@ -176,6 +176,10 @@ function builderids (resultsets) {
         setDataTable(UsersTableArray);
 };
 
+function builderid (resultsets) {
+	console.log("db setting9: ",resultsets);
+}
+
 function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -214,12 +218,11 @@ function View() {
       };
 
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
-      console.log("db setting5: ",fulldbname);
       axios.get(fulldbname, { headers })
         .then(response => {
         var resultsets = response.data;
         console.log("resultsets ",resultsets);
-        builderids(resultsets);
+        builderid(resultsets);
 
       })
       .catch(error => {
