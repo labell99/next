@@ -356,8 +356,6 @@ if (dbname === "norvax-lnps") {
   columns[4].name="Users";
 };
 
-console.log("output: ",columns);
-
 const options = {
   filter: true,
   filterType: 'dropdown',
