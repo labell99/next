@@ -85,50 +85,7 @@ const styles = {
   },
 };
 
-function View() {
-  const useStyles = makeStyles(styles);
-  const classes = useStyles();
-  const [data, setData] = useState([""]);
-  const [dataTable, setDataTable] = useState([""]);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalInfo, setModalInfo] = useState(0);
-  const [modalInfoi, setModalInfoi] = useState(0);
-  const [dataVal, setDataVal] = useState([""]);
-  const dbcontext = useContext(DataBContext);
-  const dbname = dbcontext.data;
-  const dbserver = "54.198.204.54";
-  const dbport = "1337";
-
-  const popupDialog = (value) => {
-    setDataVal(data[value]);
-    setModalOpen(!modalOpen);
-    setModalInfo(value);
-    setModalInfoi(value + 1);
-  }
-
-  const handleClose = () => {
-      setModalOpen(!modalOpen);
-  };
-
-  useEffect(() => {
-      axios.post('http://54.198.204.54:1337/auth/local', {
-        identifier: 'peter.jensen@finclusionsystems.com',
-        password: 'Test123!',
-      }).then(resp => {
-
-      var authtoken = "Bearer " + resp.data.jwt;
-	  const headers = {
-        'Authorization': authtoken,
-        'accept': 'application/json'
-      };
-
-      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
-      console.log("db setting5: ",fulldbname);
-      axios.get(fulldbname, { headers })
-        .then(response => {
-        console.log("response ",response);
-        var resultsets = response.data;
-        console.log("resultsets ",resultsets);
+const builderids = (resultsets) => {
         var UsersArray = [];
         var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
@@ -217,6 +174,53 @@ function View() {
 
         setData(UsersArray);
         setDataTable(UsersTableArray);
+};
+
+function View() {
+  const useStyles = makeStyles(styles);
+  const classes = useStyles();
+  const [data, setData] = useState([""]);
+  const [dataTable, setDataTable] = useState([""]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalInfo, setModalInfo] = useState(0);
+  const [modalInfoi, setModalInfoi] = useState(0);
+  const [dataVal, setDataVal] = useState([""]);
+  const dbcontext = useContext(DataBContext);
+  const dbname = dbcontext.data;
+  const dbserver = "54.198.204.54";
+  const dbport = "1337";
+
+  const popupDialog = (value) => {
+    setDataVal(data[value]);
+    setModalOpen(!modalOpen);
+    setModalInfo(value);
+    setModalInfoi(value + 1);
+  }
+
+  const handleClose = () => {
+      setModalOpen(!modalOpen);
+  };
+
+  useEffect(() => {
+      axios.post('http://54.198.204.54:1337/auth/local', {
+        identifier: 'peter.jensen@finclusionsystems.com',
+        password: 'Test123!',
+      }).then(resp => {
+
+      var authtoken = "Bearer " + resp.data.jwt;
+	  const headers = {
+        'Authorization': authtoken,
+        'accept': 'application/json'
+      };
+
+      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
+      console.log("db setting5: ",fulldbname);
+      axios.get(fulldbname, { headers })
+        .then(response => {
+        var resultsets = response.data;
+        console.log("resultsets ",resultsets);
+        builderids(response.data);
+
       })
       .catch(error => {
         // handle error
