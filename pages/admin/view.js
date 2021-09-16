@@ -125,7 +125,7 @@ function View() {
       const dbport = "1337";
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       console.log("db setting5: ",fulldbname);
-      axios.get(`http://54.198.204.54:1337/ids`, { headers })
+      axios.get(fulldbname, { headers })
         .then(response => {
 
         var resultsets = response.data;
