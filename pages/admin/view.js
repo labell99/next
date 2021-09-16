@@ -348,7 +348,9 @@ const columns = [
  }
 ];
 
-console.log("outputc: ",columns);
+columns[4].name="test";
+console.log("outputc: ",columns[4].name);
+console.log("output: ",columns);
 
 const options = {
   filter: true,
