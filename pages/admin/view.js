@@ -178,6 +178,11 @@ function builderids (resultsets) {
 
 function builderid (resultsets) {
 	console.log("db setting9: ",resultsets);
+        var UsersArray = [];
+        var UsersTableArray = [];
+        for (let i = 0; i < resultsets.length; i++) {
+          var name = resultsets[i].VaccineName;
+	    }
 }
 
 function View() {
@@ -220,10 +225,7 @@ function View() {
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
       axios.get(fulldbname, { headers })
         .then(response => {
-        var resultsets = response.data;
-        console.log("resultsets ",resultsets);
-        builderid(response.data);
-
+          builderid(response.data);
       })
       .catch(error => {
         // handle error
