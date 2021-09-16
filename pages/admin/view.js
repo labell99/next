@@ -173,7 +173,7 @@ function builderids (resultsets) {
         }
         console.log("db setting9: ",UsersArray);
         console.log("db setting9a: ",UsersTableArray);
-       // setData(UsersArray);
+        setData(UsersArray);
        // setDataTable(UsersTableArray);
 };
 
