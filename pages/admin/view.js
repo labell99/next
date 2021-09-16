@@ -32,6 +32,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {DataBContext} from 'components/Context/dataBContext';
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
@@ -93,6 +94,10 @@ function View() {
   const [modalInfo, setModalInfo] = useState(0);
   const [modalInfoi, setModalInfoi] = useState(0);
   const [dataVal, setDataVal] = useState([""]);
+
+  const dbcontext = useContext(DataBContext);
+  console.log("db setting1: ",dbcontext);
+
 
   const popupDialog = (value) => {
     setDataVal(data[value]);
