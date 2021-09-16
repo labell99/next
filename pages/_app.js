@@ -39,7 +39,7 @@ Router.events.on("routeChangeError", () => {
 export default class MyApp extends App {
 
   state = {
-    datab: "MRNA-IDS",
+    datab: "ids",
   };
 
   setData = (data) => {

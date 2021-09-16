@@ -57,7 +57,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
-                <IconButton onClick={() => dbcontext.setData("MRNA-IDS")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
@@ -69,7 +69,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
-                <IconButton  onClick={() => dbcontext.setData("NOR-LNPS")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton  onClick={() => dbcontext.setData("norvax-lnps")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -81,7 +81,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
-                 <IconButton  onClick={() => dbcontext.setData("GBTB-IDS")} style={{fontSize: '12px', color: 'white'}}>
+                 <IconButton  onClick={() => dbcontext.setData("gb-t-bm-rna-ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -93,7 +93,7 @@ function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <IconButton  onClick={() => dbcontext.setData("ECAM-IDS")} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton  onClick={() => dbcontext.setData("ecam-sma-ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
