@@ -85,7 +85,7 @@ const styles = {
   },
 };
 
-const builderids = (resultsets) => {
+function builderids (resultsets) {
         var UsersArray = [];
         var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
