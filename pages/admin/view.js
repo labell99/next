@@ -219,7 +219,7 @@ function View() {
         .then(response => {
         var resultsets = response.data;
         console.log("resultsets ",resultsets);
-        builderids(response.data);
+        builderids(resultsets);
 
       })
       .catch(error => {
