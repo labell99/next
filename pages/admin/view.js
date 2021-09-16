@@ -222,7 +222,7 @@ function View() {
         .then(response => {
         var resultsets = response.data;
         console.log("resultsets ",resultsets);
-        builderid(resultsets);
+        builderid(response.data);
 
       })
       .catch(error => {
