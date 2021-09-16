@@ -96,7 +96,7 @@ function View() {
   const [dataVal, setDataVal] = useState([""]);
 
   const dbcontext = useContext(DataBContext);
-  console.log("db setting1: ",dbcontext);
+  console.log("db setting3: ",dbcontext);
 
 
   const popupDialog = (value) => {
