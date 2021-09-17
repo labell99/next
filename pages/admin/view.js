@@ -581,7 +581,7 @@ const options = {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
-            <h4 className={classes.cardTitleWhite}>{tableName}</h4>
+            <h4 className={classes.cardTitleWhite}>test</h4>
           </CardHeader>
           <CardBody>
             <MuiThemeProvider theme={getMuiTheme()}>
