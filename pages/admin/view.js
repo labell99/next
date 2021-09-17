@@ -542,10 +542,10 @@ const options = {
     var categories=[];
   } else if (dbname === "ecam-sma-ids") {
     var pentries=[
-    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","Conserved","Variant Targets","Description","Category","Type","Subcategory","AmpTec_Sourcecode","RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,13,14,15,16,17,18,27,26], menu:"Characterisation"}];
+    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","Conserved","Variant Targets","Description","Category","Type","Subcategory" ], indexes: [2,3,4,6,7,8,5,13,14,15,16,17,18], menu:"Characterisation"}];
     var entries=[];
     var categories=[
-	{id:1, name: ["FACTA. Target","FACTA. Genome","Amino Acid","IPReferences","PublicationSource","DOI","REFlinks","Notes","Users","PANGO Link"], indexes: [9,10,12,19,21,20,22,24,23,11], menu:"Structure"}];
+	{id:1, name: ["FACTA. Target","FACTA. Genome","Amino Acid","IPReferences","PublicationSource","DOI","REFlinks","Notes","Users","PANGO Link","AmpTec_Sourcecode","RNAseqCHECK"], indexes: [9,10,12,19,21,20,22,24,23,11,27,26], menu:"Structure"}];
   };
 
   return (
