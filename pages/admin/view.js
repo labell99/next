@@ -282,6 +282,43 @@ function buildergbs (resultsets, setData, setDataTable) {
           var AtSc = resultsets[i].AmpTec_Sourcecode;
           var RNACHECK = resultsets[i].RNAseqCHECK;
 
+          var UserArray = [];
+          var UserTableArray = [];
+          UserArray.push("");
+          UserTableArray.push("");
+          UserArray.push(recordNumber);
+          UserTableArray.push(recordNumber);
+          UserArray.push(name);
+          UserTableArray.push(name);
+          UserArray.push(vaccineType);
+          UserTableArray.push(vaccineType);
+          UserArray.push(vaccineTarget);
+          UserArray.push(vaccineApplication);
+          UserTableArray.push(vaccineApplication);
+          UserArray.push(Emergence);
+          UserArray.push(shortName);
+          UserArray.push(longName);
+          UserArray.push(fTarget);
+          UserArray.push(fGenome);
+          UserArray.push(PANGO);
+          UserArray.push(AminoAcid);
+          UserArray.push(Conserved);
+          UserArray.push(VariantTargets);
+          UserArray.push(Description);
+          UserArray.push(Category);
+          UserArray.push(Type);
+          UserArray.push(Subcategory);
+          UserArray.push(IPReferences);
+          UserArray.push(Phenotypes);
+          UserArray.push(PublicationSource);
+          UserArray.push(REFlinks);
+          UserArray.push(Users);
+          UserArray.push(Notes);
+          UserArray.push(Notes2);
+          UserArray.push(RNACHECK);
+          UserArray.push(AtSc);
+          UsersArray.push(UserArray);
+          UsersTableArray.push(UserTableArray);
 
         }
 
