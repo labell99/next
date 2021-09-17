@@ -448,7 +448,7 @@ function View() {
             builderlnps(response.data, setData, setDataTable);
 	      } else if (dbname === "gb-t-bm-rna-ids") {
 			setTableName("GBTBMRNA IDS");
-            buildergbs(response.data, setData, setDataTable);
+            buildersma(response.data, setData, setDataTable);
 	      } else if (dbname === "ecam-sma-ids") {
 			setTableName("ECAM-SMA IDS");
             buildersma(response.data, setData, setDataTable);
