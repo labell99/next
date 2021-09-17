@@ -248,7 +248,7 @@ function builderlnps (resultsets, setData, setDataTable) {
         setDataTable(UsersTableArray);
 };
 
-function buildergbs (resultsets, setData, setDataTable) {
+function buildergb (resultsets, setData, setDataTable) {
         console.log("restes: ",resultsets);
 
         var UsersArray = [];
@@ -308,13 +308,13 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(Category);
           UserArray.push(Type);
           UserArray.push(Subcategory);
-
+          UserArray.push(IPReference);
 
         }
 
 }
 
-function buildergbss (resultsets, setData, setDataTable) {
+function buildergbs (resultsets, setData, setDataTable) {
         var UsersArray = [];
         var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
@@ -372,7 +372,7 @@ function buildergbss (resultsets, setData, setDataTable) {
           UserArray.push(Category);
           UserArray.push(Type);
           UserArray.push(Subcategory);
-          UserArray.push(IPReferences);
+          UserArray.push(IPReference);
           UserArray.push(Phenotypes);
           UserArray.push(PublicationSource);
           UserArray.push(REFlinks);
