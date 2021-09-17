@@ -290,6 +290,11 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserTableArray.push(recordNumber);
           UserArray.push(name);
           UserTableArray.push(name);
+          UserArray.push(vaccineType);
+          UserTableArray.push(vaccineType);
+          UserArray.push(vaccineTarget);
+          UserArray.push(vaccineApplication);
+          UserTableArray.push(vaccineApplication);
 
 
 
