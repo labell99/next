@@ -300,7 +300,12 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(longName);
           UserArray.push(fTarget);
           UserArray.push(fGenome);
-
+          UserArray.push(PANGO);
+          UserArray.push(AminoAcid);
+          UserArray.push(Conserved);
+          UserArray.push(VariantTargets);
+          UserArray.push(Description);
+          UserArray.push(Category);
 
         }
 
