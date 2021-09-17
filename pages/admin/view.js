@@ -306,7 +306,7 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(Category);
           UserArray.push(Type);
           UserArray.push(Subcategory);
-          UserArray.push(IPReference);
+          UserArray.push(IPReferences);
           UserArray.push(Phenotypes);
           UserArray.push(PublicationSource);
           UserArray.push(REFlinks);
@@ -346,7 +346,7 @@ function buildersma (resultsets, setData, setDataTable) {
           var Category = resultsets[i].Category;
           var Type = resultsets[i].Type;
           var Subcategory = resultsets[i].Subcategory;
-          var IPReference = resultsets[i].IPReference;
+          var IPReference = resultsets[i].IPReferences;
           var Phenotypes = resultsets[i].DOI;
           var PublicationSource = resultsets[i].PublicationSource;
           var REFlinks = resultsets[i].REFlinks;
@@ -537,12 +537,12 @@ const options = {
     var categories=[];
   } else if (dbname === "gb-t-bm-rna-ids") {
     var pentries=[
-    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","FACTA target","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Subcategory","IPReference","PublicationSource", "DOI", "REFlinks", "FACTAGenome", "Notes", "Users", "AmpTec_Sourcecode", "RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,11,9,12,13,14,15,16,17,18,19,21,20,22,10,24,23,27,26], menu:"Characterisation"}];
+    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","FACTA target","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Subcategory","IPReferences","PublicationSource", "DOI", "REFlinks", "FACTAGenome", "Notes", "Users", "AmpTec_Sourcecode", "RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,11,9,12,13,14,15,16,17,18,19,21,20,22,10,24,23,27,26], menu:"Characterisation"}];
     var entries=[];
     var categories=[];
   } else if (dbname === "ecam-sma-ids") {
     var pentries=[
-    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","FACTA target","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Subcategory","IPReference","PublicationSource", "DOI", "REFlinks", "FACTAGenome", "Notes", "Users", "AmpTec_Sourcecode", "RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,11,9,12,13,14,15,16,17,18,19,21,20,22,10,24,23,27,26], menu:"Characterisation"}];
+    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","FACTA target","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Subcategory","IPReferences","PublicationSource", "DOI", "REFlinks", "FACTAGenome", "Notes", "Users", "AmpTec_Sourcecode", "RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,11,9,12,13,14,15,16,17,18,19,21,20,22,10,24,23,27,26], menu:"Characterisation"}];
     var entries=[];
     var categories=[];
   };
