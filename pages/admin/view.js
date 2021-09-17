@@ -251,6 +251,12 @@ function builderlnps (resultsets, setData, setDataTable) {
 function buildergbs (resultsets, setData, setDataTable) {
         var UsersArray = [];
         var UsersTableArray = [];
+        console.log("restes: ",resultsets);
+}
+
+function buildergbss (resultsets, setData, setDataTable) {
+        var UsersArray = [];
+        var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
           var name = resultsets[i].VaccineName;
           var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
@@ -448,7 +454,7 @@ function View() {
             builderlnps(response.data, setData, setDataTable);
 	      } else if (dbname === "gb-t-bm-rna-ids") {
 			setTableName("GBTBMRNA IDS");
-            buildersma(response.data, setData, setDataTable);
+            buildergbs(response.data, setData, setDataTable);
 	      } else if (dbname === "ecam-sma-ids") {
 			setTableName("ECAM-SMA IDS");
             buildersma(response.data, setData, setDataTable);
