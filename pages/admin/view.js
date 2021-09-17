@@ -286,7 +286,10 @@ function buildergbs (resultsets, setData, setDataTable) {
           var UserTableArray = [];
           UserArray.push("");
           UserTableArray.push("");
-
+          UserArray.push(recordNumber);
+          UserTableArray.push(recordNumber);
+          UserArray.push(name);
+          UserTableArray.push(name);
 
 
 
