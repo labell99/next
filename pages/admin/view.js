@@ -324,6 +324,81 @@ function buildergbs (resultsets, setData, setDataTable) {
 };
 
 
+function buildersma (resultsets, setData, setDataTable) {
+        var UsersArray = [];
+        var UsersTableArray = [];
+        for (let i = 0; i < resultsets.length; i++) {
+          var name = resultsets[i].VaccineName;
+          var recordNumber = parseInt(resultsets[i].RecordNumber, 10);
+          var vaccineType = resultsets[i].VaccineType;
+          var vaccineApplication = resultsets[i].VaccineApplication;
+          var vaccineTarget = resultsets[i].VaccineTarget;
+          var Emergence = resultsets[i].Emergence;
+          var shortName = resultsets[i].ntShortName;
+          var longName = resultsets[i].ntLongName;
+          var fTarget = resultsets[i].FACTAtarget;
+          var fGenome = resultsets[i].FACTAGenome;
+          var PANGO = resultsets[i].PANGO;
+          var AminoAcid = resultsets[i].AminoAcid;
+          var Conserved = resultsets[i].Conserved;
+          var VariantTargets = resultsets[i].VariantTargets;
+          var Description = resultsets[i].Description;
+          var Category = resultsets[i].Category;
+          var Type = resultsets[i].Type;
+          var Subcategory = resultsets[i].Subcategory;
+          var IPReference = resultsets[i].IPReference;
+          var Phenotypes = resultsets[i].DOI;
+          var PublicationSource = resultsets[i].PublicationSource;
+          var REFlinks = resultsets[i].REFlinks;
+          var Users = resultsets[i].Users;
+          var Notes = resultsets[i].Notes;
+          var Notes2 = resultsets[i].Notes2;
+          var AtSc = resultsets[i].AmpTec_Sourcecode;
+          var RNACHECK = resultsets[i].RNAseqCHECK;
+
+          var UserArray = [];
+          var UserTableArray = [];
+          UserArray.push("");
+          UserTableArray.push("");
+          UserArray.push(recordNumber);
+          UserTableArray.push(recordNumber);
+          UserArray.push(name);
+          UserTableArray.push(name);
+          UserArray.push(vaccineType);
+          UserTableArray.push(vaccineType);
+          UserArray.push(vaccineTarget);
+          UserArray.push(vaccineApplication);
+          UserTableArray.push(vaccineApplication);
+          UserArray.push(Emergence);
+          UserArray.push(shortName);
+          UserArray.push(longName);
+          UserArray.push(fTarget);
+          UserArray.push(fGenome);
+          UserArray.push(PANGO);
+          UserArray.push(AminoAcid);
+          UserArray.push(Conserved);
+          UserArray.push(VariantTargets);
+          UserArray.push(Description);
+          UserArray.push(Category);
+          UserArray.push(Type);
+          UserArray.push(Subcategory);
+          UserArray.push(IPReference);
+          UserArray.push(Phenotypes);
+          UserArray.push(PublicationSource);
+          UserArray.push(REFlinks);
+          UserArray.push(Users);
+          UserArray.push(Notes);
+          UserArray.push(Notes2);
+          UserArray.push(RNACHECK);
+          UserArray.push(AtSc);
+          UsersArray.push(UserArray);
+          UsersTableArray.push(UserTableArray);
+        }
+
+        setData(UsersArray);
+        setDataTable(UsersTableArray);
+};
+
 function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -370,6 +445,8 @@ function View() {
             builderlnps(response.data, setData, setDataTable);
 	      } else if (dbname === "gb-t-bm-rna-ids") {
             buildergbs(response.data, setData, setDataTable);
+	      } else if (dbname === "ecam-sma-ids") {
+            buildersma(response.data, setData, setDataTable);
           }
       })
       .catch(error => {
@@ -459,6 +536,11 @@ const options = {
     var entries=[];
     var categories=[];
   } else if (dbname === "gb-t-bm-rna-ids") {
+    var pentries=[
+    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","FACTA target","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Subcategory","IPReference","PublicationSource", "DOI", "REFlinks", "FACTAGenome", "Notes", "Users", "AmpTec_Sourcecode", "RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,11,9,12,13,14,15,16,17,18,19,21,20,22,10,24,23,27,26], menu:"Characterisation"}];
+    var entries=[];
+    var categories=[];
+  } else if (dbname === "ecam-sma-ids") {
     var pentries=[
     {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","PANGO Link","FACTA target","Amino Acid","Conserved","Variant Targets","Description","Category","Type","Subcategory","IPReference","PublicationSource", "DOI", "REFlinks", "FACTAGenome", "Notes", "Users", "AmpTec_Sourcecode", "RNAseqCHECK" ], indexes: [2,3,4,6,7,8,5,11,9,12,13,14,15,16,17,18,19,21,20,22,10,24,23,27,26], menu:"Characterisation"}];
     var entries=[];
