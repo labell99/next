@@ -317,8 +317,7 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(Notes2);
           UserArray.push(RNACHECK);
           UserArray.push(AtSc);
-          UsersArray.push(UserArray);
-          UsersTableArray.push(UserTableArray);
+
 
         }
 
