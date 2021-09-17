@@ -295,7 +295,11 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(vaccineTarget);
           UserArray.push(vaccineApplication);
           UserTableArray.push(vaccineApplication);
-
+          UserArray.push(Emergence);
+          UserArray.push(shortName);
+          UserArray.push(longName);
+          UserArray.push(fTarget);
+          UserArray.push(fGenome);
 
 
         }
