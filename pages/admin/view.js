@@ -525,6 +525,7 @@ const options = {
 };
 
   if (dbname === "ids") {
+	const tableName = "Immunogen Design & Selection";
     var categories=[
     {id:1, name: ["FACTA. Target","FACTA. Genome","Spike Variants","Other Variants"], indexes: [9,10,11,12], menu:"Structure"}];
     var entries=[
@@ -577,7 +578,7 @@ const options = {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
-            <h4 className={classes.cardTitleWhite}>test</h4>
+            <h4 className={classes.cardTitleWhite}>{tableName}</h4>
           </CardHeader>
           <CardBody>
             <MuiThemeProvider theme={getMuiTheme()}>
