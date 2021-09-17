@@ -306,6 +306,9 @@ function buildergbs (resultsets, setData, setDataTable) {
           UserArray.push(VariantTargets);
           UserArray.push(Description);
           UserArray.push(Category);
+          UserArray.push(Type);
+          UserArray.push(Subcategory);
+          UserArray.push(IPReferences);
 
         }
 
