@@ -53,16 +53,14 @@ function Dashboard() {
 		</Card>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
-           <CardItem style={{backgroundColor: 'red'}}>
             <CardHeader color="warning" stats icon>
-              <CardIcon color="warning">
+              <CardIcon color="warning" style={{backgroundColor: 'red'}}>
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
               </CardIcon>
             </CardHeader>
-             </CardItem>
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
