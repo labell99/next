@@ -52,9 +52,9 @@ function Dashboard() {
 		  <Image src={norvax} width={1642} height={878} layout='responsive'/>
 		</Card>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#e3972d"}}>
-            <CardHeader color="warning"  stats icon>
-              <CardIcon color="warning" >
+          <Card style={{backgroundColor: "#e2942b"}}>
+            <CardHeader color="#e2942b"  stats icon>
+              <CardIcon color="#e2942b" >
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
