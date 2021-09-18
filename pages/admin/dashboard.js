@@ -77,8 +77,8 @@ function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card style={{backgroundColor: "#C7463F"}}>
-            <CardHeader color="danger" stats icon>
-              <CardIcon color="danger">
+            <CardHeader color="#C7463F" stats icon>
+              <CardIcon color="#C7463F">
                  <IconButton  onClick={() => dbcontext.setData("gb-t-bm-rna-ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
@@ -89,8 +89,8 @@ function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card style={{backgroundColor: "#6CB7CB"}}>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
+            <CardHeader color="#6CB7CB" stats icon>
+              <CardIcon color="#6CB7CB">
                 <IconButton  onClick={() => dbcontext.setData("ecam-sma-ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
