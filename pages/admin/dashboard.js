@@ -48,9 +48,6 @@ function Dashboard() {
   return (
     <div>
       <GridContainer>
-        <Card profile>
-		  <Image src={norvax} width={1642} height={878} layout='responsive'/>
-		</Card>
         <GridItem xs={12} sm={6} md={3}>
           <Card style={{backgroundColor: "#e2942b"}}>
             <CardHeader color="#e2942b"  stats icon>
@@ -99,6 +96,9 @@ function Dashboard() {
             </CardHeader>
           </Card>
         </GridItem>
+        <Card profile>
+		  <Image src={norvax} width={1642} height={878} layout='responsive'/>
+		</Card>
       </GridContainer>
     </div>
   );
