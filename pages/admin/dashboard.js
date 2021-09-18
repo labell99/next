@@ -65,8 +65,8 @@ function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card style={{backgroundColor: "#72a557"}}>
-            <CardHeader color="success" stats icon>
-              <CardIcon color="success">
+            <CardHeader color="#72a557" stats icon>
+              <CardIcon color="#72a557">
                 <IconButton  onClick={() => dbcontext.setData("norvax-lnps")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
