@@ -64,7 +64,7 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card style={{backgroundColor: "#00B74A"}}>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
                 <IconButton  onClick={() => dbcontext.setData("norvax-lnps")} style={{fontSize: '12px', color: 'white'}}>
