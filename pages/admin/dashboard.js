@@ -52,7 +52,7 @@ function Dashboard() {
 		  <Image src={norvax} width={1642} height={878} layout='responsive'/>
 		</Card>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#ffc107"}}>
+          <Card style={{backgroundColor: "#E3962D"}}>
             <CardHeader color="warning"  stats icon>
               <CardIcon color="warning" >
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
@@ -64,7 +64,7 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#00B74A"}}>
+          <Card style={{backgroundColor: "#72A557"}}>
             <CardHeader color="success" stats icon>
               <CardIcon color="success">
                 <IconButton  onClick={() => dbcontext.setData("norvax-lnps")} style={{fontSize: '12px', color: 'white'}}>
