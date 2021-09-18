@@ -49,7 +49,7 @@ function Dashboard() {
     <div>
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#ffffff00"}}>
+          <Card >
             <CardHeader color="#e2942b"  stats icon>
               <CardIcon color="#e2942b" >
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
