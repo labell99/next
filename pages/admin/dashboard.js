@@ -76,7 +76,7 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card style={{backgroundColor: "#C7463F"}}>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
                  <IconButton  onClick={() => dbcontext.setData("gb-t-bm-rna-ids")} style={{fontSize: '12px', color: 'white'}}>
@@ -88,7 +88,7 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card style={{backgroundColor: "#6CB7CB"}}>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
                 <IconButton  onClick={() => dbcontext.setData("ecam-sma-ids")} style={{fontSize: '12px', color: 'white'}}>
