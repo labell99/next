@@ -52,7 +52,7 @@ function Dashboard() {
 		  <Image src={norvax} width={1642} height={878} layout='responsive'/>
 		</Card>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: 'warning'}}>
+          <Card style={{backgroundColor: "#ffc107"}}>
             <CardHeader color="warning"  stats icon>
               <CardIcon color="warning" >
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
