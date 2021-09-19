@@ -39,9 +39,6 @@ import { bugs, website, server } from "variables/general.js";
 import StorageIcon from '@material-ui/icons/Storage';
 import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
-import {
-  warningColor,
-} from "assets/jss/nextjs-material-dashboard.js";
 
 
 function Dashboard() {

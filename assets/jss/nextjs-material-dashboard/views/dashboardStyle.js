@@ -3,6 +3,7 @@ import {
   whiteColor,
   grayColor,
   hexToRgb,
+  warningColor,
 } from "assets/jss/nextjs-material-dashboard.js";
 
 const dashboardStyle = {
@@ -48,6 +49,9 @@ const dashboardStyle = {
     fontSize: "14px",
     marginTop: "0",
     marginBottom: "0",
+  },
+   cardWarning: {
+    backgroundColor: warningColor[0],
   },
   cardTitle: {
     color: grayColor[2],
