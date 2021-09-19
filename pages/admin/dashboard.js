@@ -51,7 +51,7 @@ function Dashboard() {
         <GridItem xs={12} sm={6} md={3}>
           <Card >
             <CardHeader color="warning"  stats icon>
-              <CardIcon  color="warning">
+              <CardIcon color="warning">
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
@@ -61,9 +61,9 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#72a557"}}>
-            <CardHeader color="#72a557" stats icon>
-              <CardIcon color="#72a557">
+          <Card >
+            <CardHeader color="success" stats icon>
+              <CardIcon color="success">
                 <IconButton  onClick={() => dbcontext.setData("norvax-lnps")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
@@ -73,9 +73,9 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#C7463F"}}>
-            <CardHeader color="#C7463F" stats icon>
-              <CardIcon color="#C7463F">
+          <Card >
+            <CardHeader color="danger" stats icon>
+              <CardIcon color="danger">
                  <IconButton  onClick={() => dbcontext.setData("gb-t-bm-rna-ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
@@ -85,9 +85,9 @@ function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{backgroundColor: "#6CB7CB"}}>
-            <CardHeader color="#6CB7CB" stats icon>
-              <CardIcon color="#6CB7CB">
+          <Card >
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
                 <IconButton  onClick={() => dbcontext.setData("ecam-sma-ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
