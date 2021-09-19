@@ -54,8 +54,8 @@ function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
-            <CardHeader color="warningColor[1]"  stats icon>
-              <CardIcon color="warningColor[1]">
+            <CardHeader color={warningColor[1]}  stats icon>
+              <CardIcon color={warningColor[1]}>
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
