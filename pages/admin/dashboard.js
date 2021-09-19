@@ -39,6 +39,10 @@ import { bugs, website, server } from "variables/general.js";
 import StorageIcon from '@material-ui/icons/Storage';
 import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
+import {
+  warningColor,
+} from "assets/jss/nextjs-material-dashboard.js";
+
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
@@ -50,8 +54,8 @@ function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
-            <CardHeader color="warning"  stats icon>
-              <CardIcon color="warning">
+            <CardHeader color=warningColor[0]  stats icon>
+              <CardIcon color=warningColor[0]>
                 <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
