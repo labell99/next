@@ -10,7 +10,6 @@ import Admin from "layouts/Admin.js";
 import Button from '@material-ui/core/Button';
 import RegularAccordion from "components/CustomAccordion/CustomAccordion.js";
 import PanelAccordion from "components/PanelAccordion/PanelAccordion.js";
-import Popup from "components/Popup/Popup.js";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Table from "components/Table/Table.js";
@@ -341,7 +340,6 @@ function View() {
   const dbport = "1337";
 
   const handleDelete = (id) => {
-	console.log("delete item: ",id);
     setPopup({
       show: true,
       id,
@@ -349,7 +347,8 @@ function View() {
   };
 
   const handleDeleteTrue = () => {
-    if (popup.show && popup.id) {
+	console.log("delete item: ",popup.id);
+    if (popup.show) {
       delId(popup.id);
       setPopup({
         show: false,
@@ -516,7 +515,15 @@ const options = {
 
   return (
     <GridContainer>
-      <Popup />
+
+      <Dialog open={popup.show} aria-labelledby="form-dialog-title">
+        <DialogTitle id="confirmation-dialog-title">Delete Record</DialogTitle>
+        <DialogContent>Do you want to delete this record? </DialogContent>
+        <DialogActions>
+          <Button color="primary" onClick={() => handleDeleteTrue()}>Yes</Button>{' '}
+          <Button color="secondary" onClick={() => handleDeleteFalse()}>Cancel</Button>
+        </DialogActions>
+      </Dialog>
       <Dialog fullWidth maxWidth="xl" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
