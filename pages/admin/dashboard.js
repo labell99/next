@@ -46,7 +46,7 @@ function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
-  const [button, setButton] = useState({currentButton: "ids"});
+  const [button, setButton] = useState({currentButton: 0});
 
   console.log("button: ",button);
 
