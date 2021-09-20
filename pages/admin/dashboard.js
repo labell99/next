@@ -73,9 +73,9 @@ function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
-            <CardHeader color="success" stats icon>
-              <CardIcon color="success">
-                <IconButton  onClick={() => dbcontext.setData("norvax-lnps")} style={{fontSize: '12px', color: 'white'}}>
+            <CardHeader color={button.currentButton === 1 ? "primary" : "success"} stats icon>
+              <CardIcon color={button.currentButton === 1 ? "primary" : "success"}>
+                <IconButton  onClick={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -85,9 +85,9 @@ function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
-            <CardHeader color="danger" stats icon>
-              <CardIcon color="danger">
-                 <IconButton  onClick={() => dbcontext.setData("gb-t-bm-rna-ids")} style={{fontSize: '12px', color: 'white'}}>
+            <CardHeader color={button.currentButton === 2 ? "primary" : "danger"} stats icon>
+              <CardIcon color={button.currentButton === 2 ? "primary" : "danger"}>
+                 <IconButton  onClick={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -97,9 +97,9 @@ function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
-                <IconButton  onClick={() => dbcontext.setData("ecam-sma-ids")} style={{fontSize: '12px', color: 'white'}}>
+            <CardHeader color={button.currentButton === 3 ? "primary" : "info"} stats icon>
+              <CardIcon color={button.currentButton === 3 ? "primary" : "info"}>
+                <IconButton  onClick={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
