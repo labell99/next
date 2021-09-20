@@ -124,6 +124,7 @@ function builderids (resultsets, setData, setDataTable) {
           var S2Mut = resultsets[i].S2_Mutation;
           var Sequences = resultsets[i].Sequences;
           var AtSc = resultsets[i].AmpTec_Sourcecode;
+          var Id = resultsets[i]._id;
 
           var UserArray = [];
           var UserTableArray = [];
@@ -168,6 +169,8 @@ function builderids (resultsets, setData, setDataTable) {
           UserArray.push(S2Mut);
           UserArray.push(Sequences);
           UserArray.push(AtSc);
+          UserArray.push(Id);
+          UserTableArray.push(Id);
           UsersArray.push(UserArray);
           UsersTableArray.push(UserTableArray);
         }
@@ -205,6 +208,7 @@ function builderlnps (resultsets, setData, setDataTable) {
           var lipid43 = resultsets[i].Lipid_4_3;
           var lipid44 = resultsets[i].Lipid_4_4;
           var preclin = resultsets[i].Preclin_Data;
+          var Id = resultsets[i]._id;
 
           var UserArray = [];
           var UserTableArray = [];
@@ -239,7 +243,8 @@ function builderlnps (resultsets, setData, setDataTable) {
           UserArray.push(lipid43);
           UserArray.push(lipid44);
           UserArray.push(preclin);
-
+          UserArray.push(Id);
+          UserTableArray.push(Id);
           UsersArray.push(UserArray);
           UsersTableArray.push(UserTableArray);
         }
@@ -279,6 +284,7 @@ function builder (resultsets, setData, setDataTable) {
           var Notes2 = resultsets[i].Notes2;
           var AtSc = resultsets[i].AmpTec_Sourcecode;
           var RNACHECK = resultsets[i].RNAseqCHECK;
+          var Id = resultsets[i]._id;
 
           var UserArray = [];
           var UserTableArray = [];
@@ -315,6 +321,8 @@ function builder (resultsets, setData, setDataTable) {
           UserArray.push(Notes2);
           UserArray.push(RNACHECK);
           UserArray.push(AtSc);
+          UserArray.push(Id);
+          UserTableArray.push(Id);
           UsersArray.push(UserArray);
           UsersTableArray.push(UserTableArray);
         }
