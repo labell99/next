@@ -355,7 +355,7 @@ function View() {
   };
 
   const delId = (id) => {
-	console.log("delete item: ",id);
+	console.log("delete item: ",dataTable[id]);
       axios.post('http://54.198.204.54:1337/auth/local', {
         identifier: 'peter.jensen@finclusionsystems.com',
         password: 'Test123!',
