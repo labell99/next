@@ -371,6 +371,7 @@ function View() {
           alert("Authentication Error! Please login again");
         }
       });
+     });
   };
 
   const handleDeleteTrue = () => {
