@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -8,14 +8,17 @@ import PropTypes from "prop-types";
 import Typography from '@material-ui/core/Typography'
 import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from "reactstrap";
 
-
 export default function Popup(props) {
 
   const {
-    handleDeleteTrue,
-    handleDeleteFalse,
+    buttonLabel,
+    className
   } = props;
+
   const [modal, setModal] = useState(true);
+  const toggle = () => setModal(!modal);
+
+
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle} className={className}>
