@@ -41,19 +41,28 @@ import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 
 
+
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
+  const [button, setButton] = useState({currentButton: 'null'});
+
+  console.log("button: ",button);
+  onButtonClicked (datab, id) {
+	dbcontext.setData(datab);
+    setButton({ currentButton: button.currentButton === id ? null : id });
+    console.log("buttoncl: ",button);
+  }
 
   return (
     <div>
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
-          <Card style={{ backgroundColor: "black"}}>
-            <CardHeader color="warning"  stats icon>
-              <CardIcon color="warning">
-                <IconButton onClick={() => dbcontext.setData("ids")} style={{fontSize: '12px', color: 'white'}}>
+          <Card >
+            <CardHeader  color={button.currentButton === 0 ? "primary" : "warning" }  stats icon>
+              <CardIcon  color={button.currentButton === 0 ? "primary" : "warning" }>
+                <IconButton onClick={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
