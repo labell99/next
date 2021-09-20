@@ -546,12 +546,6 @@ const options = {
     var entries=[];
     var categories=[
 	{id:1, name: ["Description","FACTA. Target","FACTA. Genome","Amino Acid","IPReferences","PublicationSource","DOI","REFlinks","Notes","Users","PANGO Link","AmpTec_Sourcecode","RNAseqCHECK"], indexes: [15,9,10,12,19,21,20,22,24,23,11,27,26], menu:"Structure"}];
-  } else if (dbname === "ecam-s") {
-    var pentries=[
-    {id:1, name: ["Vaccine Name","Vaccine Type","Vaccine Target","Emergence","Short Name","Long Name","Vaccine Application","Conserved","Variant Targets","Category","Type","Subcategory"], indexes: [2,3,4,6,7,8,5,13,14,16,17,18], menu:"Characterisation"}];
-    var entries=[];
-    var categories=[
-	{id:1, name: ["Description","FACTA. Target","FACTA. Genome","Amino Acid","IPReferences","PublicationSource","DOI","REFlinks","Notes","Users","PANGO Link","AmpTec_Sourcecode","RNAseqCHECK"], indexes: [15,9,10,12,19,21,20,22,24,23,11,27,26], menu:"Structure"}];
   };
 
   return (
