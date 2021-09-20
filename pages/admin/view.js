@@ -456,7 +456,7 @@ function View() {
       })
       .catch(error => {
         // handle error
-        console.log("handle: ",error);
+        console.log("error fetching strapi data: ",error);
         if (error.response.status == 401) {
           alert("Authentication Error! Please login again");
         }

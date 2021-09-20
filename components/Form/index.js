@@ -55,7 +55,6 @@ const OrderForm = () => {
   };
 
   async function getUser(values) {
-	console.log("val ",values);
     try {
       var resp = await axios.post('http://54.198.204.54:1337/auth/local', {
          identifier: 'lee_abell@hotmail.com',
@@ -68,9 +67,8 @@ const OrderForm = () => {
       };
       const responseg = await axios.get(`http://54.198.204.54:1337/ids`, { headers });
       const response = await axios.post(`http://54.198.204.54:1337/ids`, values);
-      console.log(response);
     } catch (error) {
-      console.error(error);
+      console.error("form error: ",error);
     }
   }
 
@@ -142,7 +140,6 @@ const OrderForm = () => {
           })}
           validate={validate}
           onSubmit={(values, actions) => {
-			console.log("submit");
             values.pick = !!tabValue;
             getUser(values);
           }}
