@@ -324,7 +324,7 @@ function buildergbs (resultsets, setData, setDataTable) {
 };
 
 
-function buildersma (resultsets, setData, setDataTable) {
+function builder (resultsets, setData, setDataTable) {
         var UsersArray = [];
         var UsersTableArray = [];
         for (let i = 0; i < resultsets.length; i++) {
@@ -448,10 +448,10 @@ function View() {
             builderlnps(response.data, setData, setDataTable);
 	      } else if (dbname === "gb-t-bm-rna-ids") {
 			setTableName("GBTBMRNA IDS");
-            buildergbs(response.data, setData, setDataTable);
+            builder(response.data, setData, setDataTable);
 	      } else if (dbname === "ecam-sma-ids") {
 			setTableName("ECAM-SMA IDS");
-            buildersma(response.data, setData, setDataTable);
+            builder(response.data, setData, setDataTable);
           }
       })
       .catch(error => {
