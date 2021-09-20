@@ -22,7 +22,7 @@ export default function Popup(props) {
   return (
     <div className="modal">
       <div className="modal_box">
-        <p>You sure you wanna delete?</p>
+        <p>Do you want to delete this record?</p>
         <button className="modal_buttonCancel">Cancel</button>
         <button onClick={handleDeleteTrue} className="modal_buttoDelete">
           Confirm
