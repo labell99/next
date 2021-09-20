@@ -10,6 +10,7 @@ import Admin from "layouts/Admin.js";
 import Button from '@material-ui/core/Button';
 import RegularAccordion from "components/CustomAccordion/CustomAccordion.js";
 import PanelAccordion from "components/PanelAccordion/PanelAccordion.js";
+import Popup from "components/Popup/Popup.js";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Table from "components/Table/Table.js";
@@ -326,6 +327,7 @@ function builder (resultsets, setData, setDataTable) {
 function View() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
+  const [popup, setPopup] = useState({show: false, id: null});
   const [data, setData] = useState([""]);
   const [tableName, setTableName] = useState([""]);
   const [dataTable, setDataTable] = useState([""]);
@@ -338,6 +340,31 @@ function View() {
   const dbserver = "54.198.204.54";
   const dbport = "1337";
 
+  const handleDelete = (id) => {
+	console.log("delete item: ",id);
+    setPopup({
+      show: true,
+      id,
+    });
+  };
+
+  const handleDeleteTrue = () => {
+    if (popup.show && popup.id) {
+      delId(popup.id);
+      setPopup({
+        show: false,
+        id: null,
+      });
+    }
+  };
+
+  const handleDeleteFalse = () => {
+    setPopup({
+      show: false,
+      id: null,
+    });
+  };
+
   const popupDialog = (value) => {
     setDataVal(data[value]);
     setModalOpen(!modalOpen);
@@ -345,9 +372,6 @@ function View() {
     setModalInfoi(value + 1);
   }
 
-  const deleteDialog = (value) => {
-      console.log("delete item: ",value);
-  }
 
   const handleClose = () => {
       setModalOpen(!modalOpen);
@@ -443,7 +467,7 @@ const columns = [
      sort: false,
      customBodyRender: (value, tableMeta, updateValue) => {
        return (
-         <Button style={{ color: "white", background: "black"}} variant="contained" onClick={() => deleteDialog(tableMeta.rowIndex)}>
+         <Button style={{ color: "white", background: "black"}} variant="contained" onClick={() => handleDelete(tableMeta.rowIndex)}>
             Delete
          </Button>
        );
@@ -515,6 +539,12 @@ const options = {
             </Button>
           </DialogActions>
       </Dialog>
+      {popup.show && (
+	    <Popup
+	      handleDeleteTrue={handleDeleteTrue}
+	      handleDeleteFalse={handleDeleteFalse}
+	    />
+      )}
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
