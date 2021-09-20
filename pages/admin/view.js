@@ -348,6 +348,29 @@ function View() {
 
   const delId = (id) => {
 	console.log("delete item: ",id);
+      axios.post('http://54.198.204.54:1337/auth/local', {
+        identifier: 'peter.jensen@finclusionsystems.com',
+        password: 'Test123!',
+      }).then(resp => {
+
+      var authtoken = "Bearer " + resp.data.jwt;
+	  const headers = {
+        'Authorization': authtoken,
+        'accept': 'application/json'
+      };
+
+      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname + "/" + id;
+      axios.delete(fulldbname, { headers })
+        .then(response => {
+          console.log("delete item: ",response);
+      })
+      .catch(error => {
+        // handle error
+        console.log("error deleting strapi data: ",error);
+        if (error.response.status == 401) {
+          alert("Authentication Error! Please login again");
+        }
+      });
   };
 
   const handleDeleteTrue = () => {
