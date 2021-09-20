@@ -47,7 +47,7 @@ function Dashboard() {
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
-  int state;
+  const state;
 
   if (dbname === "ids") {
     state = 0;
