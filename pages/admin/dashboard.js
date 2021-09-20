@@ -49,7 +49,8 @@ function Dashboard() {
   const [button, setButton] = useState({currentButton: 'null'});
 
   console.log("button: ",button);
-  onButtonClicked (datab, id) {
+
+  function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
     setButton({ currentButton: button.currentButton === id ? null : id });
     console.log("buttoncl: ",button);
