@@ -5,11 +5,8 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // material-ui components
 
-import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Container ,Row, Col, Input, InputGroupAddon, InputGroupText, InputGroup, Modal, ModalBody, ModalFooter, FormGroup, Form } from "reactstrap";
+import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from "reactstrap";
 
 
 export default function Popup(props) {
@@ -20,14 +17,17 @@ export default function Popup(props) {
   } = props;
 
   return (
-    <div className="modal">
-      <div className="modal_box">
-        <p>Do you want to delete this record?</p>
-        <button className="modal_buttonCancel">Cancel</button>
-        <button onClick={handleDeleteTrue} className="modal_buttoDelete">
-          Confirm
-        </button>
-      </div>
+    <div>
+      <Modal isOpen=true toggle={toggle} className={className}>
+        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+        <ModalBody>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
+          <Button color="secondary" onClick={toggle}>Cancel</Button>
+        </ModalFooter>
+      </Modal>
     </div>
   );
 }
