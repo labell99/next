@@ -46,14 +46,25 @@ function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
-  const [button, setButton] = useState({currentButton: 0});
+  const dbname = dbcontext.data;
+  int state;
 
-  console.log("button: ",button);
+  if (dbname === "ids") {
+    state = 0;
+  } else if (dbname === "norvax-lnps") {
+    state = 1;
+  } else if (dbname === "gb-t-bm-rna-ids") {
+    state = 2;
+  } else if (dbname === "ecam-sma-ids") {
+    state = 3;
+  }
+
+  const [button, setButton] = useState({currentButton: state});
+  console.log("buttoncl: ",button);
 
   function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
     setButton({ currentButton: button.currentButton === id ? null : id });
-    console.log("buttoncl: ",button);
   }
 
   return (
