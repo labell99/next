@@ -345,6 +345,10 @@ function View() {
     setModalInfoi(value + 1);
   }
 
+  const deleteDialog = (value) => {
+      console.log("delete item: ",value);
+  }
+
   const handleClose = () => {
       setModalOpen(!modalOpen);
   };
@@ -431,6 +435,20 @@ const columns = [
    filter: true,
    sort: false,
   }
+ },
+ {
+   name: "",
+   options: {
+     filter: true,
+     sort: false,
+     customBodyRender: (value, tableMeta, updateValue) => {
+       return (
+         <Button style={{ color: "white", background: "black"}} variant="contained" onClick={() => deleteDialog(tableMeta.rowIndex)}>
+            Delete
+         </Button>
+       );
+     }
+   }
  }
 ];
 
