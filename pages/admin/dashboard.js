@@ -63,7 +63,7 @@ function Dashboard() {
 
   function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
-    setButton({ currentButton: button.currentButton === id ? null : id });
+    setButton({ currentButton: id });
   }
 
   return (
