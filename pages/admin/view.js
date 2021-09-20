@@ -367,7 +367,7 @@ function View() {
         'accept': 'application/json'
       };
 
-      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname + "/" + id;
+      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname + "/" + dataTable[id][5];
       axios.delete(fulldbname, { headers })
         .then(response => {
           console.log("delete item: ",response);
