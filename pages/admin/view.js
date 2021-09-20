@@ -518,7 +518,7 @@ const options = {
 
       <Dialog open={popup.show} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Delete Record</DialogTitle>
-        <DialogContent>Do you want to delete this record? </DialogContent>
+        <DialogContent>Are you sure you want to delete this record? </DialogContent>
         <DialogActions>
           <Button color="primary" onClick={() => handleDeleteTrue()}>Yes</Button>{' '}
           <Button color="secondary" onClick={() => handleDeleteFalse()}>Cancel</Button>
