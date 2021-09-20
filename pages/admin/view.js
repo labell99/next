@@ -516,6 +516,7 @@ const options = {
 
   return (
     <GridContainer>
+      <Popup />
       <Dialog fullWidth maxWidth="xl" onClose={() => setModalOpen(!modalOpen)} open={modalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Review Record {modalInfoi}</DialogTitle>
           <div className={classes.root}>
