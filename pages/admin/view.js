@@ -539,12 +539,6 @@ const options = {
             </Button>
           </DialogActions>
       </Dialog>
-      {popup.show && (
-	    <Popup
-	      handleDeleteTrue={handleDeleteTrue}
-	      handleDeleteFalse={handleDeleteFalse}
-	    />
-      )}
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="dark">
