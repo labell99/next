@@ -346,8 +346,11 @@ function View() {
     });
   };
 
+  const delId = (id) => {
+	console.log("delete item: ",id);
+  };
+
   const handleDeleteTrue = () => {
-	console.log("delete item: ",popup.id);
     if (popup.show) {
       delId(popup.id);
       setPopup({
