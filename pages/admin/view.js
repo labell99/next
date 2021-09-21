@@ -370,7 +370,6 @@ function View() {
         'accept': 'application/json'
       };
 
-      router.prefetch('/admin/view')
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname + "/" + dataTable[id][5];
       axios.delete(fulldbname, { headers })
         .then(response => {
@@ -379,7 +378,7 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
-          router.push('/admin/view');
+          router.push('/admin/view', undefined, { shallow: true });
       })
       .catch(error => {
         // handle error
