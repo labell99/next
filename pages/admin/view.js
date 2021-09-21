@@ -33,7 +33,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {DataBContext} from 'components/Context/dataBContext';
-import { toast, ToastContainer } from 'react-nextjs-toast'
+import { useToasts } from 'react-toast-notifications'
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
@@ -344,10 +344,11 @@ function View() {
   const [modalInfoi, setModalInfoi] = useState(0);
   const [dataVal, setDataVal] = useState([""]);
   const dbcontext = useContext(DataBContext);
+  const { addToast } = useToasts()
   const dbname = dbcontext.data;
   const dbserver = "54.198.204.54";
   const dbport = "1337";
-  const [pup, setPup] = useState(true);
+
   const handleDelete = (id) => {
     setPopup({
       show: true,
@@ -551,12 +552,12 @@ const options = {
 
   return (
     <GridContainer>
-    <Dialog open={pup}>
-      <button onClick={() => toast("Wow so easy!")}>
-        Notify!
-      </button>
-      <ToastContainer />
-    </Dialog>
+     <Button onClick={() => addToast("test", {
+      appearance: 'success',
+      autoDismiss: true,
+    })}>
+      Add Toast
+    </Button>
       <Dialog open={popup.show} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Delete Record</DialogTitle>
         <DialogContent>Are you sure you want to delete this record? </DialogContent>

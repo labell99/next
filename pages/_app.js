@@ -18,6 +18,7 @@ import Router from "next/router";
 import {DataBProvider} from 'components/Context/dataBContext';
 import PageChange from "components/PageChange/PageChange.js";
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
+import { ToastProvider } from 'react-toast-notifications';
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -79,6 +80,12 @@ export default class MyApp extends App {
           <title> IDS Dashboard</title>
         </Head>
         <Layout>
+         <ToastProvider
+           autoDismiss
+           autoDismissTimeout={4000}
+           components={{ Toast: Snack }}
+           placement="top-center"
+         >
           <DataBProvider
              value={{
                data: this.state.datab,
@@ -87,6 +94,7 @@ export default class MyApp extends App {
           >
             <Component {...pageProps} />
           </DataBProvider>
+         </ToastProvider>
         </Layout>
       </React.Fragment>
     );
