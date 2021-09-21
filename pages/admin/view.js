@@ -33,7 +33,8 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {DataBContext} from 'components/Context/dataBContext';
-import { useToasts } from 'react-toast-notifications'
+import { useToasts } from 'react-toast-notifications';
+import { useRouter } from 'next/router';
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
@@ -344,7 +345,8 @@ function View() {
   const [modalInfoi, setModalInfoi] = useState(0);
   const [dataVal, setDataVal] = useState([""]);
   const dbcontext = useContext(DataBContext);
-  const { addToast } = useToasts()
+  const { addToast } = useToasts();
+  const router = useRouter();
   const dbname = dbcontext.data;
   const dbserver = "54.198.204.54";
   const dbport = "1337";
@@ -376,7 +378,7 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
-          window.location.reload(false);
+          router.reload(window.location.pathname);
       })
       .catch(error => {
         // handle error
