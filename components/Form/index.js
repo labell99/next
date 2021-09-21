@@ -326,10 +326,7 @@ const OrderForm = () => {
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '8px' }}
                 >
                   <StyledButton theme={theme} disabled={formik.isSubmitting}
-                    onClick={(resetForm) => {
-                      formik.submitForm;
-                      resetForm;
-                    }}
+                    onClick={formik.submitForm}
                     size="large">
                     Submit Data
                   </StyledButton>
