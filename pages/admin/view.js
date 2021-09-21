@@ -376,7 +376,11 @@ function View() {
       })
       .catch(error => {
         // handle error
-        console.log("error deleting strapi data: ",error);
+        //console.log("error deleting strapi data: ",error);
+        addToast("Error deleting data from strapi: {error}", {
+		      appearance: 'error',
+		      autoDismiss: true,
+        });
         if (error.response.status == 401) {
           alert("Authentication Error! Please login again");
         }
@@ -444,7 +448,11 @@ function View() {
       })
       .catch(error => {
         // handle error
-        console.log("error fetching strapi data: ",error);
+        //console.log("error fetching strapi data: ",error);
+        addToast("Error fetching data from strapi: {error}", {
+		      appearance: 'error',
+		      autoDismiss: true,
+        });
         if (error.response.status == 401) {
           alert("Authentication Error! Please login again");
         }
@@ -552,12 +560,6 @@ const options = {
 
   return (
     <GridContainer>
-     <Button onClick={() => addToast("test", {
-      appearance: 'success',
-      autoDismiss: true,
-    })}>
-      Add Toast
-    </Button>
       <Dialog open={popup.show} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Delete Record</DialogTitle>
         <DialogContent>Are you sure you want to delete this record? </DialogContent>
