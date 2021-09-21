@@ -378,7 +378,7 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
-          router.push('/admin/dashboard');
+          router.push('/admin/view');
       })
       .catch(error => {
         // handle error
