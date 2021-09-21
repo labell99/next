@@ -33,6 +33,8 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {DataBContext} from 'components/Context/dataBContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const getMuiTheme = () => createMuiTheme({
     overrides: {
@@ -550,7 +552,12 @@ const options = {
 
   return (
     <GridContainer>
-
+    <div>
+      <button onClick={() => toast("Wow so easy!")}>
+        Notify!
+      </button>
+      <ToastContainer />
+    </div>
       <Dialog open={popup.show} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Delete Record</DialogTitle>
         <DialogContent>Are you sure you want to delete this record? </DialogContent>
