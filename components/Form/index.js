@@ -63,7 +63,7 @@ const OrderForm = () => {
       password: 'Test123!',
     }).then(resp => {
 
-    var authtoken = "BearerS " + resp.data.jwt;
+    var authtoken = "Bearer " + resp.data.jwt;
 	const headers = {
       'Authorization': authtoken,
       'accept': 'application/json'
