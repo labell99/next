@@ -41,7 +41,7 @@ function Create() {
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
-  const [tableName, setTableName] = useState(["test"]);
+  const [tableName, setTableName] = useState([dbname]);
 
   return (
     <div>
