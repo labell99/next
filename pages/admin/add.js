@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from 'react';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -15,6 +15,7 @@ import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import OrderForm from 'components/Form';
+import {DataBContext} from 'components/Context/dataBContext';
 
 const styles = {
   cardCategoryWhite: {
@@ -38,13 +39,27 @@ const styles = {
 function Create() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
+  const dbcontext = useContext(DataBContext);
+  const dbname = dbcontext.data;
+  const [tableName, setTableName] = useState([""]);
+
+  if (dbname === "ids") {
+    setTableName("Input Immunogen Design & Selection Data");
+  } else if (dbname === "norvax-lnps") {
+    setTableName("Input Norvax LNPS Data");
+  } else if (dbname === "gb-t-bm-rna-ids") {
+    setTableName("Input GBTBMRNA IDS Data");
+  } else if (dbname === "ecam-sma-ids") {
+    setTableName("Input ECAM-SMA IDS Data");
+  }
+
   return (
     <div>
       <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="dark">
-              <h4 className={classes.cardTitleWhite}>Input IDS Data</h4>
+              <h4 className={classes.cardTitleWhite}>{tableName}</h4>
             </CardHeader>
             <CardBody>
               <OrderForm />
