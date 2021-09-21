@@ -449,13 +449,17 @@ function View() {
       .catch(error => {
         // handle error
         //console.log("error fetching strapi data: ",error);
-        addToast("Error fetching data from strapi: "+error, {
+        if (error.response.status == 401) {
+          addToast("Authentication Error! Please login again", {
 		      appearance: 'error',
 		      autoDismiss: true,
-        });
-       // if (error.response.status == 401) {
-       //   alert("Authentication Error! Please login again");
-       // }
+          });
+	    } else {
+          addToast("Error fetching data from strapi: "+error, {
+		      appearance: 'error',
+		      autoDismiss: true,
+          });
+        }
       });
     });
   }, []);
