@@ -43,15 +43,9 @@ function Create() {
   const dbname = dbcontext.data;
   const [tableName, setTableName] = useState([dbname]);
 
-  if (dbname === "ids") {
-    setTableName("Input Immunogen Design & Selection Data");
-  } else if (dbname === "norvax-lnps") {
-    setTableName("Input Norvax LNPS Data");
-  } else if (dbname === "gb-t-bm-rna-ids") {
-    setTableName("Input GBTBMRNA IDS Data");
-  } else if (dbname === "ecam-sma-ids") {
-    setTableName("Input ECAM-SMA IDS Data");
-  }
+
+  setTableName("Input Immunogen Design & Selection Data");
+
 
   return (
     <div>
