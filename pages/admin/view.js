@@ -348,7 +348,7 @@ function View() {
   const dbname = dbcontext.data;
   const dbserver = "54.198.204.54";
   const dbport = "1337";
-
+  const [pup, setPup] = useState(true);
   const handleDelete = (id) => {
     setPopup({
       show: true,
@@ -552,7 +552,7 @@ const options = {
 
   return (
     <GridContainer>
-    <Dialog>
+    <Dialog open={pup}>
       <button onClick={() => toast("Wow so easy!")}>
         Notify!
       </button>
