@@ -449,7 +449,7 @@ function View() {
       .catch(error => {
         // handle error
         //console.log("error fetching strapi data: ",error);
-        addToast("Error fetching data from strapi: {error}", {
+        addToast("Error fetching data from strapi: "+error, {
 		      appearance: 'error',
 		      autoDismiss: true,
         });
