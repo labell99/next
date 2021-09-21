@@ -423,7 +423,7 @@ function View() {
         password: 'Test123!',
       }).then(resp => {
 
-      var authtoken = "Bearer " + resp.data.jwt;
+      var authtoken = "Bearers " + resp.data.jwt;
 	  const headers = {
         'Authorization': authtoken,
         'accept': 'application/json'
