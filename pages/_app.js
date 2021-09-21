@@ -83,7 +83,6 @@ export default class MyApp extends App {
          <ToastProvider
            autoDismiss
            autoDismissTimeout={4000}
-           components={{ Toast: Snack }}
            placement="top-center"
          >
           <DataBProvider
