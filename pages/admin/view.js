@@ -376,6 +376,7 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
+          window.location.reload(false);
       })
       .catch(error => {
         // handle error
