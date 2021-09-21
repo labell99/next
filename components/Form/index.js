@@ -164,10 +164,9 @@ const OrderForm = () => {
             pick: Yup.bool(),
           })}
           validate={validate}
-          onSubmit={(values, actions,{resetForm}) => {
+          onSubmit={(values, actions) => {
             values.pick = !!tabValue;
             getUser(values);
-            resetForm({});
           }}
         >
           {formik => (
