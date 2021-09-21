@@ -41,9 +41,7 @@ function Create() {
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
-  const [tableName, setTableName] = useState([""]);
-
-  setTableName("Input Immunogen Design & Selection Data");
+  const [tableName, setTableName] = useState(["test"]);
 
   return (
     <div>
