@@ -453,9 +453,9 @@ function View() {
 		      appearance: 'error',
 		      autoDismiss: true,
         });
-        if (error.response.status == 401) {
-          alert("Authentication Error! Please login again");
-        }
+       // if (error.response.status == 401) {
+       //   alert("Authentication Error! Please login again");
+       // }
       });
     });
   }, []);
