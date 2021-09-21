@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -41,11 +41,11 @@ function Create() {
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
-  const [tableName, setTableName] = useState([dbname]);
+  const [formName, setFormName] = useState([""]);
 
-
-  setTableName("Input Immunogen Design & Selection Data");
-
+  useEffect(() => {
+    setFormName("Input Immunogen Design & Selection Data");
+  }, []);
 
   return (
     <div>
@@ -53,7 +53,7 @@ function Create() {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="dark">
-              <h4 className={classes.cardTitleWhite}>{tableName}</h4>
+              <h4 className={classes.cardTitleWhite}>{formName}</h4>
             </CardHeader>
             <CardBody>
 
