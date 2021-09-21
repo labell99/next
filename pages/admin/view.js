@@ -552,12 +552,12 @@ const options = {
 
   return (
     <GridContainer>
-    <div>
+    <Dialog>
       <button onClick={() => toast("Wow so easy!")}>
         Notify!
       </button>
       <ToastContainer />
-    </div>
+    </Dialog>
       <Dialog open={popup.show} aria-labelledby="form-dialog-title">
         <DialogTitle id="confirmation-dialog-title">Delete Record</DialogTitle>
         <DialogContent>Are you sure you want to delete this record? </DialogContent>
