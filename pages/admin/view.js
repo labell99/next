@@ -357,7 +357,6 @@ function View() {
   };
 
   const delId = (id) => {
-	console.log("delete item: ",dataTable[id][5]);
       axios.post('http://54.198.204.54:1337/auth/local', {
         identifier: 'peter.jensen@finclusionsystems.com',
         password: 'Test123!',
@@ -372,17 +371,24 @@ function View() {
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname + "/" + dataTable[id][5];
       axios.delete(fulldbname, { headers })
         .then(response => {
-          console.log("delete item: ",response);
+          addToast("Record deleted. "+response, {
+		      appearance: 'success',
+		      autoDismiss: true,
+          });
       })
       .catch(error => {
         // handle error
         //console.log("error deleting strapi data: ",error);
-        addToast("Error deleting data from strapi: {error}", {
+        if (error.response.status == 401) {
+          addToast("Authentication Error! Please login again", {
 		      appearance: 'error',
 		      autoDismiss: true,
-        });
-        if (error.response.status == 401) {
-          alert("Authentication Error! Please login again");
+          });
+	    } else {
+          addToast("Error fetching data from strapi: "+error, {
+		      appearance: 'error',
+		      autoDismiss: true,
+          });
         }
       });
      });
@@ -423,7 +429,7 @@ function View() {
         password: 'Test123!',
       }).then(resp => {
 
-      var authtoken = "Bearers " + resp.data.jwt;
+      var authtoken = "Bearer " + resp.data.jwt;
 	  const headers = {
         'Authorization': authtoken,
         'accept': 'application/json'
