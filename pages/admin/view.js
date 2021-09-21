@@ -378,11 +378,11 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
-          router.push();
+          router.push('/admin/view');
       })
       .catch(error => {
         // handle error
-        //console.log("error deleting strapi data: ",error);
+        console.log("error deleting strapi data: ",error);
         if (error.response.status == 401) {
           addToast("Authentication Error! Please login again", {
 		      appearance: 'error',
