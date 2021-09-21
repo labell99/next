@@ -378,7 +378,7 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
-          router.reload(window.location.pathname);
+          router.push();
       })
       .catch(error => {
         // handle error
