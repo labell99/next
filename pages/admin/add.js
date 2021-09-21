@@ -44,7 +44,15 @@ function Create() {
   const [formName, setFormName] = useState([""]);
 
   useEffect(() => {
-    setFormName("Input Immunogen Design & Selection Data");
+    if (dbname === "ids") {
+      setFormName("Input Immunogen Design & Selection Data");
+    } else if (dbname === "norvax-lnps") {
+      setFormName("Input Norvax LNPS Data");
+    } else if (dbname === "gb-t-bm-rna-ids") {
+      setFormName("Input GBTBMRNA IDS Data");
+    } else if (dbname === "ecam-sma-ids") {
+      setFormName("Input ECAM-SMA IDS Data");
+    }
   }, []);
 
   return (
