@@ -100,6 +100,7 @@ const OrderForm = () => {
     <>
       <MuiPickersUtilsProvider utils={MomentUtils}>
         <Formik
+          enableReinitialize={true}
           initialValues={{
             VaccineName: '',
             RecordNumber: '',
@@ -163,9 +164,10 @@ const OrderForm = () => {
             pick: Yup.bool(),
           })}
           validate={validate}
-          onSubmit={(values, actions) => {
+          onSubmit={(values, actions,{resetForm}) => {
             values.pick = !!tabValue;
             getUser(values);
+            resetForm({});
           }}
         >
           {formik => (
