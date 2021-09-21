@@ -64,7 +64,7 @@ function Create() {
               <h4 className={classes.cardTitleWhite}>{formName}</h4>
             </CardHeader>
             <CardBody>
-
+              <OrderForm />
             </CardBody>
           </Card>
         </GridItem>
