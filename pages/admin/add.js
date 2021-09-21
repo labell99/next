@@ -62,7 +62,7 @@ function Create() {
               <h4 className={classes.cardTitleWhite}>{tableName}</h4>
             </CardHeader>
             <CardBody>
-              <OrderForm />
+
             </CardBody>
           </Card>
         </GridItem>
