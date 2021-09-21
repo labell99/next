@@ -371,6 +371,7 @@ function View() {
       const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname + "/" + dataTable[id][5];
       axios.delete(fulldbname, { headers })
         .then(response => {
+		  console.log("response strapi data: ",response);
           addToast("Record deleted. "+response, {
 		      appearance: 'success',
 		      autoDismiss: true,
