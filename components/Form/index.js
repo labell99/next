@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
-
+import {DataBContext} from 'components/Context/dataBContext';
 // material-ui
 import { Card, CardContent, CardActions, Grid, Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
@@ -16,7 +16,7 @@ import axios from 'axios';
 // moment
 import MomentUtils from '@date-io/moment';
 import moment from 'moment';
-
+import { useToasts } from 'react-toast-notifications';
 // order components
 import OrderProducts from './OrderProducts';
 
@@ -38,10 +38,13 @@ const StyledButton = styled(Button)`
 `;
 
 const OrderForm = () => {
-  const [price, setPrice] = useState(50);
   const [tabValue, setTabValue] = useState(0);
-
+  const { addToast } = useToasts();
   const theme = useTheme();
+  const dbcontext = useContext(DataBContext);
+  const dbserver = "54.198.204.54";
+  const dbport = "1337";
+  const dbname = dbcontext.data;
 
   const validate = values => {
     const errors = {};
@@ -55,22 +58,43 @@ const OrderForm = () => {
   };
 
   async function getUser(values) {
-    try {
-      var resp = await axios.post('http://54.198.204.54:1337/auth/local', {
-         identifier: 'lee_abell@hotmail.com',
-         password: 'Test123!',
+    axios.post('http://54.198.204.54:1337/auth/local', {
+      identifier: 'peter.jensen@finclusionsystems.com',
+      password: 'Test123!',
+    }).then(resp => {
+
+    var authtoken = "Bearer " + resp.data.jwt;
+	const headers = {
+      'Authorization': authtoken,
+      'accept': 'application/json'
+    };
+
+    const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
+    axios.post(fulldbname, values, { headers })
+      .then(response => {
+		//console.log("response posting strapi data: ",response);
+        addToast("IDS Data posted.", {
+		   appearance: 'success',
+		   autoDismiss: true,
+        });
+      })
+      .catch(error => {
+        // handle error
+        console.log("error posting strapi data: ",error);
+        if (error.response.status == 401) {
+          addToast("Authentication Error! Please login again", {
+		    appearance: 'error',
+		    autoDismiss: true,
+          });
+	    } else {
+          addToast("Error posting strapi data: "+error, {
+		    appearance: 'error',
+		    autoDismiss: true,
+          });
+        }
       });
-      var authtoken = "Bearer " + resp.data.jwt;
-	  const headers = {
-        'Authorization': authtoken,
-        'accept': 'application/json'
-      };
-      const responseg = await axios.get(`http://54.198.204.54:1337/ids`, { headers });
-      const response = await axios.post(`http://54.198.204.54:1337/ids`, values);
-    } catch (error) {
-      console.error("form error: ",error);
-    }
-  }
+     });
+  };
 
   return (
     <>
