@@ -130,6 +130,7 @@ const OrderForm = () => {
             OtherVariants: '',
             PANGO: '',
             BVBRC: '',
+            AmpTec_Sourcecode: '',
             pick: !!tabValue,
           }}
           validationSchema={Yup.object({
@@ -161,6 +162,7 @@ const OrderForm = () => {
             OtherVariants: Yup.string().required('Required'),
             PANGO: Yup.string().required('Required'),
             BVBRC: Yup.string().required('Required'),
+            AmpTec_Sourcecode: Yup.string().required('Required'),
             pick: Yup.bool(),
           })}
           validate={validate}
@@ -320,6 +322,11 @@ const OrderForm = () => {
                     {/* BVBRC */}
                     <Grid item xs={12}>
                       <Field fullWidth component={TextField} name="BVBRC" type="text" label="BVBRC" />
+                    </Grid>
+
+                     {/* AmpTec_Sourcecode */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="AmpTec_Sourcecode" type="text" label="AmpTec_Sourcecode" />
                     </Grid>
 
                   </Grid>
