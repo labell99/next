@@ -45,6 +45,51 @@ const OrderForm = () => {
   const dbserver = "54.198.204.54";
   const dbport = "1337";
   const dbname = dbcontext.data;
+  const [iniValues, setIniValues] = useState([""]);
+
+  useEffect(() => {
+    if (dbname === "ids") {
+          setIniValues({
+            VaccineName: 'leetest1',
+            RecordNumber: '',
+            VaccineType: '',
+            VaccineApplication: '',
+            VaccineTarget: '',
+            Emergence: '',
+            ntShortName: '',
+            ntLongName: '',
+            FACTAtarget: '',
+            AminoAcid: '',
+            Conserved: '',
+            VariantTargets: '',
+            Description: '',
+            Category: '',
+            Type: '',
+            Subcategory: '',
+            IPReference: '',
+            PublicationSource: '',
+            DOI: '',
+            REFlinks: '',
+            FACTAGenome: '',
+            Notes: '',
+            Users: '',
+            Notes2: '',
+            SpikeVariants: '',
+            OtherVariants: '',
+            PANGO: '',
+            BVBRC: '',
+            AmpTec_Sourcecode: '',
+            Sequences: '',
+            Signal_Peptide_e: '',
+            NTD_Mutation: '',
+            RBD_Mutation: '',
+            S1_S2_Mutation: '',
+            S2_Mutation: '',
+            pick: !!tabValue,
+          });
+    }
+  }, []);
+
 
   const validate = values => {
     const errors = {};
@@ -101,44 +146,7 @@ const OrderForm = () => {
       <MuiPickersUtilsProvider utils={MomentUtils}>
         <Formik
           enableReinitialize
-          initialValues={{
-            VaccineName: '',
-            RecordNumber: '',
-            VaccineType: '',
-            VaccineApplication: '',
-            VaccineTarget: '',
-            Emergence: '',
-            ntShortName: '',
-            ntLongName: '',
-            FACTAtarget: '',
-            AminoAcid: '',
-            Conserved: '',
-            VariantTargets: '',
-            Description: '',
-            Category: '',
-            Type: '',
-            Subcategory: '',
-            IPReference: '',
-            PublicationSource: '',
-            DOI: '',
-            REFlinks: '',
-            FACTAGenome: '',
-            Notes: '',
-            Users: '',
-            Notes2: '',
-            SpikeVariants: '',
-            OtherVariants: '',
-            PANGO: '',
-            BVBRC: '',
-            AmpTec_Sourcecode: '',
-            Sequences: '',
-            Signal_Peptide_e: '',
-            NTD_Mutation: '',
-            RBD_Mutation: '',
-            S1_S2_Mutation: '',
-            S2_Mutation: '',
-            pick: !!tabValue,
-          }}
+          initialValues={iniValues}
           validationSchema={Yup.object({
             VaccineName: Yup.string().required('Required'),
             RecordNumber: Yup.string().required('Required'),
