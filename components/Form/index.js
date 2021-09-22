@@ -131,6 +131,12 @@ const OrderForm = () => {
             PANGO: '',
             BVBRC: '',
             AmpTec_Sourcecode: '',
+            Sequences: '',
+            Signal_Peptide_e: '',
+            NTD_Mutation: '',
+            RBD_Mutation: '',
+            S1_S2_Mutation: '',
+            S2_Mutation: '',
             pick: !!tabValue,
           }}
           validationSchema={Yup.object({
@@ -163,6 +169,12 @@ const OrderForm = () => {
             PANGO: Yup.string().required('Required'),
             BVBRC: Yup.string().required('Required'),
             AmpTec_Sourcecode: Yup.string().required('Required'),
+            Sequences: Yup.string().required('Required'),
+            Signal_Peptide_e: Yup.string().required('Required'),
+            NTD_Mutation: Yup.string().required('Required'),
+            RBD_Mutation: Yup.string().required('Required'),
+            S1_S2_Mutation: Yup.string().required('Required'),
+            S2_Mutation: Yup.string().required('Required'),
             pick: Yup.bool(),
           })}
           validate={validate}
@@ -258,6 +270,11 @@ const OrderForm = () => {
                       <Field fullWidth component={TextField} name="Type" type="text" label="Type" />
                     </Grid>
 
+                    {/* Sequences */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="Sequences" type="text" label="Sequences" />
+                    </Grid>
+
                     {/* Subcategory */}
                     <Grid item xs={12}>
                       <Field fullWidth component={TextField} name="Subcategory" type="text" label="Subcategory" />
@@ -329,6 +346,30 @@ const OrderForm = () => {
                       <Field fullWidth component={TextField} name="AmpTec_Sourcecode" type="text" label="AmpTec_Sourcecode" />
                     </Grid>
 
+                     {/* Signal_Peptide_e */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="Signal_Peptide_e" type="text" label="Signal_Peptide_e" />
+                    </Grid>
+
+                     {/* NTD_Mutation */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="NTD_Mutation" type="text" label="NTD_Mutation" />
+                    </Grid>
+
+                     {/* RBD_Mutation */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="RBD_Mutation" type="text" label="RBD_Mutation" />
+                    </Grid>
+
+                     {/* S1_S2_Mutation */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="S1_S2_Mutation" type="text" label="S1_S2_Mutation" />
+                    </Grid>
+
+                     {/* S2_Mutation */}
+                    <Grid item xs={12}>
+                      <Field fullWidth component={TextField} name="S2_Mutation" type="text" label="S2_Mutation" />
+                    </Grid>
                   </Grid>
                 </CardContent>
                 <CardActions
