@@ -46,6 +46,7 @@ const OrderForm = () => {
   const dbport = "1337";
   const dbname = dbcontext.data;
   const [iniValues, setIniValues] = useState([""]);
+  const [valSchema, setValSchema] = useState([""]);
 
   useEffect(() => {
     if (dbname === "ids") {
@@ -87,6 +88,44 @@ const OrderForm = () => {
             S2_Mutation: '',
             pick: !!tabValue,
           });
+          setValSchema({Yup.object({
+            VaccineName: Yup.string().required('Required'),
+            RecordNumber: Yup.string().required('Required'),
+            VaccineType: Yup.string().required('Required'),
+            VaccineApplication: Yup.string().required('Required'),
+            VaccineTarget: Yup.string().required('Required'),
+            Emergence: Yup.string().required('Required'),
+            ntShortName: Yup.string().required('Required'),
+            ntLongName: Yup.string().required('Required'),
+            FACTAtarget: Yup.string().required('Required'),
+            AminoAcid: Yup.string().required('Required'),
+            Conserved: Yup.string().required('Required'),
+            VariantTargets: Yup.string().required('Required'),
+            Description: Yup.string().required('Required'),
+            Category: Yup.string().required('Required'),
+            Type: Yup.string().required('Required'),
+            Subcategory: Yup.string().required('Required'),
+            IPReference: Yup.string().required('Required'),
+            PublicationSource: Yup.string().required('Required'),
+            DOI: Yup.string().required('Required'),
+            REFlinks: Yup.string().required('Required'),
+            FACTAGenome: Yup.string().required('Required'),
+            Notes: Yup.string().required('Required'),
+            Users: Yup.string().required('Required'),
+            Notes2: Yup.string().required('Required'),
+            SpikeVariants: Yup.string().required('Required'),
+            OtherVariants: Yup.string().required('Required'),
+            PANGO: Yup.string().required('Required'),
+            BVBRC: Yup.string().required('Required'),
+            AmpTec_Sourcecode: Yup.string().required('Required'),
+            Sequences: Yup.string().required('Required'),
+            Signal_Peptide_e: Yup.string().required('Required'),
+            NTD_Mutation: Yup.string().required('Required'),
+            RBD_Mutation: Yup.string().required('Required'),
+            S1_S2_Mutation: Yup.string().required('Required'),
+            S2_Mutation: Yup.string().required('Required'),
+            pick: Yup.bool(),
+          })});
     }
   }, []);
 
@@ -147,44 +186,7 @@ const OrderForm = () => {
         <Formik
           enableReinitialize
           initialValues={iniValues}
-          validationSchema={Yup.object({
-            VaccineName: Yup.string().required('Required'),
-            RecordNumber: Yup.string().required('Required'),
-            VaccineType: Yup.string().required('Required'),
-            VaccineApplication: Yup.string().required('Required'),
-            VaccineTarget: Yup.string().required('Required'),
-            Emergence: Yup.string().required('Required'),
-            ntShortName: Yup.string().required('Required'),
-            ntLongName: Yup.string().required('Required'),
-            FACTAtarget: Yup.string().required('Required'),
-            AminoAcid: Yup.string().required('Required'),
-            Conserved: Yup.string().required('Required'),
-            VariantTargets: Yup.string().required('Required'),
-            Description: Yup.string().required('Required'),
-            Category: Yup.string().required('Required'),
-            Type: Yup.string().required('Required'),
-            Subcategory: Yup.string().required('Required'),
-            IPReference: Yup.string().required('Required'),
-            PublicationSource: Yup.string().required('Required'),
-            DOI: Yup.string().required('Required'),
-            REFlinks: Yup.string().required('Required'),
-            FACTAGenome: Yup.string().required('Required'),
-            Notes: Yup.string().required('Required'),
-            Users: Yup.string().required('Required'),
-            Notes2: Yup.string().required('Required'),
-            SpikeVariants: Yup.string().required('Required'),
-            OtherVariants: Yup.string().required('Required'),
-            PANGO: Yup.string().required('Required'),
-            BVBRC: Yup.string().required('Required'),
-            AmpTec_Sourcecode: Yup.string().required('Required'),
-            Sequences: Yup.string().required('Required'),
-            Signal_Peptide_e: Yup.string().required('Required'),
-            NTD_Mutation: Yup.string().required('Required'),
-            RBD_Mutation: Yup.string().required('Required'),
-            S1_S2_Mutation: Yup.string().required('Required'),
-            S2_Mutation: Yup.string().required('Required'),
-            pick: Yup.bool(),
-          })}
+          validationSchema={valSchema}
           validate={validate}
           onSubmit={(values, { resetForm }) => {
             values.pick = !!tabValue;
