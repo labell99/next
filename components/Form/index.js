@@ -53,10 +53,7 @@ const OrderForm = () => {
   useEffect(() => {
     if (dbname === "ids") {
 
-          setForTit([
-          {name:'VaccineName', label:'Vaccine Name'},
-          {name:'RecordNumber', label:'Record Number'}
-          ]);
+          setForTit(['VaccineName', 'Vaccine Name']);
 
 
           console.log("entries1a ",forTit);
