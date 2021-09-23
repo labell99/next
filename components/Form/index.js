@@ -58,8 +58,8 @@ const OrderForm = () => {
           {name:'VaccineApplication', label:'Vaccine Application'},
           {name:'VaccineTarget', label:'Vaccine Target'},
           {name:'Emergence', label:'Emergence'},
-          {name:'ntShortName', label:'ntShortName'},
-          {name:'ntLongName', label:'ntLongName'},
+          {name:'ntShortName', label:'ShortName'},
+          {name:'ntLongName', label:'LongName'},
           {name:'FACTAtarget', label:'FACTAtarget'},
           {name:'AminoAcid', label:'Amino Acid'},
           {name:'Conserved', label:'Conserved'},
@@ -246,175 +246,13 @@ const OrderForm = () => {
                     <OrderProducts formik={formik} />
 
                     {forTit.map( entry => (
-
+                      {/* {entry.name} */}
                       <Grid item xs={12}>
                          <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
                       </Grid>
 
                     ))}
 
-                    {/* VaccineApplication */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="VaccineApplication" type="text" label="Vaccine Application" />
-                    </Grid>
-
-                    {/* VaccineTarget */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="VaccineTarget" type="text" label="Vaccine Target" />
-                    </Grid>
-
-                    {/* Emergence */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Emergence" type="text" label="Emergence" />
-                    </Grid>
-
-
-                    {/* ShortName */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="ntShortName" type="text" label="Nucleotide ShortName" />
-                    </Grid>
-
-                    {/* LongName */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="ntLongName" type="text" label="Nucleotide LongName" />
-                    </Grid>
-
-                    {/* FACTAtarget */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="FACTAtarget" type="text" label="FACTAtarget" />
-                    </Grid>
-
-                    {/* AminoAcid */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="AminoAcid" type="text" label="Amino Acid" />
-                    </Grid>
-
-                    {/* Conserved */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Conserved" type="text" label="Conserved" />
-                    </Grid>
-
-                    {/* VariantTargets */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="VariantTargets" type="text" label="Variant Targets" />
-                    </Grid>
-
-
-                    {/* Description */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Description" type="text" label="Description" />
-                    </Grid>
-
-                    {/* Category */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Category" type="text" label="Category" />
-                    </Grid>
-
-                    {/* Type */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Type" type="text" label="Type" />
-                    </Grid>
-
-                    {/* Sequences */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Sequences" type="text" label="Sequences" />
-                    </Grid>
-
-                    {/* Subcategory */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Subcategory" type="text" label="Subcategory" />
-                    </Grid>
-
-                    {/* IPReference */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="IPReference" type="text" label="IP Reference" />
-                    </Grid>
-
-                    {/* PublicationSource */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="PublicationSource" type="text" label="Publication Source" />
-                    </Grid>
-
-
-                    {/* Phenotypes */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="DOI" type="text" label="Phenotypes" />
-                    </Grid>
-
-                    {/* REFlinks */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="REFlinks" type="text" label="Ref Links" />
-                    </Grid>
-
-                    {/* FACTAGenome */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="FACTAGenome" type="text" label="FACTAGenome" />
-                    </Grid>
-
-                    {/* Notes */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Notes" type="text" label="Notes" />
-                    </Grid>
-
-                    {/* Users */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Users" type="text" label="Users" />
-                    </Grid>
-
-                     {/* Variant Source Note */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Notes2" type="text" label="Variant Source Note (SIB)" />
-                    </Grid>
-
-                    {/* SpikeVariants */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="SpikeVariants" type="text" label="Spike Variants" />
-                    </Grid>
-
-                    {/* OtherVariants */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="OtherVariants" type="text" label="Other Variants" />
-                    </Grid>
-
-                    {/* PANGO */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="PANGO" type="text" label="PANGO" />
-                    </Grid>
-
-                    {/* BVBRC */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="BVBRC" type="text" label="BVBRC" />
-                    </Grid>
-
-                     {/* AmpTec_Sourcecode */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="AmpTec_Sourcecode" type="text" label="AmpTec_Sourcecode" />
-                    </Grid>
-
-                     {/* Signal_Peptide_e */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="Signal_Peptide_e" type="text" label="Signal_Peptide_e" />
-                    </Grid>
-
-                     {/* NTD_Mutation */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="NTD_Mutation" type="text" label="NTD_Mutation" />
-                    </Grid>
-
-                     {/* RBD_Mutation */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="RBD_Mutation" type="text" label="RBD_Mutation" />
-                    </Grid>
-
-                     {/* S1_S2_Mutation */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="S1_S2_Mutation" type="text" label="S1_S2_Mutation" />
-                    </Grid>
-
-                     {/* S2_Mutation */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="S2_Mutation" type="text" label="S2_Mutation" />
-                    </Grid>
                   </Grid>
                 </CardContent>
                 <CardActions
