@@ -91,7 +91,7 @@ const OrderForm = () => {
           {name:'S2_Mutation', label:'S2_Mutation'}
           ]);
 
-          console.log("entries1a ",forTit);
+          console.log("entries1B ",forTit);
 
           setIniValues({
             VaccineName: '',
