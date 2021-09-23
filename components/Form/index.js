@@ -213,6 +213,7 @@ const OrderForm = () => {
 
                       <Grid item xs={12}>
                          {entry.name}
+                         {entry.label}
                       </Grid>
 
                     ))}
