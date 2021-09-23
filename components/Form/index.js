@@ -47,13 +47,13 @@ const OrderForm = () => {
   const dbname = dbcontext.data;
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
-  const [forTit, setForTit] = useState();
+  const [forTit, setForTit] = useState([""]);
 
   useEffect(() => {
     if (dbname === "ids") {
 
           setForTit({ friends: ['jared', 'ian', 'brent'] });
-          console.log("entries ",setForTit);
+          console.log("entries ",forTit);
           setIniValues({
             VaccineName: '',
             RecordNumber: '',
