@@ -58,6 +58,8 @@ const OrderForm = () => {
               {"name": "VaccineType","label": "Vaccine Type"}
           ]);
 
+          setEntries({ friends: ['jared', 'ian', 'brent'] });
+
           setIniValues({
             VaccineName: '',
             RecordNumber: '',
@@ -213,7 +215,7 @@ const OrderForm = () => {
                     {/* Products */}
                     <OrderProducts formik={formik} />
 
-                    {entries.map( entry => (
+                    {entries.friends.map( entry => (
 					  {entry}
 					))}
 
