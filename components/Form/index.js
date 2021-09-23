@@ -213,7 +213,9 @@ const OrderForm = () => {
                     {/* Products */}
                     <OrderProducts formik={formik} />
 
-                    {entries[1].name}
+                    {entries.map( entry => (
+					  {entry.name}
+					))}
 
                     {/* VaccineApplication */}
                     <Grid item xs={12}>
