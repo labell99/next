@@ -53,7 +53,7 @@ const OrderForm = () => {
     if (dbname === "ids") {
 
           setEntries({ friends: ['jared', 'ian', 'brent'] });
-
+          console.log("entries ",entries);
           setIniValues({
             VaccineName: '',
             RecordNumber: '',
