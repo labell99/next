@@ -52,7 +52,12 @@ const OrderForm = () => {
   useEffect(() => {
     if (dbname === "ids") {
 
-          setForTit([{name:'VaccineName', label:'Vaccine Name'}, {name:'RecordNumber', label:'Record Number'}, {name:'VaccineType', label:'Vaccine Type'}]);
+          setForTit([
+          {name:'VaccineName', label:'Vaccine Name'},
+          {name:'RecordNumber', label:'Record Number'},
+          {name:'VaccineType', label:'Vaccine Type'}
+          ]);
+
           console.log("entries1 ",forTit);
           setIniValues({
             VaccineName: '',
