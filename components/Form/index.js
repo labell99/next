@@ -213,7 +213,6 @@ const OrderForm = () => {
 
                     {entries.map((entry, index) => (
 
-                      {/* {entry.name} */}
                       <Grid item xs={12}>
                          <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
                       </Grid>
