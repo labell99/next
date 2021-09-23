@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 // formiks
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, FieldArray } from 'formik';
 import * as Yup from 'yup';
 import { TextField } from 'formik-material-ui';
 import axios from 'axios';
@@ -203,6 +203,7 @@ const OrderForm = () => {
           }}
         >
           {formik => (
+			 <FieldArray>
             <Form name="Orders" data-netlify="true">
               <Card >
                 <CardContent>
@@ -387,6 +388,7 @@ const OrderForm = () => {
                 </CardActions>
               </Card>
             </Form>
+             </FieldArray>
           )}
         </Formik>
       </MuiPickersUtilsProvider>
