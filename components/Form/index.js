@@ -51,11 +51,42 @@ const OrderForm = () => {
 
   useEffect(() => {
     if (dbname === "ids") {
-
           setForTit([
           {name:'VaccineName', label:'Vaccine Name'},
           {name:'RecordNumber', label:'Record Number'},
-          {name:'VaccineType', label:'Vaccine Type'}
+          {name:'VaccineType', label:'Vaccine Type'},
+          {name:'VaccineApplication', label:'Vaccine Application'},
+          {name:'VaccineTarget', label:'Vaccine Target'},
+          {name:'Emergence', label:'Emergence'},
+          {name:'ntShortName', label:'ntShortName'},
+          {name:'ntLongName', label:'ntLongName'},
+          {name:'FACTAtarget', label:'FACTAtarget'},
+          {name:'AminoAcid', label:'Amino Acid'},
+          {name:'Conserved', label:'Conserved'},
+          {name:'VariantTargets', label:'Variant Targets'},
+          {name:'Description', label:'Description'},
+          {name:'Category', label:'Category'},
+          {name:'Type', label:'Type'},
+          {name:'Subcategory', label:'Subcategory'},
+          {name:'IPReference', label:'IPReference'},
+          {name:'PublicationSource', label:'Publication Source'},
+          {name:'DOI', label:'DOI'},
+          {name:'REFlinks', label:'REFlinks'},
+          {name:'FACTAGenome', label:'FACTAGenome'},
+          {name:'Notes', label:'Notes'},
+          {name:'Users', label:'Users'},
+          {name:'Notes2', label:'Notes2'},
+          {name:'SpikeVariants', label:'Spike Variants'},
+          {name:'OtherVariants', label:'Other Variants'},
+          {name:'PANGO', label:'PANGO'},
+          {name:'BVBRC', label:'BVBRC'},
+          {name:'AmpTec_Sourcecode', label:'AmpTec Sourcecode'},
+          {name:'Sequences', label:'Sequences'},
+          {name:'Signal_Peptide_e', label:'Signal_Peptide_e'},
+          {name:'NTD_Mutation', label:'NTD_Mutation'},
+          {name:'RBD_Mutation', label:'RBD_Mutation'},
+          {name:'S1_S2_Mutation', label:'S1_S2_Mutation'}
+          {name:'S2_Mutation', label:'S2_Mutation'}
           ]);
 
           console.log("entries1 ",forTit);
