@@ -212,8 +212,7 @@ const OrderForm = () => {
                     {forTit.map( entry => (
 
                       <Grid item xs={12}>
-                         {entry.name}
-                         {entry.label}
+                         <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
                       </Grid>
 
                     ))}
