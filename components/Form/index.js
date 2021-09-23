@@ -52,7 +52,7 @@ const OrderForm = () => {
   useEffect(() => {
     if (dbname === "ids") {
 
-          setForTit({ friends: ['jared', 'ian', 'brent'] });
+          setForTit(['jared', 'ian', 'brent']);
           console.log("entries ",forTit);
           setIniValues({
             VaccineName: '',
