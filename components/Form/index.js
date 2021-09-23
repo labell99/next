@@ -58,6 +58,10 @@ const OrderForm = () => {
           {name:'RecordNumber', label:'Record Number'}
           ]);
 
+
+          console.log("entries1a ",forTit);
+
+
        /*   setForT([
           {name:'VaccineName', label:'Vaccine Name'},
           {name:'RecordNumber', label:'Record Number'},
@@ -95,8 +99,6 @@ const OrderForm = () => {
           {name:'S1_S2_Mutation', label:'S1_S2_Mutation'},
           {name:'S2_Mutation', label:'S2_Mutation'}
           ]); */
-
-          console.log("entries1 ",forTit);
 
           setIniValues({
             VaccineName: '',
