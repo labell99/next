@@ -85,7 +85,7 @@ const OrderForm = () => {
           {name:'Signal_Peptide_e', label:'Signal_Peptide_e'},
           {name:'NTD_Mutation', label:'NTD_Mutation'},
           {name:'RBD_Mutation', label:'RBD_Mutation'},
-          {name:'S1_S2_Mutation', label:'S1_S2_Mutation'}
+          {name:'S1_S2_Mutation', label:'S1_S2_Mutation'},
           {name:'S2_Mutation', label:'S2_Mutation'}
           ]);
 
