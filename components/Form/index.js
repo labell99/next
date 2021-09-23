@@ -47,8 +47,8 @@ const OrderForm = () => {
   const dbname = dbcontext.data;
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
-  const [forTit, setForTit] = useState();
-  const [forT, setForT] = useState([{name:'VaccineName', label:'Vaccine Name'}]);
+  const [forT, setForT] = useState([""]);
+  const [forTit, setForTit] = useState([""]);
 
   useEffect(() => {
     if (dbname === "ids") {
@@ -97,6 +97,7 @@ const OrderForm = () => {
           ]); */
 
           console.log("entries1 ",forTit);
+
           setIniValues({
             VaccineName: '',
             RecordNumber: '',
@@ -135,6 +136,7 @@ const OrderForm = () => {
             S2_Mutation: '',
             pick: !!tabValue,
           });
+
           setValSchema(Yup.object({
             VaccineName: Yup.string().required('Required'),
             RecordNumber: Yup.string().required('Required'),
@@ -246,12 +248,8 @@ const OrderForm = () => {
             <Form name="Orders" data-netlify="true">
               <Card >
                 <CardContent>
-
                   <Grid container spacing={2}>
-
                     <OrderProducts formik={formik} />
-
-
                   </Grid>
                 </CardContent>
                 <CardActions
