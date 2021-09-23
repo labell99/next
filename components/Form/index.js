@@ -213,7 +213,7 @@ const OrderForm = () => {
                     {/* Products */}
                     <OrderProducts formik={formik} />
 
-                    {entries}
+                    {entries[1].name}
 
                     {/* VaccineApplication */}
                     <Grid item xs={12}>
