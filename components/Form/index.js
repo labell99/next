@@ -53,7 +53,7 @@ const OrderForm = () => {
     if (dbname === "ids") {
 
           setForTit([{name:'t1', label:'t2'}, {name:'t1', label:'t2'}, {name:'t1', label:'t2'}]);
-          console.log("entries ",forTit);
+          console.log("entries1 ",forTit);
           setIniValues({
             VaccineName: '',
             RecordNumber: '',
