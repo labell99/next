@@ -47,7 +47,6 @@ const OrderForm = () => {
   const dbname = dbcontext.data;
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
-  const [valSchema, setValSchema] = useState([""]);
   const [entries, setEntries] = useState([""]);
 
   useEffect(() => {
