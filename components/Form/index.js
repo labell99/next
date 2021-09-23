@@ -47,16 +47,10 @@ const OrderForm = () => {
   const dbname = dbcontext.data;
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
-  const [entries, setEntries] = useState([""]);
+  const [entries, setEntries] = useState();
 
   useEffect(() => {
     if (dbname === "ids") {
-
-          setEntries([
-              {"name": "VaccineName","label": "Vaccine Name"},
-              {"name": "RecordNumber","label": "Record Number"},
-              {"name": "VaccineType","label": "Vaccine Type"}
-          ]);
 
           setEntries({ friends: ['jared', 'ian', 'brent'] });
 
