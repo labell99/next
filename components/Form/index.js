@@ -214,7 +214,7 @@ const OrderForm = () => {
                     <OrderProducts formik={formik} />
 
                     {entries.map( entry => (
-					  {entry.name}
+					  {entry}
 					))}
 
                     {/* VaccineApplication */}
