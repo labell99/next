@@ -95,7 +95,7 @@ const OrderForm = () => {
             S2_Mutation: '',
             pick: !!tabValue,
           });
-          setValSchema({Yup.object({
+          setValSchema(Yup.object({
             VaccineName: Yup.string().required('Required'),
             RecordNumber: Yup.string().required('Required'),
             VaccineType: Yup.string().required('Required'),
@@ -132,7 +132,7 @@ const OrderForm = () => {
             S1_S2_Mutation: Yup.string().required('Required'),
             S2_Mutation: Yup.string().required('Required'),
             pick: Yup.bool(),
-          })});
+          }));
     }
   }, []);
 
