@@ -52,7 +52,7 @@ const OrderForm = () => {
   useEffect(() => {
     if (dbname === "ids") {
 
-          setForTit([{name:'t1', label:'t2'}, {name:'t1', label:'t2'}, {name:'t1', label:'t2'}]);
+          setForTit([{name:'VaccineName', label:'Vaccine Name'}, {name:'RecordNumber', label:'Record Number'}, {name:'VaccineType', label:'Vaccine Type'}]);
           console.log("entries1 ",forTit);
           setIniValues({
             VaccineName: '',
@@ -211,8 +211,9 @@ const OrderForm = () => {
 
                     {forTit.map( entry => (
 
-                       <h4 >{entry.name}</h4>
-
+                      <Grid item xs={12}>
+                        <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
+                      </Grid>
 
                     ))}
 
