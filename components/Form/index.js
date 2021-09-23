@@ -244,11 +244,6 @@ const OrderForm = () => {
 
                     <OrderProducts formik={formik} />
 
-                    {forTit.map( entry => (
-
-                         {entry.name}
-
-                    ))}
 
                   </Grid>
                 </CardContent>
