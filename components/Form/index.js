@@ -48,7 +48,7 @@ const OrderForm = () => {
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
   const [forTit, setForTit] = useState();
-  const [forT, setForT] = useState([""]);
+  const [forT, setForT] = useState([{name:'VaccineName', label:'Vaccine Name'}]);
 
   useEffect(() => {
     if (dbname === "ids") {
@@ -58,7 +58,7 @@ const OrderForm = () => {
           {name:'RecordNumber', label:'Record Number'}
           ]);
 
-          setForT([
+       /*   setForT([
           {name:'VaccineName', label:'Vaccine Name'},
           {name:'RecordNumber', label:'Record Number'},
           {name:'VaccineType', label:'Vaccine Type'},
@@ -94,7 +94,7 @@ const OrderForm = () => {
           {name:'RBD_Mutation', label:'RBD_Mutation'},
           {name:'S1_S2_Mutation', label:'S1_S2_Mutation'},
           {name:'S2_Mutation', label:'S2_Mutation'}
-          ]);
+          ]); */
 
           console.log("entries1 ",forTit);
           setIniValues({
