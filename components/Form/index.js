@@ -50,8 +50,15 @@ const OrderForm = () => {
 
   useEffect(() => {
     if (dbname === "ids") {
+
+          var entries=[
+              {"name": "VaccineName","label": "Vaccine Name"},
+              {"name": "RecordNumber","label": "Record Number"},
+              {"name": "VaccineType","label": "Vaccine Type"}
+          ];
+
           setIniValues({
-            VaccineName: 'leetest1',
+            VaccineName: '',
             RecordNumber: '',
             VaccineType: '',
             VaccineApplication: '',
@@ -200,23 +207,18 @@ const OrderForm = () => {
                 <CardContent>
 
                   <Grid container spacing={2}>
+
                     {/* Products */}
                     <OrderProducts formik={formik} />
 
-                    {/* VaccineName */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="VaccineName" type="text" label="Vaccine Name" />
-                    </Grid>
+                    {entries.map((entry, index) => (
 
-                    {/* RecordNumber */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="RecordNumber" type="text" label="Record Number" />
-                    </Grid>
+                      {/* {entry.name} */}
+                      <Grid item xs={12}>
+                         <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
+                      </Grid>
 
-                    {/* VaccineType */}
-                    <Grid item xs={12}>
-                      <Field fullWidth component={TextField} name="VaccineType" type="text" label="Vaccine Type" />
-                    </Grid>
+                    ))}
 
                     {/* VaccineApplication */}
                     <Grid item xs={12}>
