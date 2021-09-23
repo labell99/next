@@ -48,10 +48,17 @@ const OrderForm = () => {
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
   const [forTit, setForTit] = useState([""]);
+  const [forT, setForT] = useState([""]);
 
   useEffect(() => {
     if (dbname === "ids") {
+
           setForTit([
+          {name:'VaccineName', label:'Vaccine Name'},
+          {name:'RecordNumber', label:'Record Number'}
+          ]);
+
+          setForT([
           {name:'VaccineName', label:'Vaccine Name'},
           {name:'RecordNumber', label:'Record Number'},
           {name:'VaccineType', label:'Vaccine Type'},
