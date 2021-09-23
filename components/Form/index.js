@@ -212,9 +212,9 @@ const OrderForm = () => {
                     {/* Products */}
                     <OrderProducts formik={formik} />
 
-                    {entries.map((entry, index) => (
+                    {entries.map( entry => (
 
-                       <h4 >{entry}</h4>
+                       {entry.name}
 
                     ))}
 
