@@ -248,8 +248,8 @@ const OrderForm = () => {
                     <OrderProducts formik={formik} />
 
                     {forTit.map( (entry, index) => (
-                      <Grid item xs={12}>
-                         <Field fullWidth component={TextField} name={entry.name} key={index} type="text" label={entry.label} />
+                      <Grid item xs={12} key={index}>
+                         <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
                       </Grid>
                     ))}
 
