@@ -237,7 +237,7 @@ const OrderForm = () => {
           }}
         >
           {formik => (
-			 <FieldArray>
+		   <FieldArray>
             <Form name="Orders" data-netlify="true">
               <Card >
                 <CardContent>
@@ -247,9 +247,9 @@ const OrderForm = () => {
                     {/* Products */}
                     <OrderProducts formik={formik} />
 
-                    {forTit.map( entry => (
+                    {forTit.map( (entry, index) => (
                       <Grid item xs={12}>
-                         <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
+                         <Field fullWidth component={TextField} name={entry.name} key={index} type="text" label={entry.label} />
                       </Grid>
                     ))}
 
@@ -264,7 +264,7 @@ const OrderForm = () => {
                 </CardActions>
               </Card>
             </Form>
-             </FieldArray>
+           </FieldArray>
           )}
         </Formik>
       </MuiPickersUtilsProvider>
