@@ -51,8 +51,6 @@ const OrderForm = () => {
 
   useEffect(() => {
     if (dbname === "ids") {
-
-
           setForTit([
           {name:'VaccineName', label:'Vaccine Name'},
           {name:'RecordNumber', label:'Record Number'},
@@ -243,8 +241,18 @@ const OrderForm = () => {
             <Form name="Orders" data-netlify="true">
               <Card >
                 <CardContent>
+
                   <Grid container spacing={2}>
+
+                    {/* Products */}
                     <OrderProducts formik={formik} />
+
+                    {forTit.map( entry => (
+                      <Grid item xs={12}>
+                         <Field fullWidth component={TextField} name={entry.name} type="text" label={entry.label} />
+                      </Grid>
+                    ))}
+
                   </Grid>
                 </CardContent>
                 <CardActions
