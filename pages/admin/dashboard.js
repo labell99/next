@@ -70,7 +70,7 @@ function Dashboard() {
   function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
-    addToast("Dataset {datab} selected.", {
+    addToast("Dataset " + {datab} + " selected.", {
 	  appearance: 'success',
 	  autoDismiss: true,
     });
