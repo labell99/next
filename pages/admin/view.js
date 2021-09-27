@@ -428,7 +428,8 @@ function View() {
   };
 
   useEffect(() => {
-      axios.post('http://54.198.204.54:1337/auth/local', {
+      const idserver = "http://" + dbserver + ":" + dbport + "/auth/local";
+      axios.post(idserver, {
         identifier: 'peter.jensen@finclusionsystems.com',
         password: 'Test123!',
       }).then(resp => {
