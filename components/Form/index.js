@@ -372,11 +372,9 @@ const OrderForm = () => {
     };
 
     const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
-    console.log("db ",fulldbname);
-    console.log("db1 ",values, headers);
     axios.post(fulldbname, values, { headers })
       .then(response => {
-		console.log("response posting strapi data: ",response);
+		//console.log("response posting strapi data: ",response);
         addToast("IDS Data posted.", {
 		   appearance: 'success',
 		   autoDismiss: true,
@@ -384,7 +382,7 @@ const OrderForm = () => {
       })
       .catch(error => {
         // handle error
-        console.log("error posting strapi data: ",error);
+       // console.log("error posting strapi data: ",error);
         if (error.response.status == 401) {
           addToast("Authentication Error! Please login again", {
 		    appearance: 'error',
