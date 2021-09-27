@@ -48,7 +48,7 @@ function Dashboard() {
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
   const { addToast } = useToasts();
-  var state, content;
+  var state;
   var title = dbname;
 
   if (dbname === "ids") {
@@ -72,12 +72,12 @@ function Dashboard() {
     setButton({ currentButton: id });
 
     if (datab === "ids") {
-      content = "Dataset mrna-ucv-ids selected.";
+      var tcontent = "Dataset mrna-ucv-ids selected.";
     } else if (dbname === "ecam-sma-ids") {
-      content = "Dataset " + datab + " selected.";
+      var tcontent = "Dataset " + datab + " selected.";
     }
 
-    addToast(content, {
+    addToast(tcontent, {
 	  appearance: 'success',
 	  autoDismiss: true,
     });
