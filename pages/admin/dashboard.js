@@ -78,7 +78,7 @@ function Dashboard() {
 
   return (
     <div>
-      <Typography variant="body1"> Dataset {title} Selected.</Typography>
+      <Typography variant="body1">Current Dataset: {title}.</Typography>
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
