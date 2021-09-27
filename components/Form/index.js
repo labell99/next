@@ -170,22 +170,16 @@ const OrderForm = () => {
 
 
           setForTit([
-          {name:'LNP_Formulation_Name', label:'LNP Formulation Name'},
-          {name:'Record_Number', label:'Record Number'},
-          {name:'Formulation_Version', label:'Formulation Version'}
+          {name:'LNP_Formulation_Name', label:'LNP Formulation Name'}
           ]);
 
            setIniValues({
             LNP_Formulation_Name: '',
-            Record_Number: '',
-            Formulation_Version: '',
             pick: !!tabValue,
           });
 
           setValSchema(Yup.object({
-            LNP_Formulation_Name: Yup.string().required('Required'),
-            Record_Number: Yup.string().required('Required'),
-            Formulation_Version: Yup.string().required('Required'),
+            LNP_Formulation_Name: Yup.string().required('Required')
             pick: Yup.bool(),
           }));
 
@@ -285,12 +279,12 @@ const OrderForm = () => {
 
   const validate = values => {
     const errors = {};
-    console.log("err: ",values);
+
     // Address
     if (!values.LNP_Formulation_Name && !values.VaccineName && tabValue === 0) {
       errors.street = 'No IDS data entered';
     }
-    console.log("err: ",errors);
+
     return errors;
   };
 
