@@ -70,7 +70,7 @@ function Dashboard() {
 
   return (
     <div>
-      <Typography variant="h6"> Dataset {dbname} selected.</Typography>
+      <Typography variant="h6"> Dataset {title} Selected.</Typography>
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
