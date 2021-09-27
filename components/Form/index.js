@@ -170,35 +170,20 @@ const OrderForm = () => {
 
           setForTit([
           {name:'LNP_Formulation_Name', label:'LNP Formulation Name'},
-          {name:'Record_Number', label:'Record Number'},
-          {name:'Formulation_Version', label:'Formulation Version'},
-          {name:'Users', label:'Users'},
-          {name:'AI_Analytics_Report', label:'AI Analytics Report'},
-          {name:'Norvax_Notes', label:'Norvax_Notes'},
-          {name:'REF_Links', label:'REF Links'},
-          {name:'SINTEF_Notes', label:'SINTEF Notes'},
-          {name:'Preclin_Data', label:'Preclinical Data and Toxicology'},
-          {name:'lipid11', label:'Lipid11'},
-          {name:'lipid12', label:'Lipid12'},
-          {name:'lipid13', label:'Lipid13'},
-          {name:'lipid14', label:'Lipid14'},
-          {name:'lipid21', label:'Lipid21'},
-          {name:'lipid22', label:'Lipid22'},
-          {name:'lipid23', label:'Lipid23'},
-          {name:'lipid24', label:'Lipid24'},
-          {name:'lipid31', label:'Lipid31'},
-          {name:'lipid32', label:'Lipid32'},
-          {name:'lipid33', label:'Lipid33'},
-          {name:'lipid34', label:'Lipid34'},
-          {name:'lipid41', label:'Lipid41'},
-          {name:'lipid42', label:'Lipid42'},
-          {name:'lipid43', label:'Lipid43'},
-          {name:'lipid44', label:'Lipid44'}
+          {name:'Record_Number', label:'Record Number'}
           ]);
 
+          setIniValues({
+            LNP_Formulation_Name: '',
+            Record_Number: '',
+            pick: !!tabValue
+          });
 
-
-
+          setValSchema(Yup.object({
+            LNP_Formulation_Name: Yup.string().required('Required'),
+            Record_Number: Yup.string().required('Required'),
+            pick: Yup.bool(),
+          }));
 
     } else if ((dbname === "gb-t-bm-rna-ids") || (dbname === "ecam-sma-ids")) {
 
