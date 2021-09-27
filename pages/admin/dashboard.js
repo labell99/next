@@ -39,7 +39,7 @@ import { bugs, website, server } from "variables/general.js";
 import StorageIcon from '@material-ui/icons/Storage';
 import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
-
+import Typography from '@material-ui/core/Typography'
 
 
 function Dashboard() {
@@ -69,6 +69,7 @@ function Dashboard() {
   return (
     <div>
       <GridContainer>
+        <Typography variant="h5" {dbname} </Typography>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
             <CardHeader  color={button.currentButton === 0 ? "primary" : "warning" }  stats icon>
