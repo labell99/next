@@ -375,9 +375,11 @@ const OrderForm = () => {
     };
 
     const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
+    console.log("db ",fulldbname);
+    console.log("db1 ",values);
     axios.post(fulldbname, values, { headers })
       .then(response => {
-		//console.log("response posting strapi data: ",response);
+		console.log("response posting strapi data: ",response);
         addToast("IDS Data posted.", {
 		   appearance: 'success',
 		   autoDismiss: true,
