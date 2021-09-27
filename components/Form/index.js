@@ -196,63 +196,9 @@ const OrderForm = () => {
           {name:'lipid44', label:'Lipid44'}
           ]);
 
-           setIniValues({
-            LNP_Formulation_Name: '',
-            RecordNumber: '',
-            Formulation_Version: '',
-            Users: '',
-            AI_Analytics_Report: '',
-            Norvax_Notes: '',
-            REF_Links: '',
-            SINTEF_Notes: '',
-            Preclin_Data: '',
-            lipid11: '',
-            lipid12: '',
-            lipid13: '',
-            lipid14: '',
-            lipid21: '',
-            lipid22: '',
-            lipid23: '',
-            lipid24: '',
-            lipid31: '',
-            lipid32: '',
-            lipid33: '',
-            lipid34: '',
-            lipid41: '',
-            lipid42: '',
-            lipid43: '',
-            lipid44: '',
-            pick: !!tabValue,
-          });
 
-          setValSchema(Yup.object({
-            LNP_Formulation_Name: Yup.string().required('Required'),
-            RecordNumber: Yup.string().required('Required'),
-            Formulation_Version: Yup.string().required('Required'),
-            Users: Yup.string().required('Required'),
-            AI_Analytics_Report: Yup.string().required('Required'),
-            Norvax_Notes: Yup.string().required('Required'),
-            REF_Links: Yup.string().required('Required'),
-            SINTEF_Notes: Yup.string().required('Required'),
-            Preclin_Data: Yup.string().required('Required'),
-            lipid11: Yup.string().required('Required'),
-            lipid12: Yup.string().required('Required'),
-            lipid13: Yup.string().required('Required'),
-            lipid14: Yup.string().required('Required'),
-            lipid21: Yup.string().required('Required'),
-            lipid22: Yup.string().required('Required'),
-            lipid23: Yup.string().required('Required'),
-            lipid24: Yup.string().required('Required'),
-            lipid31: Yup.string().required('Required'),
-            lipid32: Yup.string().required('Required'),
-            lipid33: Yup.string().required('Required'),
-            lipid34: Yup.string().required('Required'),
-            lipid41: Yup.string().required('Required'),
-            lipid42: Yup.string().required('Required'),
-            lipid43: Yup.string().required('Required'),
-            lipid44: Yup.string().required('Required'),
-            pick: Yup.bool(),
-          }));
+
+
 
     } else if ((dbname === "gb-t-bm-rna-ids") || (dbname === "ecam-sma-ids")) {
 
