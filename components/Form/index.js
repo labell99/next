@@ -283,7 +283,7 @@ const OrderForm = () => {
     const errors = {};
 
     // Address
-    if (!values.VaccineName && tabValue === 0) {
+    if (!values.LNP_Formulation_Name && !values.VaccineName && tabValue === 0) {
       errors.street = 'No IDS data entered';
     }
 
