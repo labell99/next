@@ -55,10 +55,13 @@ function Dashboard() {
     title = "MRNA-UCV-IDS";
   } else if (dbname === "norvax-lnps") {
     state = 1;
+    title = "NORVAX-LNPS";
   } else if (dbname === "gb-t-bm-rna-ids") {
     state = 2;
+    title = "GBTBMRNA-IDS";
   } else if (dbname === "ecam-sma-ids") {
     state = 3;
+    title = "ECAM-SMA-IDS";
   }
 
   const [button, setButton] = useState({currentButton: state});
