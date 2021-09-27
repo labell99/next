@@ -179,7 +179,7 @@ const OrderForm = () => {
           });
 
           setValSchema(Yup.object({
-            LNP_Formulation_Name: Yup.string().required('Required')
+            LNP_Formulation_Name: Yup.string().required('Required'),
             pick: Yup.bool(),
           }));
 
