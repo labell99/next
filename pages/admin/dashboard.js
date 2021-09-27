@@ -48,9 +48,11 @@ function Dashboard() {
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
   var state;
+  var title = dbname;
 
   if (dbname === "ids") {
     state = 0;
+    title = "MRNA-UCV-IDS";
   } else if (dbname === "norvax-lnps") {
     state = 1;
   } else if (dbname === "gb-t-bm-rna-ids") {
