@@ -40,13 +40,14 @@ import StorageIcon from '@material-ui/icons/Storage';
 import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 import Typography from '@material-ui/core/Typography'
-
+import { useToasts } from 'react-toast-notifications';
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
+  const { addToast } = useToasts();
   var state;
   var title = dbname;
 
@@ -69,6 +70,10 @@ function Dashboard() {
   function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
+    addToast("Dataset {datab} selected.", {
+	  appearance: 'success',
+	  autoDismiss: true,
+    });
   }
 
   return (
