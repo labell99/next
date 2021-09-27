@@ -356,7 +356,7 @@ const OrderForm = () => {
     if (!values.LNP_Formulation_Name && !values.VaccineName && tabValue === 0) {
       errors.street = 'No IDS data entered';
     }
-
+    console.log("err: ",errors);
     return errors;
   };
 
