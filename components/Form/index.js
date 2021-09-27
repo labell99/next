@@ -302,7 +302,7 @@ const OrderForm = () => {
 
     const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
     console.log("db ",fulldbname);
-    console.log("db1 ",values);
+    console.log("db1 ",values, headers);
     axios.post(fulldbname, values, { headers })
       .then(response => {
 		console.log("response posting strapi data: ",response);
