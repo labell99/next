@@ -68,8 +68,8 @@ function Dashboard() {
 
   return (
     <div>
+      <Typography variant="h5"> test </Typography>
       <GridContainer>
-        <Typography variant="h5"> test </Typography>
         <GridItem xs={12} sm={6} md={3}>
           <Card >
             <CardHeader  color={button.currentButton === 0 ? "primary" : "warning" }  stats icon>
