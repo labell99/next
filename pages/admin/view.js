@@ -358,8 +358,57 @@ function View() {
     });
   };
 
+  const strapi = () => {
+        const idserver = "http://" + dbserver + ":" + dbport + "/auth/local";
+        axios.post(idserver, {
+          identifier: 'peter.jensen@finclusionsystems.com',
+          password: 'Test123!',
+        }).then(resp => {
+
+        var authtoken = "Bearer " + resp.data.jwt;
+  	    const headers = {
+          'Authorization': authtoken,
+          'accept': 'application/json'
+        };
+
+        const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
+        axios.get(fulldbname, { headers })
+          .then(response => {
+            if (dbname === "ids") {
+  			setTableName("Immunogen Design & Selection");
+              builderids(response.data,setData,setDataTable);
+  	      } else if (dbname === "norvax-lnps") {
+  			setTableName("Norvax LNPS");
+              builderlnps(response.data, setData, setDataTable);
+  	      } else if (dbname === "gb-t-bm-rna-ids") {
+  			setTableName("GBTBMRNA IDS");
+              builder(response.data, setData, setDataTable);
+  	      } else if (dbname === "ecam-sma-ids") {
+  			setTableName("ECAM-SMA IDS");
+              builder(response.data, setData, setDataTable);
+            }
+        })
+        .catch(error => {
+          // handle error
+          //console.log("error fetching strapi data: ",error);
+          if (error.response.status == 401) {
+            addToast("Authentication Error! Please login again", {
+  		      appearance: 'error',
+  		      autoDismiss: true,
+            });
+  	    } else {
+            addToast("Error fetching data from strapi: "+error, {
+  		      appearance: 'error',
+  		      autoDismiss: true,
+            });
+          }
+        });
+      });
+  };
+
   const delId = (id) => {
-      axios.post('http://54.198.204.54:1337/auth/local', {
+	  const idserver = "http://" + dbserver + ":" + dbport + "/auth/local";
+      axios.post(idserver, {
         identifier: 'peter.jensen@finclusionsystems.com',
         password: 'Test123!',
       }).then(resp => {
@@ -428,51 +477,7 @@ function View() {
   };
 
   useEffect(() => {
-      const idserver = "http://" + dbserver + ":" + dbport + "/auth/local";
-      axios.post(idserver, {
-        identifier: 'peter.jensen@finclusionsystems.com',
-        password: 'Test123!',
-      }).then(resp => {
-
-      var authtoken = "Bearer " + resp.data.jwt;
-	  const headers = {
-        'Authorization': authtoken,
-        'accept': 'application/json'
-      };
-
-      const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
-      axios.get(fulldbname, { headers })
-        .then(response => {
-          if (dbname === "ids") {
-			setTableName("Immunogen Design & Selection");
-            builderids(response.data,setData,setDataTable);
-	      } else if (dbname === "norvax-lnps") {
-			setTableName("Norvax LNPS");
-            builderlnps(response.data, setData, setDataTable);
-	      } else if (dbname === "gb-t-bm-rna-ids") {
-			setTableName("GBTBMRNA IDS");
-            builder(response.data, setData, setDataTable);
-	      } else if (dbname === "ecam-sma-ids") {
-			setTableName("ECAM-SMA IDS");
-            builder(response.data, setData, setDataTable);
-          }
-      })
-      .catch(error => {
-        // handle error
-        //console.log("error fetching strapi data: ",error);
-        if (error.response.status == 401) {
-          addToast("Authentication Error! Please login again", {
-		      appearance: 'error',
-		      autoDismiss: true,
-          });
-	    } else {
-          addToast("Error fetching data from strapi: "+error, {
-		      appearance: 'error',
-		      autoDismiss: true,
-          });
-        }
-      });
-    });
+    strapi();
   }, []);
 
 const columns = [
