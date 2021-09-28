@@ -41,6 +41,7 @@ import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 import Typography from '@material-ui/core/Typography'
 import { useToasts } from 'react-toast-notifications';
+import createPersistedState from "use-persisted-state";
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
@@ -48,6 +49,9 @@ function Dashboard() {
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
   const { addToast } = useToasts();
+  const useDataState = createPersistedState("button");
+  const [datastate, setDataState] = useDataState("ids");
+
   var state, tcontent;
   var title = dbname;
 
@@ -67,10 +71,16 @@ function Dashboard() {
 
   const [button, setButton] = useState({currentButton: state});
 
+  useEffect(() => {
+    if (dbname !== datastate) {
+      dbcontext.setData(datastate);
+	}
+  }, []);
+
   function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
-
+    setDataState(dbname);
     tcontent = datab;
     if (datab === "ids") {
       tcontent = "mrna-ucv-ids";
