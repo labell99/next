@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 import Button from '@material-ui/core/Button';
