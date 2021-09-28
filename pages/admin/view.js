@@ -455,6 +455,7 @@ function View() {
         id: null,
       });
       strapi();
+      window.location.reload(false);
     }
   };
 
