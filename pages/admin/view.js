@@ -454,6 +454,7 @@ function View() {
         show: false,
         id: null,
       });
+      strapi();
     }
   };
 
