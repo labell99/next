@@ -74,9 +74,9 @@ function Dashboard() {
   useEffect(() => {
 	console.log("db1: ", dbname);
 	console.log("db2: ", datastate);
-    if (dbname !== datastate) {
-      dbcontext.setData(datastate);
-	}
+    //if (dbname !== datastate) {
+    //  dbcontext.setData(datastate);
+	//}
   }, []);
 
   function onButtonClicked (datab, id) {
