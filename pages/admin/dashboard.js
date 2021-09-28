@@ -72,6 +72,8 @@ function Dashboard() {
   const [button, setButton] = useState({currentButton: state});
 
   useEffect(() => {
+	console.log("db1: ", dbname);
+	console.log("db2: ", datastate);
     if (dbname !== datastate) {
       dbcontext.setData(datastate);
 	}
