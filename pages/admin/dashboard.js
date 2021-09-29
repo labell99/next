@@ -123,7 +123,7 @@ function Dashboard() {
           <Card >
             <CardHeader  color={button.currentButton === 0 ? "primary" : "warning" }  stats icon>
               <CardIcon  color={button.currentButton === 0 ? "primary" : "warning" }>
-                <IconButton disableRipple disableTouchRipple focusRipple onTouchTap={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
+                <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
