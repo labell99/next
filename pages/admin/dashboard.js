@@ -123,7 +123,7 @@ function Dashboard() {
           <Card >
             <CardHeader  color={button.currentButton === 0 ? "primary" : "warning" }  stats icon>
               <CardIcon  color={button.currentButton === 0 ? "primary" : "warning" }>
-                <IconButton onTouchTap={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton disableRipple onClick={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </IconButton>
@@ -135,7 +135,7 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 1 ? "primary" : "success"} stats icon>
               <CardIcon color={button.currentButton === 1 ? "primary" : "success"}>
-                <IconButton onTouchTap={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton disableRipple onClick={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </IconButton>
@@ -147,7 +147,7 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 2 ? "primary" : "danger"} stats icon>
               <CardIcon color={button.currentButton === 2 ? "primary" : "danger"}>
-                 <IconButton onTouchTap={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
+                 <IconButton disableRipple onClick={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </IconButton>
@@ -159,7 +159,7 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 3 ? "primary" : "info"} stats icon>
               <CardIcon color={button.currentButton === 3 ? "primary" : "info"}>
-                <IconButton onTouchTap={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
+                <IconButton disableRipple onClick={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </IconButton>
