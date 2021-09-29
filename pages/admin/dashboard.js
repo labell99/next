@@ -51,7 +51,6 @@ function Dashboard() {
   const { addToast } = useToasts();
   const useDataState = createPersistedState("button");
   const [datastate, setDataState] = useDataState("ids");
-
   var state, tcontent;
   var title = dbname;
 
@@ -72,17 +71,39 @@ function Dashboard() {
   const [button, setButton] = useState({currentButton: state});
 
   useEffect(() => {
+	const persistedStore = loadFromLocalStorage();
 	console.log("db1: ", dbname);
 	console.log("db2: ", datastate);
+	console.log("db3: ", persistedStore);
     //if (dbname !== datastate) {
     //  dbcontext.setData(datastate);
 	//}
   }, []);
 
+  const saveToLocalStorage = (state) => {
+    try {
+      localStorage.setItem('state', JSON.stringify(state));
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const loadFromLocalStorage = () => {
+    try {
+      const stateStr = localStorage.getItem('state');
+      return stateStr ? JSON.parse(stateStr) : undefined;
+    } catch (e) {
+      console.error(e);
+      return undefined;
+    }
+  };
+
+
   function onButtonClicked (datab, id) {
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
     setDataState(dbname);
+    saveToLocalStorage(dbname);
     tcontent = datab;
     if (datab === "ids") {
       tcontent = "mrna-ucv-ids";
