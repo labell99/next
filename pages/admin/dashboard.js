@@ -135,10 +135,10 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 1 ? "primary" : "success"} stats icon>
               <CardIcon color={button.currentButton === 1 ? "primary" : "success"}>
-                <IconButton disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
+                <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
-                </IconButton>
+                </Button>
               </CardIcon>
             </CardHeader>
           </Card>
@@ -147,10 +147,10 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 2 ? "primary" : "danger"} stats icon>
               <CardIcon color={button.currentButton === 2 ? "primary" : "danger"}>
-                 <IconButton disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
+                 <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
-                </IconButton>
+                </Button>
               </CardIcon>
             </CardHeader>
           </Card>
@@ -159,10 +159,10 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 3 ? "primary" : "info"} stats icon>
               <CardIcon color={button.currentButton === 3 ? "primary" : "info"}>
-                <IconButton disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
+                <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
-                </IconButton>
+                </Button>
               </CardIcon>
             </CardHeader>
           </Card>
