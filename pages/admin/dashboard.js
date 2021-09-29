@@ -126,7 +126,7 @@ function Dashboard() {
                 <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
-                </IconButton>
+                </Button>
               </CardIcon>
             </CardHeader>
           </Card>
