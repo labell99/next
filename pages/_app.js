@@ -21,7 +21,6 @@ import PageChange from "components/PageChange/PageChange.js";
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
 import { ToastProvider } from 'react-toast-notifications';
 import AppContext from "context/AppContext";
-import fetch from "isomorphic-fetch";
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -44,6 +43,7 @@ export default class MyApp extends App {
 
   state = {
     datab: "ids",
+    user: null,
   };
 
   setData = (data) => {
@@ -51,6 +51,8 @@ export default class MyApp extends App {
   };
 
   componentDidMount() {
+    const token = Cookie.get("token");
+
     let comment = document.createComment(`
 =========================================================
 * * NextJS Material Dashboard v1.1.0 based on Material Dashboard React v1.9.0
