@@ -67,7 +67,7 @@ function Dashboard() {
   }
 
   const [button, setButton] = useState({currentButton: state});
-  const [dataset, setDataSet] = useStickyState("ids", "dataSet");
+  const [dataset, setDataSet] = useStickyState("gtb", "dataSet");
 
   useEffect(() => {
 	console.log("db1: ", dbname);
@@ -75,7 +75,7 @@ function Dashboard() {
     //if (dbname !== datastate) {
     //  dbcontext.setData(datastate);
 	//}
-  }, []);
+  }, [dataset]);
 
 function useStickyState(defaultValue, key) {
   const [value, setValue] = React.useState(defaultValue);
