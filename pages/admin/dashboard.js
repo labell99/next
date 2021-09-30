@@ -102,6 +102,7 @@ function useStickyState(defaultValue, key) {
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
     setDataSet(datab);
+    console.log("dut db2: ", dataset);
     tcontent = datab;
     if (datab === "ids") {
       tcontent = "mrna-ucv-ids";
