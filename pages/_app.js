@@ -44,7 +44,6 @@ export default class MyApp extends App {
 
   state = {
     datab: "ids",
-    user: null,
   };
 
   setData = (data) => {
