@@ -50,7 +50,7 @@ const OrderForm = () => {
   const [forTit, setForTit] = useState([{name:'VaccineName', label:'Vaccine Name'}]);
 
   useEffect(() => {
-	const stickyValue = window.localStorage.getItem("dataSet");
+    const stickyValue = window.localStorage.getItem("dataSet");
     if (dbname !== stickyValue) {
       dbname = stickyValue.replace(/['"]+/g, '');
     }

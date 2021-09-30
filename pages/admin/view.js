@@ -432,7 +432,7 @@ function View() {
   };
 
   const delId = (id) => {
-	  const idserver = "http://" + dbserver + ":" + dbport + "/auth/local";
+      const idserver = "http://" + dbserver + ":" + dbport + "/auth/local";
       axios.post(idserver, {
         identifier: 'peter.jensen@finclusionsystems.com',
         password: 'Test123!',
@@ -503,7 +503,7 @@ function View() {
   };
 
   useEffect(() => {
-	const stickyValue = window.localStorage.getItem("dataSet");
+    const stickyValue = window.localStorage.getItem("dataSet");
     if (dbname !== stickyValue) {
 	  dbname = stickyValue.replace(/['"]+/g, '');
 	}

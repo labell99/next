@@ -101,7 +101,7 @@ function Dashboard() {
   }
 
   function onButtonClicked (datab, id) {
-	dbcontext.setData(datab);
+    dbcontext.setData(datab);
     setButton({ currentButton: id });
     setDataSet(datab);
     tcontent = datab;
