@@ -63,6 +63,8 @@ function Dashboard() {
 	console.log("db3: ", state);
     if (dbname !== dataset) {
 	  dbname = dataset;
+	  iniState(dbname);
+	  setButton({ currentButton: state });
       dbcontext.setData(dataset);
 	}
   }, [dataset]);
