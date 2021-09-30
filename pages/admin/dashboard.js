@@ -58,9 +58,6 @@ function Dashboard() {
   const [dataset, setDataSet] = useStickyState("ids", "dataSet");
 
   useEffect(() => {
-	console.log("db1: ", dbname);
-	console.log("db2: ", dataset);
-	console.log("db3: ", state);
     if (dbname !== dataset) {
 	  dbname = dataset;
 	  iniState(dbname);
@@ -104,11 +101,9 @@ function Dashboard() {
   }
 
   function onButtonClicked (datab, id) {
-	console.log("dut click: ", datab);
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
     setDataSet(datab);
-    console.log("dut db2: ", dataset);
     tcontent = datab;
     if (datab === "ids") {
       tcontent = "mrna-ucv-ids";
