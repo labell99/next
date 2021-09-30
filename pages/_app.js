@@ -19,6 +19,9 @@ import {DataBProvider} from 'components/Context/dataBContext';
 import PageChange from "components/PageChange/PageChange.js";
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
 import { ToastProvider } from 'react-toast-notifications';
+import Cookie from "js-cookie";
+import fetch from "isomorphic-fetch";
+import AppContext from "../context/AppContext";
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -41,6 +44,10 @@ export default class MyApp extends App {
 
   state = {
     datab: "ids",
+  };
+
+  ustate = {
+      user: null,
   };
 
   setData = (data) => {
