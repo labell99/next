@@ -73,6 +73,7 @@ function Dashboard() {
 	console.log("db1: ", dbname);
 	console.log("db2: ", dataset);
     if (dbname !== dataset) {
+	  dbname = dataset;
       dbcontext.setData(dataset);
 	}
   }, [dataset]);
