@@ -426,7 +426,7 @@ function View() {
 		      appearance: 'success',
 		      autoDismiss: true,
           });
-          router.push('/admin/view');
+          window.location.reload(false);
       })
       .catch(error => {
         // handle error
