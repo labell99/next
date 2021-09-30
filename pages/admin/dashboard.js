@@ -46,7 +46,7 @@ function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
-  const dbname = dbcontext.data;
+  var   dbname = dbcontext.data;
   const { addToast } = useToasts();
 
   var state, tcontent;
