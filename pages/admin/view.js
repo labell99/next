@@ -478,6 +478,8 @@ function View() {
   };
 
   useEffect(() => {
+	const stickyValue = window.localStorage.getItem("dataSet");
+	console.log("stickyValue: ",stickyValue);
     strapi();
   }, []);
 
