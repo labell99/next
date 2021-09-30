@@ -100,6 +100,7 @@ function Dashboard() {
 
 
   function onButtonClicked (datab, id) {
+	console.log("dut click: ", datab);
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
     setDataState(dbname);
@@ -123,7 +124,7 @@ function Dashboard() {
           <Card >
             <CardHeader  color={button.currentButton === 0 ? "primary" : "warning" }  stats icon>
               <CardIcon  color={button.currentButton === 0 ? "primary" : "warning" }>
-                <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
+                <Button disableRipple disableTouchRipple onMouseDown={() => onButtonClicked("ids",0)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   MRNA-UCV-IDS
                 </Button>
@@ -135,7 +136,7 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 1 ? "primary" : "success"} stats icon>
               <CardIcon color={button.currentButton === 1 ? "primary" : "success"}>
-                <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
+                <Button disableRipple disableTouchRipple onMouseDown={() => onButtonClicked("norvax-lnps",1)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   NORVAX-LNPS
                 </Button>
@@ -147,7 +148,7 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 2 ? "primary" : "danger"} stats icon>
               <CardIcon color={button.currentButton === 2 ? "primary" : "danger"}>
-                 <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
+                 <Button disableRipple disableTouchRipple onMouseDown={() => onButtonClicked("gb-t-bm-rna-ids",2)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   GBTBMRNA-IDS
                 </Button>
@@ -159,7 +160,7 @@ function Dashboard() {
           <Card >
             <CardHeader color={button.currentButton === 3 ? "primary" : "info"} stats icon>
               <CardIcon color={button.currentButton === 3 ? "primary" : "info"}>
-                <Button disableRipple disableTouchRipple focusRipple onClick={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
+                <Button disableRipple disableTouchRipple onMouseDown={() => onButtonClicked("ecam-sma-ids",3)} style={{fontSize: '12px', color: 'white'}}>
                   <StorageIcon />
                   ECAM-SMA-IDS
                 </Button>
