@@ -480,7 +480,7 @@ function View() {
   useEffect(() => {
 	const stickyValue = window.localStorage.getItem("dataSet");
     if (dbname !== stickyValue) {
-	  dbname = stickyValue;
+	  dbname = stickyValue.replace(/['"]+/g, '');
 	}
 	console.log("stickyValue: ",stickyValue,dbname);
     strapi();
