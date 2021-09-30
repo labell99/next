@@ -42,6 +42,8 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 import Typography from '@material-ui/core/Typography'
 import { useToasts } from 'react-toast-notifications';
 import createPersistedState from "use-persisted-state";
+import useLocalStorage from 'react-use-localstorage';
+
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
@@ -51,6 +53,8 @@ function Dashboard() {
   const { addToast } = useToasts();
   const useDataState = createPersistedState("button");
   const [datastate, setDataState] = useDataState("ids");
+  const [item, setItem] = useLocalStorage('name', 'Initial Value');
+
   var state, tcontent;
   var title = dbname;
 
@@ -75,6 +79,7 @@ function Dashboard() {
 	console.log("db1: ", dbname);
 	console.log("db2: ", datastate);
 	console.log("db3: ", persistedStore);
+    console.log("db4: ", item);
     //if (dbname !== datastate) {
     //  dbcontext.setData(datastate);
 	//}
@@ -105,6 +110,7 @@ function Dashboard() {
     setButton({ currentButton: id });
     setDataState(dbname);
     saveToLocalStorage(dbname);
+    setItem(dbname);
     tcontent = datab;
     if (datab === "ids") {
       tcontent = "mrna-ucv-ids";
