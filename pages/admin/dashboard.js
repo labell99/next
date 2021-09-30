@@ -52,19 +52,7 @@ function Dashboard() {
   var state, tcontent;
   var title = dbname;
 
-  if (dbname === "ids") {
-    state = 0;
-    title = "MRNA-UCV-IDS";
-  } else if (dbname === "norvax-lnps") {
-    state = 1;
-    title = "NORVAX-LNPS";
-  } else if (dbname === "gb-t-bm-rna-ids") {
-    state = 2;
-    title = "GBTBMRNA-IDS";
-  } else if (dbname === "ecam-sma-ids") {
-    state = 3;
-    title = "ECAM-SMA-IDS";
-  }
+  iniState(dbname);
 
   const [button, setButton] = useState({currentButton: state});
   const [dataset, setDataSet] = useStickyState("ids", "dataSet");
@@ -79,25 +67,39 @@ function Dashboard() {
 	}
   }, [dataset]);
 
-function useStickyState(defaultValue, key) {
-  const [value, setValue] = React.useState(defaultValue);
-
-  React.useEffect(() => {
-    const stickyValue = window.localStorage.getItem(key);
-
-    if (stickyValue !== null) {
-      setValue(JSON.parse(stickyValue));
+  function iniState(db) {
+    if (db === "ids") {
+      state = 0;
+      title = "MRNA-UCV-IDS";
+    } else if (db === "norvax-lnps") {
+      state = 1;
+      title = "NORVAX-LNPS";
+    } else if (db === "gb-t-bm-rna-ids") {
+      state = 2;
+      title = "GBTBMRNA-IDS";
+    } else if (db === "ecam-sma-ids") {
+      state = 3;
+      title = "ECAM-SMA-IDS";
     }
-  }, [key]);
+  };
 
-  React.useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
+  function useStickyState(defaultValue, key) {
+    const [value, setValue] = React.useState(defaultValue);
 
-  return [value, setValue];
-}
+    React.useEffect(() => {
+      const stickyValue = window.localStorage.getItem(key);
 
+      if (stickyValue !== null) {
+        setValue(JSON.parse(stickyValue));
+      }
+    }, [key]);
 
+    React.useEffect(() => {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+
+    return [value, setValue];
+  }
 
   function onButtonClicked (datab, id) {
 	console.log("dut click: ", datab);
