@@ -583,6 +583,10 @@ const options = {
   }
 };
 
+var categories=[];
+var entries=[];
+var pentries=[];
+
 setheaders();
 
   return (
