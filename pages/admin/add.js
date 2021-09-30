@@ -40,10 +40,14 @@ function Create() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const dbcontext = useContext(DataBContext);
-  const dbname = dbcontext.data;
+  var   dbname = dbcontext.data;
   const [formName, setFormName] = useState([""]);
 
   useEffect(() => {
+	const stickyValue = window.localStorage.getItem("dataSet");
+    if (dbname !== stickyValue) {
+	  dbname = stickyValue.replace(/['"]+/g, '');
+	}
     if (dbname === "ids") {
       setFormName("Input Immunogen Design & Selection Data");
     } else if (dbname === "norvax-lnps") {
