@@ -370,7 +370,7 @@ function View() {
           'Authorization': authtoken,
           'accept': 'application/json'
         };
-
+        console.log("dbname: ",dbname);
         const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
         axios.get(fulldbname, { headers })
           .then(response => {
