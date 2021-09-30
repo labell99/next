@@ -44,7 +44,7 @@ const OrderForm = () => {
   const dbcontext = useContext(DataBContext);
   const dbserver = "54.198.204.54";
   const dbport = "1337";
-  const dbname = dbcontext.data;
+  var   dbname = dbcontext.data;
   const [iniValues, setIniValues] = useState([""]);
   const [valSchema, setValSchema] = useState([""]);
   const [forTit, setForTit] = useState([{name:'VaccineName', label:'Vaccine Name'}]);
@@ -52,8 +52,8 @@ const OrderForm = () => {
   useEffect(() => {
 	const stickyValue = window.localStorage.getItem("dataSet");
     if (dbname !== stickyValue) {
-	  dbname = stickyValue.replace(/['"]+/g, '');
-	}
+      dbname = stickyValue.replace(/['"]+/g, '');
+    }
     if (dbname === "ids") {
           setForTit([
           {name:'VaccineName', label:'Vaccine Name'},
