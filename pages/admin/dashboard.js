@@ -72,6 +72,7 @@ function Dashboard() {
   useEffect(() => {
 	console.log("db1: ", dbname);
 	console.log("db2: ", dataset);
+	console.log("db3: ", state);
     if (dbname !== dataset) {
 	  dbname = dataset;
       dbcontext.setData(dataset);
