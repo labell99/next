@@ -41,9 +41,6 @@ import {DataBContext} from 'components/Context/dataBContext';
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 import Typography from '@material-ui/core/Typography'
 import { useToasts } from 'react-toast-notifications';
-import createPersistedState from "use-persisted-state";
-import useLocalStorage from 'react-use-localstorage';
-
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
@@ -51,9 +48,6 @@ function Dashboard() {
   const dbcontext = useContext(DataBContext);
   const dbname = dbcontext.data;
   const { addToast } = useToasts();
-  const useDataState = createPersistedState("button");
-  const [datastate, setDataState] = useDataState("ids");
-  const [item, setItem] = useLocalStorage('name', 'Initial Value');
 
   var state, tcontent;
   var title = dbname;
@@ -73,44 +67,41 @@ function Dashboard() {
   }
 
   const [button, setButton] = useState({currentButton: state});
+  const [dataset, setDataSet] = useStickyState("ids", "dataSet");
 
   useEffect(() => {
-	const persistedStore = loadFromLocalStorage();
 	console.log("db1: ", dbname);
-	console.log("db2: ", datastate);
-	console.log("db3: ", persistedStore);
-    console.log("db4: ", item);
+	console.log("db2: ", dataset);
     //if (dbname !== datastate) {
     //  dbcontext.setData(datastate);
 	//}
   }, []);
 
-  const saveToLocalStorage = (state) => {
-    try {
-      localStorage.setItem('state', JSON.stringify(state));
-    } catch (e) {
-      console.error(e);
-    }
-  };
+function useStickyState(defaultValue, key) {
+  const [value, setValue] = React.useState(defaultValue);
 
-  const loadFromLocalStorage = () => {
-    try {
-      const stateStr = localStorage.getItem('state');
-      return stateStr ? JSON.parse(stateStr) : undefined;
-    } catch (e) {
-      console.error(e);
-      return undefined;
+  React.useEffect(() => {
+    const stickyValue = window.localStorage.getItem(key);
+
+    if (stickyValue !== null) {
+      setValue(JSON.parse(stickyValue));
     }
-  };
+  }, [key]);
+
+  React.useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+
+  return [value, setValue];
+}
+
 
 
   function onButtonClicked (datab, id) {
 	console.log("dut click: ", datab);
 	dbcontext.setData(datab);
     setButton({ currentButton: id });
-    setDataState(dbname);
-    saveToLocalStorage(dbname);
-    setItem(dbname);
+    setDataSet(datab);
     tcontent = datab;
     if (datab === "ids") {
       tcontent = "mrna-ucv-ids";
