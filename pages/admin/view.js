@@ -370,7 +370,6 @@ function View() {
           'Authorization': authtoken,
           'accept': 'application/json'
         };
-        console.log("dbname: ",dbname);
         const fulldbname = "http://" + dbserver + ":" + dbport + "/" + dbname;
         axios.get(fulldbname, { headers })
           .then(response => {
@@ -482,7 +481,6 @@ function View() {
     if (dbname !== stickyValue) {
 	  dbname = stickyValue.replace(/['"]+/g, '');
 	}
-	console.log("stickyValue: ",stickyValue,dbname);
     strapi();
   }, []);
 
