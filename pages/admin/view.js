@@ -347,7 +347,7 @@ function View() {
   const dbcontext = useContext(DataBContext);
   const { addToast } = useToasts();
   const router = useRouter();
-  const dbname = dbcontext.data;
+  var   dbname = dbcontext.data;
   const dbserver = "54.198.204.54";
   const dbport = "1337";
 
@@ -479,7 +479,10 @@ function View() {
 
   useEffect(() => {
 	const stickyValue = window.localStorage.getItem("dataSet");
-	console.log("stickyValue: ",stickyValue);
+    if (dbname !== stickyValue) {
+	  dbname = stickyValue;
+	}
+	console.log("stickyValue: ",stickyValue,dbname);
     strapi();
   }, []);
 
