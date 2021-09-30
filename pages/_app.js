@@ -20,6 +20,7 @@ import {DataBProvider} from 'components/Context/dataBContext';
 import PageChange from "components/PageChange/PageChange.js";
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
 import { ToastProvider } from 'react-toast-notifications';
+import AppContext from "context/AppContext";
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
