@@ -520,7 +520,7 @@ const columns = [
      customBodyRender: (value, tableMeta, updateValue) => {
        return (
          <Button style={{ color: "white", background: "black"}} variant="contained" onClick={() => popupDialog(tableMeta.rowIndex)}>
-            Edit
+            View
          </Button>
        );
      }
